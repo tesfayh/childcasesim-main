@@ -1,0 +1,85 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"
+      xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd">
+<head>
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
+</head>
+<body>
+<wicket:extend>
+    <br><br>
+    <label wicket:id="feedback" style="background-color: white">[feedback panel]</label>
+
+
+
+    <form wicket:id="createAccountForm">
+<!--
+        <strong>To add a new user please use the form below</strong>
+-->
+
+        <table>
+            <tr>
+                <td>
+                    E-post
+                </td>
+                <td>
+                    <input type="text" wicket:id="email"/>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    Namn
+                </td>
+                <td>
+                    <input type="text" wicket:id="Name"/>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    Org.Namn
+                </td>
+                <td>
+                    <input type="text" wicket:id="orgName"/>
+                </td>
+            </tr>
+
+
+           <!-- <tr>
+                <td>
+                    <p>
+                        <label>Roles:</label>
+                        <br />
+                        <input wicket:id="languages" />
+                    </p>
+                </td>
+
+            </tr>-->
+
+            <tr>
+                <td>
+             <br>Roll
+                </td>
+                <td>
+                     <span wicket:id="radioButton"/>
+                </td>
+            </tr>
+
+
+        </table>
+
+
+
+
+
+
+
+
+
+         <br/><br/>
+        <input type="submit" value="lägga till"/>
+        <hr>
+    </form>
+</wicket:extend>
+</body>
+</html>

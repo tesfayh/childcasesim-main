@@ -1,0 +1,22 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.3-strict.dtd">
+<head>
+    <title></title>
+</head>
+<body>
+<wicket:panel>
+
+    <a wicket:id="videoplayer" class="player" style="display:block;width:600px;height:400px; margin:15px auto;"></a>
+    <script language="JavaScript">
+        if ($f() != undefined)
+            $f().stop();
+        $f("a.player", "/flowplayer/flowplayer-3.2.16.swf", {
+            log: {
+                level: 'warn'
+            }
+        });
+        $f(0).play();
+    </script>
+</wicket:panel>
+</body>
+</html>

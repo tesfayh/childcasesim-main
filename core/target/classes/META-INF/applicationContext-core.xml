@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="
+            http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+            http://www.springframework.org/schema/context
+            http://www.springframework.org/schema/context/spring-context.xsd
+		    http://www.springframework.org/schema/tx
+		    http://www.springframework.org/schema/tx/spring-tx-3.0.xsd"
+       default-autowire="byType">
+
+    <bean id="entityManagerFactory"
+          class="org.springframework.orm.jpa.LocalEntityManagerFactoryBean">
+        <property name="persistenceUnitName" value="myFirstJpaUnit"/>
+    </bean>
+
+    <!--
+        enable the configuration of transactional behavior based on
+        annotations
+    -->
+    <context:component-scan base-package="se.su.dsv.childcasesim.data"/>
+
+    <tx:annotation-driven transaction-manager="transactionManager"/>
+
+    <bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
+        <property name="entityManagerFactory" ref="entityManagerFactory"/>
+    </bean>
+
+    <bean id="interviewDao" class="se.su.dsv.bivsim.data.Case.dao.jpa.InterviewEntityDaoJPAImp">
+        <property name="entityManagerFactory" ref="entityManagerFactory"/>
+    </bean>
+
+    <bean id="physicalExamEntityDao" class="se.su.dsv.bivsim.data.Case.dao.jpa.PhysicalExamEntityDaoJPAImp">
+        <property name="entityManagerFactory" ref="entityManagerFactory"/>
+    </bean>
+
+    <bean id="virtualAdviserEntityDao" class="se.su.dsv.bivsim.data.Case.dao.jpa.VirtualAdviserEntityDaoJPAImp">
+        <property name="entityManagerFactory" ref="entityManagerFactory"/>
+    </bean>
+
+    <bean id="imgaingEntityDao" class="se.su.dsv.bivsim.data.Case.dao.jpa.ImagingEntityDaoJPAImp">
+        <property name="entityManagerFactory" ref="entityManagerFactory"/>
+    </bean>
+    <bean id="feedbackEntityDao" class="se.su.dsv.bivsim.data.Case.dao.jpa.FeedbackEntityDaoJPAImp">
+        <property name="entityManagerFactory" ref="entityManagerFactory"/>
+    </bean>
+    <bean id="adminEntityDao" class="se.su.dsv.bivsim.data.Case.dao.jpa.AdminsEntityDaoJPAImpl">
+        <property name="entityManagerFactory" ref="entityManagerFactory"/>
+    </bean>
+
+    <bean id="phq2EntityDao" class="se.su.dsv.bivsim.data.Case.dao.jpa.Phq2EntityDaoJPAImpl">
+        <property name="entityManagerFactory" ref="entityManagerFactory"/>
+    </bean>
+    <bean id="phq9EntityDao" class="se.su.dsv.bivsim.data.Case.dao.jpa.Phq9EntityDaoJPAImpl">
+        <property name="entityManagerFactory" ref="entityManagerFactory"/>
+    </bean>
+
+    <bean id="htqEntityDao" class="se.su.dsv.bivsim.data.Case.dao.jpa.HtqEntityDaoJPAImp">
+        <property name="entityManagerFactory" ref="entityManagerFactory"/>
+    </bean>
+    <bean id="hscl25EntityDao" class="se.su.dsv.bivsim.data.Case.dao.jpa.Hscl25EntityDaoJPAImp">
+        <property name="entityManagerFactory" ref="entityManagerFactory"/>
+    </bean>
+
+    <bean id="interviewCase2EntityDao" class="se.su.dsv.bivsim.data.Case.dao.jpa.InterviewCase2EntityDaoJPAImpl">
+        <property name="entityManagerFactory" ref="entityManagerFactory"/>
+    </bean>
+
+    <bean id="AllCasesEntityDao" class="se.su.dsv.bivsim.data.Case.dao.jpa.AllCasesEntityDaoJPAImpl">
+        <property name="entityManagerFactory" ref="entityManagerFactory"/>
+    </bean>
+
+
+    <bean id="genHealthEntityDoa" class="se.su.dsv.bivsim.data.Case.dao.jpa.GenHealthEntityDoaJPAImpl">
+        <property name="entityManagerFactory" ref="entityManagerFactory"/>
+    </bean>
+
+    <bean id="pTSDEntityDoa" class="se.su.dsv.bivsim.data.Case.dao.jpa.PTSDEntityDoaJPAImpl">
+        <property name="entityManagerFactory" ref="entityManagerFactory"/>
+    </bean>
+
+    <bean id="followUpEntityDoa" class="se.su.dsv.bivsim.data.Case.dao.jpa.FollowUpEntityDoaJPAImpl">
+        <property name="entityManagerFactory" ref="entityManagerFactory"/>
+    </bean>
+
+    <bean id="preExpertAssessmentEntityDoa"
+          class="se.su.dsv.bivsim.data.Case.dao.jpa.PreExpertAssessmentEntityDoaJPAImpl">
+        <property name="entityManagerFactory" ref="entityManagerFactory"/>
+    </bean>
+
+    <bean id="interviewCase3EntityDao" class="se.su.dsv.bivsim.data.Case.dao.jpa.InterviewCase3EntityDaoJPAImpl">
+        <property name="entityManagerFactory" ref="entityManagerFactory"/>
+    </bean>
+    <bean id="interviewCase4EntityDao" class="se.su.dsv.bivsim.data.Case.dao.jpa.InterviewCase4EntityDaoJPAImpl">
+        <property name="entityManagerFactory" ref="entityManagerFactory"/>
+    </bean>
+    <bean id="interviewCase5EntityDao" class="se.su.dsv.bivsim.data.Case.dao.jpa.InterviewCase5EntityDaoJPAImpl">
+        <property name="entityManagerFactory" ref="entityManagerFactory"/>
+    </bean>
+
+    <bean id="HistoryEntityDao" class="se.su.dsv.bivsim.data.Case.dao.jpa.HistoryEntityDaoJPAImpl">
+        <property name="entityManagerFactory" ref="entityManagerFactory"/>
+    </bean>
+
+    <bean id="reportEntityDao" class="se.su.dsv.bivsim.data.Case.dao.jpa.ReportEntityDaoJPAImpl">
+        <property name="entityManagerFactory" ref="entityManagerFactory"/>
+    </bean>
+    <bean id="expertAssessmentEntityDao" class="se.su.dsv.bivsim.data.Case.dao.jpa.ExpertAssessmentEntityDaoJPAImpl">
+        <property name="entityManagerFactory" ref="entityManagerFactory"/>
+    </bean>
+</beans>

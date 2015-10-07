@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.3-strict.dtd">
+<head>
+</head>
+<body>
+<wicket:extend>
+    <label wicket:id="feed" style="background-color: white"></label>
+    <table border="4" style="display: block;
+  height: 200px;
+  overflow-y: scroll;">
+
+        <tr>
+            <td>E-post</td>
+            <td >Namn</td>
+            <td >Org. Namn</td>
+            <td >
+                Roll</td>
+
+        </tr>
+        <tr wicket:id="List">
+            <td wicket:id="email"></td>
+            <td wicket:id="name"></td>
+            <td wicket:id="orgname"></td>
+            <td wicket:id="role"></td>
+
+            <td><a wicket:id="link">Radera </a></td>
+        </tr>
+
+    </table>
+</wicket:extend>
+</body>
+</html>

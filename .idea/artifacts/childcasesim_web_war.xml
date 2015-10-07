@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="childcasesim-web:war">
+    <output-path>$PROJECT_DIR$/web/target</output-path>
+    <root id="archive" name="bivsim.war">
+      <element id="artifact" artifact-name="childcasesim-web:war exploded" />
+    </root>
+  </artifact>
+</component>

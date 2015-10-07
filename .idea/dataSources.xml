@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="908863907">
+    <data-source source="LOCAL" name="MySQL - bivsim@localhost" uuid="5880019d-9b9e-43d0-aaf5-f6eb2d4c8654">
+      <driver-ref>mysql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3306/bivsim</jdbc-url>
+      <user-name>bivsim</user-name>
+      <user-password>dfe1dffcdffbdfe1dff3df9adf92dfdbdf9edfcddfc4dfc5dfe4dfdddfc8dfe5dff8dfdf</user-password>
+      <driver-properties>
+        <property name="zeroDateTimeBehavior" value="convertToNull" />
+        <property name="tinyInt1isBit" value="false" />
+      </driver-properties>
+      <libraries />
+    </data-source>
+  </component>
+</project>
+

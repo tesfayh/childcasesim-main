@@ -1,0 +1,81 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"
+      xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd">
+<head>
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
+
+    <style>  li {
+        list-style-type: none;
+        background-color: rgba(215, 255, 255, 0.94);
+        height: 80px;
+        width: 663px;
+    }
+    </style>
+</head>
+<body>
+<wicket:extend>
+    Redigering patient feedback
+    <table border="4">
+
+        <tr>
+            <td>
+                <strong>Redigera Negativ feedback </strong>
+            </td>
+<!--
+            <td>&nbsp;&nbsp;</td>
+-->
+            <td>
+                <strong>Redigera positiv feedback </strong>
+            </td>
+        </tr>
+        <tr>
+            <td>
+
+                <label><span wicket:id="Öppningsfras"></span><a wicket:id="edit_link">Edit</a> </label><br>
+                <label><span wicket:id="Respekt"></span><a wicket:id="edit_link1">Edit</a> </label><br>
+                <label><span wicket:id="Öppnafrågor"></span><a wicket:id="edit_link2">Edit</a> </label><br>
+                <label> <span wicket:id="3F"></span><a wicket:id="edit_link3">Edit</a> </label><br>
+
+                <label> <span wicket:id="Spegling"></span><a wicket:id="edit_link4">Edit</a> </label><br>
+                <label> <span wicket:id="Empati"></span><a wicket:id="edit_link5">Edit</a> </label><br>
+                <label> <span wicket:id="Relevans"></span><a wicket:id="edit_link6">Edit</a> </label><br>
+                <label> <span wicket:id="Tillit"></span><a wicket:id="edit_link7">Edit</a> </label><br>
+                <label> <span wicket:id="Antalfrågor "></span><a wicket:id="edit_link8">Edit</a> </label><br>
+
+              <!--
+                <label> <span wicket:id="trustrespect"></span><a wicket:id="edit_link9">Edit</a> </label><br>
+                <label> <span wicket:id="subqMirror"></span><a wicket:id="edit_link10">Edit</a> </label><br>
+                <label> <span wicket:id="Trustvalue"></span><a wicket:id="edit_link11">Edit</a> </label><br>
+                <label> <span wicket:id="trustrespectAnd"></span><a wicket:id="edit_link12">Edit</a> </label><br>-->
+            </td>
+<!--
+            <td>&nbsp;&nbsp;</td>
+-->
+            <td>
+
+                <label><span wicket:id="nÖppningsfras"></span><a wicket:id="nedit_link">Edit</a> </label><br>
+                <label><span wicket:id="nRespekt"></span><a wicket:id="nedit_link1">Edit</a> </label><br>
+                <label><span wicket:id="nÖppnafrågor"></span><a wicket:id="nedit_link2">Edit</a> </label><br>
+                <label> <span wicket:id="n3F"></span><a wicket:id="nedit_link3">Edit</a> </label><br>
+                <label> <span wicket:id="nSpegling"></span><a wicket:id="nedit_link4">Edit</a> </label><br>
+                <label> <span wicket:id="nEmpati"></span><a wicket:id="nedit_link5">Edit</a> </label><br>
+                <label> <span wicket:id="nRelevans"></span><a wicket:id="nedit_link5r">Edit</a> </label><br>
+                <label> <span wicket:id="nTillit"></span><a wicket:id="nedit_link6">Edit</a> </label><br>
+                <label> <span wicket:id="nAntalfrågor"></span><a wicket:id="nedit_link7">Edit</a> </label><br>
+<!--
+                <label> <span wicket:id="nTrustsubmirror"></span><a wicket:id="nedit_link8">Edit</a> </label><br>
+-->
+              <!--  <label> <span wicket:id="ntrustrespect"></span><a wicket:id="nedit_link9">Edit</a> </label>
+                <label> <span wicket:id="nsubqMirror"></span><a wicket:id="nedit_link10">Edit</a> </label>
+                <label> <span wicket:id="nTrustvalue"></span><a wicket:id="nedit_link11">Edit</a> </label>
+                <label> <span wicket:id="ntrustrespectAnd"></span><a wicket:id="nedit_link12">Edit</a> </label>-->
+            </td>
+
+        </tr>
+    </table>
+
+    <div wicket:id="dialog" style="width: 600px; height: 600px"></div>
+
+
+</wicket:extend>
+</body>
+</html>

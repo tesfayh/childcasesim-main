@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="bivsim-web:war exploded">
+    <output-path>$PROJECT_DIR$/target/bivsim</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="bivsim-web/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="bivsim-web" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

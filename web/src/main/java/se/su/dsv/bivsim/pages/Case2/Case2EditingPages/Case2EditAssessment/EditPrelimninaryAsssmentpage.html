@@ -1,0 +1,63 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"
+      xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd">
+<head>
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
+
+</head>
+<body>
+<wicket:extend>
+    <h2>Redigering Expertens BEDÖMNING</h2>
+
+    <form wicket:id="Form">
+
+
+        <table>
+            <tr>
+                <td>
+                    <label>
+                        PysBedo<br>
+                        <textarea wicket:id="PysBedo"></textarea> </label>
+                </td>
+                <td>
+                    <label>
+                        PysAtg<br>
+                        <textarea wicket:id="PysAtg"></textarea> </label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>PsyBedo<br>
+                        <textarea wicket:id="PsyBedo"></textarea> </label>
+                </td>
+                <td>
+                    <label>
+                        PsyAtg<br>
+                        <textarea wicket:id="PsyAtg"></textarea> </label>
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>SocialBedo<br>
+                        <textarea wicket:id="SocialBedo"></textarea></label>
+                </td>
+                <td>
+                    <label>SocialAtg<br>
+                        <textarea wicket:id="SocialAtg"></textarea></label>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <input type="submit" value="Update" class="btn-primary"/>
+                </td>
+            </tr>
+
+        </table>
+    </form>
+    <div wicket:id="feed" style="background-color:aquamarine"></div>
+
+
+</wicket:extend>
+</body>
+</html>

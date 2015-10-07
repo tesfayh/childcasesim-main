@@ -1,0 +1,837 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.3-strict.dtd">
+<head>
+    <link rel="stylesheet" type="text/css" href="css4/hermes.css"/>
+</head>
+<body>
+<wicket:panel>
+    <form wicket:id="form">
+        <p style="text-align: center"> MADRS </p>
+        <div style="height: 32.45em; overflow-y: scroll;">
+            <table cellspacing="0" border="3"
+                   style="border: 2px dotted #fc0; width: 100%; padding: 5px;background-color: rgba(230, 230, 230, 0.09)">
+                <tr>
+                    <td ></td>
+                    <td><b>Din bedömning</b></td>
+                    <td id="colunmcolor"><b>Experterna bedömning</b></td>
+                </tr>
+
+                <tr wicket:id="interviews1">
+                    <td id="radio-bel">
+                        <p wicket:id="name1"></p>
+                  </td>
+
+                    <td>
+                            <span wicket:id="radioGroup1">
+                                 <table>
+                                     <tr>
+                                         <td><input type="radio" wicket:id="radio1"/> 0 Jag kan känna mig glad eller ledsen,
+                                             alltefter omstän-
+                                             digheterna.
+                                         </td>
+                                     </tr>
+                                     <tr>
+                                         <td><input type="radio" wicket:id="radio2"/> 1</td>
+                                     </tr>
+                                     <tr>
+                                         <td><input type="radio" wicket:id="radio3"/> 2 Jag känner mig nedstämd för det
+                                             mesta, men ibland
+                                             kan det kännas lättare.
+                                         </td>
+                                     </tr>
+                                     <tr>
+                                         <td><input type="radio" wicket:id="radio4"/>3</td>
+                                     </tr>
+
+                                     <tr>
+                                         <td><input type="radio" wicket:id="radio5"/>4 Jag känner mig genomgående nedstämd
+                                             och dyster.
+                                             Jag kan inte glädja mig åt sådant som vanligen skulle
+                                         </td>
+                                     </tr>
+                                     <tr>
+                                         <td><input type="radio" wicket:id="radio6"/>5</td>
+                                     </tr>
+                                     <tr>
+
+                                         <td><input type="radio" wicket:id="radio7"/>6 Jag är så totalt nedstämd och olycklig
+                                             att jag inte kan
+                                             tänka mig värre.
+                                         </td>
+                                     </tr>
+                                 </table>
+                            </span>
+                    </td>
+
+                    <td style="background-color:#FFCC00">
+                              <span wicket:id="exRadioGroup1">
+                                   <table>
+                                       <tr>
+                                           <td><input type="radio" wicket:id="exradio1"/> 0 Jag kan känna mig glad eller ledsen,
+                                               alltefter omstän-
+                                               digheterna.
+                                           </td>
+                                       </tr>
+                                       <tr>
+                                           <td><input type="radio" wicket:id="exradio2"/> 1</td>
+                                       </tr>
+                                       <tr>
+                                           <td><input type="radio" wicket:id="exradio3"/> 2 Jag känner mig nedstämd för det
+                                               mesta, men ibland
+                                               kan det kännas lättare.
+                                           </td>
+                                       </tr>
+                                       <tr>
+                                           <td><input type="radio" wicket:id="exradio4"/>3</td>
+                                       </tr>
+
+                                       <tr>
+                                           <td><input type="radio" wicket:id="exradio5"/>4 Jag känner mig genomgående nedstämd
+                                               och dyster.
+                                               Jag kan inte glädja mig åt sådant som vanligen skulle
+                                           </td>
+                                       </tr>
+                                       <tr>
+                                           <td><input type="radio" wicket:id="exradio6"/>5</td>
+                                       </tr>
+                                       <tr>
+
+                                           <td><input type="radio" wicket:id="exradio7"/>6 Jag är så totalt nedstämd och olycklig
+                                               att jag inte kan
+                                               tänka mig värre.
+                                           </td>
+                                       </tr>
+                                   </table>
+
+                            </span>
+
+                    </td>
+
+                </tr>
+
+
+
+                <tr wicket:id="interviews2">
+                    <td id="radio-bel">
+                        <p wicket:id="name2"></p>
+                    </td>
+
+                    <td>
+                            <span wicket:id="radioGroup2">
+                                  <table>
+                                      <tr>
+                                          <td><input type="radio" wicket:id="radio1"/> 0 Jag känner mig mestadels lugn.
+                                          </td>
+                                      </tr>
+                                      <tr>
+                                          <td><input type="radio" wicket:id="radio2"/> 1</td>
+                                      </tr>
+                                      <tr>
+                                          <td><input type="radio" wicket:id="radio3"/> <span style="padding-right: 10px">2 Ibland har jag obehagliga känslor av inre oro. </span>
+                                          </td>
+                                      </tr>
+                                      <tr>
+                                          <td><input type="radio" wicket:id="radio4"/>3</td>
+                                      </tr>
+
+                                      <tr>
+                                          <td><input type="radio" wicket:id="radio5"/>4 JJag har ofta en känsla av inre oro som ibland kan bli
+                                              mycket stark, och som jag måste anstränga mig för att
+                                              bemästra.
+                                          </td>
+                                      </tr>
+                                      <tr>
+                                          <td><input type="radio" wicket:id="radio6"/>5</td>
+                                      </tr>
+                                      <tr>
+
+                                          <td><input type="radio" wicket:id="radio7"/>6  Jag har fruktansvärda, långvariga eller outhärdliga
+                                              ångestkänslor.
+                                          </td>
+                                      </tr>
+                                  </table>
+
+                            </span>
+                    </td>
+
+                    <td style="background-color:#FFCC00">
+                              <span wicket:id="exRadioGroup2">
+                                     <table>
+                                         <tr>
+                                             <td><input type="radio" wicket:id="exradio1"/> 0 Jag känner mig mestadels lugn.
+                                             </td>
+                                         </tr>
+                                         <tr>
+                                             <td><input type="radio" wicket:id="exradio3"/> 1</td>
+                                         </tr>
+                                         <tr>
+                                             <td><input type="radio" wicket:id="exradio3"/> <span style="padding-right: 10px">2 Ibland har jag obehagliga känslor av inre oro. </span>
+                                             </td>
+                                         </tr>
+                                         <tr>
+                                             <td><input type="radio" wicket:id="exradio4"/>3</td>
+                                         </tr>
+
+                                         <tr>
+                                             <td><input type="radio" wicket:id="exradio5"/>4 JJag har ofta en känsla av inre oro som ibland kan bli
+                                                 mycket stark, och som jag måste anstränga mig för att
+                                                 bemästra.
+                                             </td>
+                                         </tr>
+                                         <tr>
+                                             <td><input type="radio" wicket:id="exradio6"/>5</td>
+                                         </tr>
+                                         <tr>
+
+                                             <td><input type="radio" wicket:id="exradio7"/>6  Jag har fruktansvärda, långvariga eller outhärdliga
+                                                 ångestkänslor.
+                                             </td>
+                                         </tr>
+                                     </table>
+
+                            </span>
+
+                    </td>
+
+                </tr>
+
+
+
+                <tr wicket:id="interviews3">
+                    <td id="radio-bel">
+                        <p wicket:id="name3"></p>
+                    </td>
+
+                    <td>
+                            <span wicket:id="radioGroup3">
+                                <table>
+                                    <tr>
+                                        <td><input type="radio" wicket:id="radio1"/> 0 Jag sover lugnt och bra och tillräckligt länge för mina
+                                            behov. Jag har inga särskilda svårigheter att somna.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="radio" wicket:id="radio2"/> 1</td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="radio" wicket:id="radio3"/> 2 Jag har vissa sömnsvårigheter. Ibland har jag svårt att
+                                            somna eller sover ytligare eller oroligare än vanligt.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="radio" wicket:id="radio4"/>3</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td><input type="radio" wicket:id="radio5"/>4 Jag sover minst två timmar mindre per natt än normalt.
+                                            Jag vaknar ofta under natten, även om jag inte blir störd.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="radio" wicket:id="radio6"/>5</td>
+                                    </tr>
+                                    <tr>
+
+                                        <td><input type="radio" wicket:id="radio7"/>6 Jag sover mycket dåligt, inte mer än 2-3 timmar per natt.
+                                        </td>
+                                    </tr>
+                                </table>
+
+                            </span>
+                    </td>
+
+                    <td style="background-color:#FFCC00">
+                              <span wicket:id="exRadioGroup3">
+                                   <table>
+                                       <tr>
+                                           <td><input type="radio" wicket:id="exradio1"/> 0 Jag sover lugnt och bra och tillräckligt länge för mina
+                                               behov. Jag har inga särskilda svårigheter att somna.
+                                           </td>
+                                       </tr>
+                                       <tr>
+                                           <td><input type="radio" wicket:id="exradio2"/> 1</td>
+                                       </tr>
+                                       <tr>
+                                           <td><input type="radio" wicket:id="exradio3"/> 2 Jag har vissa sömnsvårigheter. Ibland har jag svårt att
+                                               somna eller sover ytligare eller oroligare än vanligt.
+                                           </td>
+                                       </tr>
+                                       <tr>
+                                           <td><input type="radio" wicket:id="exradio4"/>3</td>
+                                       </tr>
+
+                                       <tr>
+                                           <td><input type="radio" wicket:id="exradio5"/>4 Jag sover minst två timmar mindre per natt än normalt.
+                                               Jag vaknar ofta under natten, även om jag inte blir störd.
+                                           </td>
+                                       </tr>
+                                       <tr>
+                                           <td><input type="radio" wicket:id="exradio6"/>5</td>
+                                       </tr>
+                                       <tr>
+
+                                           <td><input type="radio" wicket:id="exradio7"/>6 Jag sover mycket dåligt, inte mer än 2-3 timmar per natt.
+                                           </td>
+                                       </tr>
+                                   </table>
+
+
+                            </span>
+
+                    </td>
+
+                </tr>
+
+
+
+                <tr wicket:id="interviews4">
+                    <td id="radio-bel">
+                        <p wicket:id="name4"></p>
+                    </td>
+
+                    <td>
+                            <span wicket:id="radioGroup4">
+                                  <table>
+                                      <tr>
+                                          <td><input type="radio" wicket:id="radio1"/> 0 Min aptit är som den brukar vara.
+                                          </td>
+                                      </tr>
+                                      <tr>
+                                          <td><input type="radio" wicket:id="radio2"/> 1</td>
+                                      </tr>
+                                      <tr>
+                                          <td><input type="radio" wicket:id="radio3"/> 2  Min aptit är sämre än vanligt.
+                                          </td>
+                                      </tr>
+                                      <tr>
+                                          <td><input type="radio" wicket:id="radio4"/>3</td>
+                                      </tr>
+
+                                      <tr>
+                                          <td><input type="radio" wicket:id="radio5"/>4 Min aptit har nästan helt försvunnit. Maten smakar
+                                              inte och jag måste tvinga mig att äta.
+                                          </td>
+                                      </tr>
+                                      <tr>
+                                          <td><input type="radio" wicket:id="radio6"/>5</td>
+                                      </tr>
+                                      <tr>
+
+                                          <td><input type="radio" wicket:id="radio7"/>6 Jag vill inte ha någon mat. Om jag skulle få någonting
+                                              i mig, måste jag övertalas att äta.
+                                          </td>
+                                      </tr>
+                                  </table>
+
+                            </span>
+                    </td>
+
+                    <td style="background-color:#FFCC00">
+                              <span wicket:id="exRadioGroup4">
+                                     <table>
+                                         <tr>
+                                             <td><input type="radio" wicket:id="exradio1"/> 0 Min aptit är som den brukar vara.
+                                             </td>
+                                         </tr>
+                                         <tr>
+                                             <td><input type="radio" wicket:id="exradio2"/> 1</td>
+                                         </tr>
+                                         <tr>
+                                             <td><input type="radio" wicket:id="exradio3"/> 2  Min aptit är sämre än vanligt.
+                                             </td>
+                                         </tr>
+                                         <tr>
+                                             <td><input type="radio" wicket:id="exradio4"/>3</td>
+                                         </tr>
+
+                                         <tr>
+                                             <td><input type="radio" wicket:id="exradio5"/>4 Min aptit har nästan helt försvunnit. Maten smakar
+                                                 inte och jag måste tvinga mig att äta.
+                                             </td>
+                                         </tr>
+                                         <tr>
+                                             <td><input type="radio" wicket:id="exradio6"/>5</td>
+                                         </tr>
+                                         <tr>
+
+                                             <td><input type="radio" wicket:id="exradio7"/>6 Jag vill inte ha någon mat. Om jag skulle få någonting
+                                                 i mig, måste jag övertalas att äta.
+                                             </td>
+                                         </tr>
+                                     </table>
+
+
+                            </span>
+
+                    </td>
+
+                </tr>
+
+
+
+
+                <tr wicket:id="interviews5">
+                    <td id="radio-bel">
+                        <p wicket:id="name5"></p>
+                    </td>
+
+                    <td>
+                            <span wicket:id="radioGroup5">
+                                <table>
+                                    <tr>
+                                        <td><input type="radio" wicket:id="radio1"/> 0  Jag har inga koncentrationssvårigheter
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="radio" wicket:id="radio2"/> 1</td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="radio" wicket:id="radio3"/> 2 Jag har tillfälligt svårt att hålla tankarna samlade på
+                                            sådant som normalt skulle fånga min uppmärksamhet
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="radio" wicket:id="radio4"/>3</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td><input type="radio" wicket:id="radio5"/>4 Jag har påtagligt svårt att koncentrera mig på sådant
+                                            som normalt inte kräver någon ansträngning från min
+                                            sida
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="radio" wicket:id="radio6"/>5</td>
+                                    </tr>
+                                    <tr>
+
+                                        <td><input type="radio" wicket:id="radio7"/>6  Jag kan överhuvudtaget inte koncentrera mig på
+                                            någonting.
+                                        </td>
+                                    </tr>
+                                </table>
+
+                            </span>
+                    </td>
+
+                    <td style="background-color:#FFCC00">
+                              <span wicket:id="exRadioGroup5">
+                                    <table>
+                                        <tr>
+                                            <td><input type="radio" wicket:id="exradio1"/> 0  Jag har inga koncentrationssvårigheter
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="radio" wicket:id="exradio2"/> 1</td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="radio" wicket:id="exradio3"/> 2 Jag har tillfälligt svårt att hålla tankarna samlade på
+                                                sådant som normalt skulle fånga min uppmärksamhet
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="radio" wicket:id="exradio4"/>3</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td><input type="radio" wicket:id="exradio5"/>4 Jag har påtagligt svårt att koncentrera mig på sådant
+                                                som normalt inte kräver någon ansträngning från min
+                                                sida
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="radio" wicket:id="exradio6"/>5</td>
+                                        </tr>
+                                        <tr>
+
+                                            <td><input type="radio" wicket:id="exradio7"/>6  Jag kan överhuvudtaget inte koncentrera mig på
+                                                någonting.
+                                            </td>
+                                        </tr>
+                                    </table>
+                            </span>
+
+                    </td>
+
+                </tr>
+
+
+
+
+                <tr wicket:id="interviews6">
+                    <td id="radio-bel">
+                        <p wicket:id="name6"></p>
+                    </td>
+
+                    <td>
+                            <span wicket:id="radioGroup6">
+                                  <table>
+                                      <tr>
+                                          <td><input type="radio" wicket:id="radio1"/> 0  Jag har inga svårigheter med att ta itu med nya
+                                              uppgifter.
+                                          </td>
+                                      </tr>
+                                      <tr>
+                                          <td><input type="radio" wicket:id="radio2"/> 1</td>
+                                      </tr>
+                                      <tr>
+                                          <td><input type="radio" wicket:id="radio3"/> 2 När skall jag ta itu med något, tar det emot på ett sätt
+                                              som inte är normalt för mig.
+                                          </td>
+                                      </tr>
+                                      <tr>
+                                          <td><input type="radio" wicket:id="radio4"/>3</td>
+                                      </tr>
+
+                                      <tr>
+                                          <td><input type="radio" wicket:id="radio5"/>4 Det krävs en stor ansträngning för mig att ens komma
+                                              igång med enkla uppgifter som jag vanligtvis utför mer
+                                              eller mindre rutinmässigt.
+                                          </td>
+                                      </tr>
+                                      <tr>
+                                          <td><input type="radio" wicket:id="radio6"/>5</td>
+                                      </tr>
+                                      <tr>
+
+                                          <td><input type="radio" wicket:id="radio7"/>6  Jag kan inte förmå mig att ta itu med de enklaste
+                                              vardagssysslor
+                                          </td>
+                                      </tr>
+                                  </table>
+                            </span>
+                    </td>
+
+                    <td style="background-color:#FFCC00">
+                              <span wicket:id="exRadioGroup6">
+                                       <table>
+                                           <tr>
+                                               <td><input type="radio" wicket:id="exradio1"/> 0  Jag har inga svårigheter med att ta itu med nya
+                                                   uppgifter.
+                                               </td>
+                                           </tr>
+                                           <tr>
+                                               <td><input type="radio" wicket:id="exradio2"/> 1</td>
+                                           </tr>
+                                           <tr>
+                                               <td><input type="radio" wicket:id="exradio3"/> 2 När skall jag ta itu med något, tar det emot på ett sätt
+                                                   som inte är normalt för mig.
+                                               </td>
+                                           </tr>
+                                           <tr>
+                                               <td><input type="radio" wicket:id="exradio4"/>3</td>
+                                           </tr>
+
+                                           <tr>
+                                               <td><input type="radio" wicket:id="exradio5"/>4 Det krävs en stor ansträngning för mig att ens komma
+                                                   igång med enkla uppgifter som jag vanligtvis utför mer
+                                                   eller mindre rutinmässigt.
+                                               </td>
+                                           </tr>
+                                           <tr>
+                                               <td><input type="radio" wicket:id="exradio6"/>5</td>
+                                           </tr>
+                                           <tr>
+
+                                               <td><input type="radio" wicket:id="exradio7"/>6  Jag kan inte förmå mig att ta itu med de enklaste
+                                                   vardagssysslor
+                                               </td>
+                                           </tr>
+                                       </table>
+                            </span>
+
+                    </td>
+
+                </tr>
+
+
+
+                <tr wicket:id="interviews7">
+                    <td id="radio-bel">
+                        <p wicket:id="name7"></p>
+                    </td>
+
+                    <td>
+                            <span wicket:id="radioGroup7">
+                             <table>
+                                 <tr>
+                                     <td><input type="radio" wicket:id="radio1"/> 0 Jag är intresserad av omvärlden och engagerar mig i
+                                         den, och det bereder mig både nöje och glädje.
+                                     </td>
+                                 </tr>
+                                 <tr>
+                                     <td><input type="radio" wicket:id="radio2"/> 1</td>
+                                 </tr>
+                                 <tr>
+                                     <td><input type="radio" wicket:id="radio3"/> 2 Jag känner mindre starkt för sådant som brukar enga-
+                                         gera mig. Jag har svårare än vanligt att bli glad eller
+                                         svårare att bli arg när det är befogat.
+                                     </td>
+                                 </tr>
+                                 <tr>
+                                     <td><input type="radio" wicket:id="radio4"/>3</td>
+                                 </tr>
+
+                                 <tr>
+                                     <td><input type="radio" wicket:id="radio5"/>4  Jag kan inte känna något intresse för omvärlden, inte
+                                         ens för vänner och bekanta.
+                                     </td>
+                                 </tr>
+                                 <tr>
+                                     <td><input type="radio" wicket:id="radio6"/>5</td>
+                                 </tr>
+                                 <tr>
+
+                                     <td><input type="radio" wicket:id="radio7"/>6 Jag har slutat uppleva några känslor. Jag känner mig
+                                         smärtsamt likgiltig även för mina närmaste.
+
+                                     </td>
+                                 </tr>
+                             </table>
+
+                            </span>
+                    </td>
+
+                    <td style="background-color:#FFCC00">
+                              <span wicket:id="exRadioGroup7">
+                                   <table>
+                                       <tr>
+                                           <td><input type="radio" wicket:id="exradio1"/> 0 Jag är intresserad av omvärlden och engagerar mig i
+                                               den, och det bereder mig både nöje och glädje.
+                                           </td>
+                                       </tr>
+                                       <tr>
+                                           <td><input type="radio" wicket:id="exradio2"/> 1</td>
+                                       </tr>
+                                       <tr>
+                                           <td><input type="radio" wicket:id="exradio3"/> 2 Jag känner mindre starkt för sådant som brukar enga-
+                                               gera mig. Jag har svårare än vanligt att bli glad eller
+                                               svårare att bli arg när det är befogat.
+                                           </td>
+                                       </tr>
+                                       <tr>
+                                           <td><input type="radio" wicket:id="exradio4"/>3</td>
+                                       </tr>
+
+                                       <tr>
+                                           <td><input type="radio" wicket:id="exradio5"/>4  Jag kan inte känna något intresse för omvärlden, inte
+                                               ens för vänner och bekanta.
+                                           </td>
+                                       </tr>
+                                       <tr>
+                                           <td><input type="radio" wicket:id="exradio6"/>5</td>
+                                       </tr>
+                                       <tr>
+
+                                           <td><input type="radio" wicket:id="exradio7"/>6 Jag har slutat uppleva några känslor. Jag känner mig
+                                               smärtsamt likgiltig även för mina närmaste.
+
+                                           </td>
+                                       </tr>
+                                   </table>
+                            </span>
+
+                    </td>
+
+                </tr>
+
+
+                <tr wicket:id="interviews8">
+                    <td id="radio-bel">
+                        <p wicket:id="name8"></p>
+                    </td>
+
+                    <td>
+                            <span wicket:id="radioGroup8">
+                                 <table>
+                                     <tr>
+                                         <td><input type="radio" wicket:id="radio1"/> 0  Jag ser på framtiden med tillförsikt. Jag är på det hela
+                                             taget ganska nöjd med mig själv.
+                                         </td>
+                                     </tr>
+                                     <tr>
+                                         <td><input type="radio" wicket:id="radio2"/> 1</td>
+                                     </tr>
+                                     <tr>
+                                         <td><input type="radio" wicket:id="radio3"/> 2  Ibland klandrar jag mig själv och tycker jag är mindre
+                                             värd än andra.
+                                         </td>
+                                     </tr>
+                                     <tr>
+                                         <td><input type="radio" wicket:id="radio4"/>3</td>
+                                     </tr>
+
+                                     <tr>
+                                         <td><input type="radio" wicket:id="radio5"/>4 Jag grubblar ofta över mina misslyckanden och
+                                             känner mig mindervärdig eller dålig, även om andra
+                                             tycker annorlunda.
+                                         </td>
+                                     </tr>
+                                     <tr>
+                                         <td><input type="radio" wicket:id="radio6"/>5</td>
+                                     </tr>
+                                     <tr>
+
+                                         <td><input type="radio" wicket:id="radio7"/>6Jag ser allting i svart och kan inte se någon ljusning.
+                                             Det känns som om jag var en alltigenom dålig män-
+                                             niska, och som om jag aldrig skulle kunna få någon
+                                             förlåtelse för det hemska jag gjort.
+                                         </td>
+                                     </tr>
+                                 </table>
+                            </span>
+                    </td>
+
+                    <td style="background-color:#FFCC00">
+                              <span wicket:id="exRadioGroup8">
+                                    <table>
+                                        <tr>
+                                            <td><input type="radio" wicket:id="exradio1"/> 0  Jag ser på framtiden med tillförsikt. Jag är på det hela
+                                                taget ganska nöjd med mig själv.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="radio" wicket:id="exradio2"/> 1</td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="radio" wicket:id="exradio3"/> 2  Ibland klandrar jag mig själv och tycker jag är mindre
+                                                värd än andra.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="radio" wicket:id="exradio4"/>3</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td><input type="radio" wicket:id="exradio5"/>4 Jag grubblar ofta över mina misslyckanden och
+                                                känner mig mindervärdig eller dålig, även om andra
+                                                tycker annorlunda.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="radio" wicket:id="exradio6"/>5</td>
+                                        </tr>
+                                        <tr>
+
+                                            <td><input type="radio" wicket:id="exradio7"/>6Jag ser allting i svart och kan inte se någon ljusning.
+                                                Det känns som om jag var en alltigenom dålig män-
+                                                niska, och som om jag aldrig skulle kunna få någon
+                                                förlåtelse för det hemska jag gjort.
+                                            </td>
+                                        </tr>
+                                    </table>
+
+                            </span>
+
+                    </td>
+
+                </tr>
+
+
+                <tr wicket:id="interviews9">
+                    <td id="radio-bel">
+                        <p wicket:id="name9"></p>
+                    </td>
+
+                    <td>
+                            <span wicket:id="radioGroup9">
+                                 <table>
+                                     <tr>
+                                         <td><input type="radio" wicket:id="radio1"/> 0 Jag har normal aptit på livet.
+                                         </td>
+                                     </tr>
+                                     <tr>
+                                         <td><input type="radio" wicket:id="radio2"/> 1</td>
+                                     </tr>
+                                     <tr>
+                                         <td><input type="radio" wicket:id="radio3"/> 2 Livet känns inte särskilt meningsfullt men jag önskar
+                                             ändå inte att jag vore död.
+                                         </td>
+                                     </tr>
+                                     <tr>
+                                         <td><input type="radio" wicket:id="radio4"/>3</td>
+                                     </tr>
+
+                                     <tr>
+                                         <td><input type="radio" wicket:id="radio5"/>4 Jag tycker ofta det vore bättre att vara död, och trots
+                                             att jag egentligen inte önskar det, kan självmord
+                                             ibland kännas som en möjlig väg.
+                                         </td>
+                                     </tr>
+                                     <tr>
+                                         <td><input type="radio" wicket:id="radio6"/>5</td>
+                                     </tr>
+                                     <tr>
+
+                                         <td><input type="radio" wicket:id="radio7"/>6 Jag är egentligen övertygad om att min enda utväg är
+                                             att dö, och jag tänker mycket på hur jag bäst skall gå
+                                             tillväga för att ta mitt eget liv.
+
+                                         </td>
+                                     </tr>
+                                 </table>
+
+                            </span>
+                    </td>
+
+                    <td style="background-color:#FFCC00">
+                              <span wicket:id="exRadioGroup9">
+                                    <table>
+                                        <tr>
+                                            <td><input type="radio" wicket:id="exradio1"/> 0 Jag har normal aptit på livet.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="radio" wicket:id="exradio2"/> 1</td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="radio" wicket:id="exradio3"/> 2 Livet känns inte särskilt meningsfullt men jag önskar
+                                                ändå inte att jag vore död.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="radio" wicket:id="exradio4"/>3</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td><input type="radio" wicket:id="exradio5"/>4 Jag tycker ofta det vore bättre att vara död, och trots
+                                                att jag egentligen inte önskar det, kan självmord
+                                                ibland kännas som en möjlig väg.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="radio" wicket:id="exradio6"/>5</td>
+                                        </tr>
+                                        <tr>
+
+                                            <td><input type="radio" wicket:id="exradio7"/>6 Jag är egentligen övertygad om att min enda utväg är
+                                                att dö, och jag tänker mycket på hur jag bäst skall gå
+                                                tillväga för att ta mitt eget liv.
+
+                                            </td>
+                                        </tr>
+                                    </table>
+                            </span>
+
+                    </td>
+
+                </tr>
+
+
+
+
+
+
+
+
+
+            </table>
+        </div>
+
+        <div class="uk-width-small-1-1 uk-width-medium-1-5 uk-width-large-1-5"><a
+                class="uk-width-1-1 uk-button uk-button-large" wicket:id="tillbaka">Tillbaka</a></div>
+
+    </form>
+</wicket:panel>
+</body>
+</html>

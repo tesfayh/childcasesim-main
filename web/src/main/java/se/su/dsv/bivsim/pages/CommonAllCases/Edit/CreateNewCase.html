@@ -1,0 +1,16 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"
+      xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd">
+<head>
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
+</head>
+<body>
+<wicket:extend>
+    <Form wicket:id="NewCaseForm" class="uk-form-icon">
+        <p><strong> Please write the name the new case you want to create</strong></p>
+        Name:<textarea wicket:id="CaseName"></textarea> <br>
+        <input type="submit" value="Create">
+        <label wicket:id="feedback" style="background-color: white">[feedback panel]</label>
+    </Form>
+</wicket:extend>
+</body>
+</html>

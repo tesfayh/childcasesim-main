@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.3-strict.dtd">
+<head>
+    <title></title>
+</head>
+<body>
+<wicket:extend>
+    <h3>Skapa frågor</h3>
+    <label wicket:id="feed" style="background-color: white"></label>
+
+    <form wicket:id="form">
+        <label>
+            <a href="#" wicket:id="selectParent"> *Välj förälder</a>
+
+            <div wicket:id="wmc">
+                <input wicket:id="parentName" style="width: 400px"/>
+            </div>
+        </label><br>
+        <label>* Frågor </label><br> <textarea wicket:id="Questions" style=" width: 450px"></textarea><br>
+        <label>* Svar </label><br> <textarea wicket:id="Answer" style=" width: 450px"></textarea><br><br>
+        <label>* Ladda (bara  .flv files)<br> </label><input wicket:id="fileUpload" size="40" type="file"/><br><br>
+        <label> återkoppling ingång </label><br> <textarea wicket:id="feedbackInput"></textarea>
+<!--
+        <label> Trust Value</label> <textarea wicket:id="trustValue"></textarea>
+-->
+        <br>
+        <br>
+        <input type="submit" value="Skapa"/>
+        <br>
+
+    </form>
+    <div wicket:id="parentSelection" style="width: 600px; height: 600px"></div>
+</wicket:extend>
+</body>
+</html>

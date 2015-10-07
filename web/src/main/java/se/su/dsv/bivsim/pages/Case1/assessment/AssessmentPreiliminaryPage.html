@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.3-strict.dtd">
+<head>
+    <title></title>
+</head>
+<body>
+<wicket:extend>
+
+    <form class="uk-form" wicket:id="Preliminär">
+        <fieldset>
+            <div class="uk-text-center uk-panel uk-panel-box">
+                <h2>Bed&ouml;mning</h2>
+
+                <div class="uk-width-1-1 uk-text-center" style="min-height: 43.45em; overflow-y: hidden;">
+                    <div class="uk-grid uk-grid-small" data-uk-grid-margin>
+                        <div class="uk-width-1-1 uk-text-center">
+
+
+                            <h3>Preliminär Bedömning</h3>
+
+
+                            <div class="uk-form-row">
+                                Välj en kategori i taget nedan, men besvara alla
+
+                            </div>
+                            <div class="uk-form-row">
+                                <select wicket:id="Profession"/>
+
+                            </div>
+
+                        </div>
+
+                        <div class="uk-width-small-1-1 uk-width-medium-1-2 uk-width-large-1-2">
+                            <h5>Bedömning</h5>
+                            <TextArea wicket:id="Bedömning" cols="50" rows="13" placeholder="..."/>
+                        </div>
+
+                        <div class="uk-width-small-1-1 uk-width-medium-1-2 uk-width-large-1-2">
+                            <h5>Åtgärd</h5>
+                            <TextArea wicket:id="Åtgärd" cols="50" rows="13" placeholder="..."/>
+                        </div>
+
+
+                        <div class="uk-width-small-1-1 uk-width-medium-1-5 uk-width-large-1-5"><a
+                                class="uk-width-1-1 uk-button uk-button-large" wicket:id="tillbaka">Tillbaka</a>
+                        </div>
+                        <div class="uk-width-small-1-1 uk-width-medium-1-5 uk-width-large-1-5"><input
+                                type="submit" class="uk-width-1-1 uk-button uk-button-primary uk-button-large"
+                                value="Skicka In"></div>
+                        <!--<div class="uk-width-small-1-1 uk-width-medium-1-5 uk-width-large-1-5"><a
+                                class="uk-width-1-1 uk-button uk-button-large" wicket:id="nextfeedbak">Återkoppling</a>
+                        </div>
+-->
+
+                    </div>
+                </div>
+            </div>
+            <!-- end panel -->
+        </fieldset>
+    </form>
+
+</wicket:extend>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.3-strict.dtd">
+<head>
+    <title></title>
+</head>
+<body>
+<wicket:extend>
+
+    <div class="uk-text-center uk-panel uk-panel-box">
+        <div class="uk-width-1-1">
+
+            <div class="uk-vertical-align-middle">
+                <div style="margin: 0 auto;">
+                    <div class="uk-text-center uk-panel uk-panel-box" style="min-height: 6.25em; width: 60em">
+                        <strong>Allmänna kommentarer</strong> <br>
+
+                        <p wicket:id="adviser"></p>
+
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="uk-vertical-align-middle">
+                <div>
+                    <div class="uk-text-center uk-panel uk-panel-box" style="min-height: 6.25em; width: 60em">
+                        <strong>Anamnesen:</strong>
+
+                        <p wicket:id="Anamnesen"></p>
+
+
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="uk-vertical-align-middle">
+                <div class="uk-width-small-1-1 uk-width-medium-1-2 uk-width-large-1-2">
+                    <div class="uk-text-center uk-panel uk-panel-box" style="min-height: 6.25em; width: 60em">
+                        <strong>Socialt</strong>
+
+                        <p wicket:id="Socialt"></p>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <br>
+
+            <table style="width: 450px" class="uk-vertical-align-middle">
+                <tr>
+                    <td>
+                        <div style="width: 200px"><a
+                                class="uk-width-1-1 uk-button uk-button-large" wicket:id="tillbaka">Tillbaka</a></div>
+
+
+                    </td>
+                    <td>
+                        <div style="width: 200px"><a
+                                class="uk-width-1-1 uk-button uk-button-large" wicket:id="next">Nästa kommentar</a>
+                        </div>
+
+                    </td>
+
+                </tr>
+            </table>
+
+
+        </div>
+    </div>
+</wicket:extend>
+</body>
+</html>

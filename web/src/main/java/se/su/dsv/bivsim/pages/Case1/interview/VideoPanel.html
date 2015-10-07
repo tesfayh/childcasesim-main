@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.3-strict.dtd" lang="en-gb" dir="ltr"
+      class="uk-height-1-1">
+<head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon"/>
+    <link rel="apple-touch-icon-precomposed" href="images/apple-touch-icon.png"/>
+    <link rel="stylesheet" href="css/uikit.gradient.min.css"/>
+    <link rel="stylesheet" href="css/hermes.css"/>
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'/>
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/uikit.min.js"></script>
+    <style>
+    </style>
+
+
+</head>
+<body>
+<wicket:panel>
+    <a wicket:id="videoplayer" class="player" style="display:block;width:320px;height:240px; margin:0px auto;"></a>
+
+    <!-- <p wicket:id="content" style="margin: 0px auto; width: 480px; height:10px; "></p>-->
+
+
+    <script language="JavaScript">
+        if ($f() != undefined)
+            $f().stop();
+        $f("a.player", "/flowplayer/flowplayer-3.2.16.swf", {
+            log: {
+                level: 'warn'
+            }
+        });
+        $f(0).play();
+    </script>
+</wicket:panel>
+</body>
+</html>

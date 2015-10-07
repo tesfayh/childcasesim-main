@@ -1,0 +1,68 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"
+      xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd">
+<head>
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
+    <title></title>
+</head>
+<body style="background-color: graytext">
+<wicket:panel>
+    <h2>Redigerar frågor</h2>
+    <label style="background-color: graytext">
+
+        <div wicket:id="feed" style="background-color:aquamarine"></div>
+
+    </label>
+
+    <form wicket:id="Form" style="background-color: darkgrey">
+
+
+        <table>
+            <tr>
+                <td>
+                    <label>
+                        <p>Namn</p>
+                        <textarea wicket:id="name"></textarea> </label>
+                </td>
+                <td>
+                    <label>
+                        <p>  Beskrivning</p>
+                        <textarea wicket:id="feedbackinput"></textarea> </label>
+                </td>
+            </tr>
+            <tr>
+
+                <td>
+                    <label>* ladda bild (bara .png files)</label> <input wicket:id="fileUpload" type="file"/>
+                    <br>
+                    <br>
+                    <br>
+
+                </td>
+            </tr>
+            <tr>
+
+            </tr>
+
+            <tr>
+                <td>
+                    <input type="submit" value="Update" class="btn-primary"/>
+                </td>
+                <td>
+                    <a wicket:id="delete" class="btn-primary">radera</a></td>
+
+                <td>
+                    <a wicket:id="close" class="btn-primary">stänga</a></td>
+
+
+            </tr>
+
+        </table>
+
+
+    </form>
+    <br>
+
+
+</wicket:panel>
+</body>
+</html>

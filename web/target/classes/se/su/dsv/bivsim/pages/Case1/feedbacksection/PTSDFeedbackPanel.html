@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.3-strict.dtd">
+<head>
+    <title></title>
+</head>
+<body>
+<wicket:panel>
+
+
+    <form wicket:id="form">
+        <p style="text-align: center"> PTSD </p>
+        <div style="height: 32.45em; overflow-y: scroll;">
+
+            <table cellspacing="0" border="3"
+                   style="border: 2px dotted #fc0; width: 100%; padding: 5px;background-color: rgba(230, 230, 230, 0.09)">
+
+
+                <tr>
+                    <td ></td>
+                    <td colspan="5" ><b>Din bedömning</b></td>
+                    <td colspan="5" id="colunmcolor"><b>Experterna bedömning</b></td>
+                </tr>
+
+                <tr wicket:id="interviews1">
+
+                    <td id="radio-bel"><span wicket:id="name1">
+                </span></td>
+                               <span wicket:id="radioGroup1">
+                                                                 <td>Inte alls<p><input type="radio" wicket:id="radio1"/></p></td>
+                                <td>Lite<p><input type="radio" wicket:id="radio2"/></p></td>
+                                <td>Lindrigt<p><input type="radio" wicket:id="radio3"/></p></td>
+                                <td>En hel del<p><input type="radio" wicket:id="radio4"/></p></td>
+                                <td>I högsta grad<p><input type="radio" wicket:id="radio5"/></p></td>
+
+                            </span>
+                              <span wicket:id="exRadioGroup1">
+                                <td style="background-color:#FFCC00">Inte alls<p><input type="radio" wicket:id="exradio1"/>
+                                </p></td>
+                                <td style="background-color: #FFCC00">Lite<p><input type="radio"
+                                                                                      wicket:id="exradio2"/></p></td>
+                                <td style="background-color:#FFCC00">Lindrigt<p><input type="radio" wicket:id="exradio3"/>
+                                </p></td>
+                                <td style="background-color:#FFCC00">En hel del<p><input type="radio" wicket:id="exradio4"/>
+                                </p></td>
+                                <td style="background-color:#FFCC00">I högsta grad<p><input type="radio" wicket:id="exradio5"/></p></td>
+
+                            </span>
+                </tr>
+
+
+            </table>
+        </div>
+
+        <div class="uk-width-small-1-1 uk-width-medium-1-5 uk-width-large-1-5"><a
+                class="uk-width-1-1 uk-button uk-button-large" wicket:id="tillbaka">Tillbaka</a></div>
+
+    </form>
+</wicket:panel>
+</body>
+</html>
+

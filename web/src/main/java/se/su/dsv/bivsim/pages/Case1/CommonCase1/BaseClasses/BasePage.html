@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.3-strict.dtd" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/flowplayer/flowplayer-3.2.12.min.js"></script>
+    <title>BSAsim - Anamnes</title>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon-precomposed" href="images/apple-touch-icon.png">
+    <link rel="stylesheet" href="css/uikit.gradient.css">
+    <link rel="stylesheet" href="css/hermes.css">
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/uikit.min.js"></script>
+</head>
+<body>
+<div class="uk-container uk-container-center">
+
+    <nav class="uk-navbar">
+        <a class="uk-navbar-brand uk-hidden-small logoin">
+            <img src="img/su.png" class="logo">
+            <img src="img/sos.png" class="logo">BSAsim</a>
+
+        <ul class="uk-navbar-nav uk-hidden-small">
+
+            <li>
+                <a wicket:id="choose" data-uk-tooltip title="Fall"><i class="uk-icon-small uk-icon-users"></i></a>
+            </li>
+
+            <li>
+                <a wicket:id="info" data-uk-tooltip title="Info"><i class="uk-icon-small uk-icon-file-text-o"></i></a>
+            </li>
+            <li class="uk-active">
+                <a wicket:id="mainpage" data-uk-tooltip title="Anamnes"><i
+                        class="uk-icon-medium uk-icon-comments-o"></i></a>
+            </li>
+
+            <li>
+                <a wicket:id="exam" data-uk-tooltip title="Status"><i
+                        class="uk-icon-medium uk-icon-stethoscope"></i></a>
+            </li>
+            <li>
+                <a wicket:id="lab" data-uk-tooltip title="Lab/Bild"><i class="uk-icon-medium uk-icon-flask"></i></a>
+            </li>
+            <li>
+                <a wicket:id="instrument" data-uk-tooltip title="Skattningsskalor"><i
+                        class="uk-icon-medium uk-icon-pencil-square-o"></i></a>
+            </li>
+            <li>
+                <a wicket:id="Bedömning" data-uk-tooltip title="Bedömning"><i
+                        class="uk-icon-medium uk-icon-filter"></i></a>
+            </li>
+
+            <li>
+                <a wicket:id="Återkoppling" data-uk-tooltip title="Återkoppling"><i
+                        class="uk-icon-medium uk-icon-comment"></i></a>
+            </li>
+
+        </ul>
+        <div class="uk-navbar-flip">
+            <ul class="uk-navbar-nav">
+                <li>
+                    <a wicket:id="signOut"><span class="special" wicket:id="username"></span> <span
+                            class="uk-text-muted">[Logga ut]</span></a>
+                </li>
+            </ul>
+        </div>
+
+        <a href="#offcanvas" class="uk-navbar-toggle uk-visible-small" data-uk-offcanvas></a>
+
+        <div class="uk-navbar-brand  uk-visible-small">
+            <img src="img/su.png" class="logo">
+            <img src="img/sos.png" class="logo">BSAsim
+        </div>
+    </nav>
+
+    <div class="uk-grid uk-grid-small" data-uk-grid-margin>
+
+        <div class="uk-width-1-1">
+
+
+            <div class="uk-text-center uk-panel uk-panel-box margin-small-top">
+
+                <div class="uk-text-center uk-panel uk-panel-box"
+                     style="background: #BDBDBD; border-radius: 6px; padding: 0.35em 0 0.35em 0; margin-top: -0.25em;">
+                    <div class="uk-grid uk-grid-small " data-uk-grid-margin>
+                        <div class="uk-width-1-1" style="margin-bottom: -0.6em;">
+                            <wicket:child/>
+                        </div>
+                        <div class="uk-width-small-1-1 uk-width-medium-1-3 uk-width-large-1-3">
+                            <form class="uk-form" wicket:id="searchForm">
+                                <fieldset>
+                                    <div class="uk-form-row">
+                                        <input wicket:id="searchtxt" type="text" placeholder="klicka och skriv h&auml;r"
+                                               class="uk-form-small uk-form-width-medium">
+                                        <!--
+                                                                                <button class="uk-button uk-button-small" type="button"><i class="uk-icon-search"></i> s&ouml;k</button>
+-->
+                                        <a wicket:id="link" class="uk-button uk-button-small"><i
+                                                class="uk-icon-search"></i> Sök</a>
+
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </div>
+
+                        <!-- <div class="uk-width-small-1-1 uk-width-medium-2-3 uk-width-large-2-3"
+                              style="padding-right: 0.5em;">
+                         </div>-->
+
+                    </div>
+                    <!-- grid -->
+                </div>
+
+
+                <div class="uk-grid uk-grid-small " data-uk-grid-margin>
+                    <div class="uk-width-small-1-1 uk-width-medium-1-3 uk-width-large-1-3">
+                        <ul data-uk-switcher="{connect:'#anamnes_questions'}" style="list-style-type: none;">
+
+                            <li>
+                                <a href="#" wicket:id="mainNavigation"/>
+
+                            </li>
+
+                        </ul>
+                    </div>
+
+                    <div class="uk-width-small-1-1 uk-width-medium-2-3 uk-width-large-2-3">
+
+                        <ul id="anamnes_questions" class="uk-switcher uk-margin-small-top">
+                            <table>
+                                <tr>
+                                 <td>
+                                            <li>
+                                                <ul style="overflow-y: auto;" wicket:id="Questions" class="uk-list uk-list-line listylist ">
+
+
+                                                    <li style="text-align: left;" wicket:id="mainNavigation2">
+
+                                                    </li>
+                                                </ul>
+                                            </li>
+
+
+                                   </td>
+
+                                    <td>
+                                        <li>
+                                            <ul style="overflow-y: auto;" wicket:id="Questions2" class="uk-list uk-list-line listylist">
+
+
+                                                <li style="text-align: left;" wicket:id="mainNavigation3">
+
+                                                </li>
+                                            </ul>
+                                        </li>
+
+
+                                    </td>
+                                </tr>
+                            </table>
+
+                        </ul>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+            <div class="uk-grid">
+                <div class="uk-width-9-10">
+
+                    <div class="uk-text-tiny uk-text-left">
+                        &nbsp;<i class="uk-icon-copyright"></i> Copyright: DSV, Stockholms universitet, 2014
+                    </div>
+                </div>
+                <div class="uk-width-1-10">
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="offcanvas" class="uk-offcanvas">
+        <div class="uk-offcanvas-bar">
+            <ul class="uk-nav uk-nav-offcanvas">
+                <li>
+                    <a wicket:id="choose"><i class="uk-icon-users"></i>&nbsp;&nbsp;&nbsp;Fall</a>
+                </li>
+                <li class="uk-active">
+                    <a wicket:id="info"><i class="uk-icon-file-text-o"></i>&nbsp;&nbsp;&nbsp;Info</a>
+                </li>
+                <li>
+                    <a wicket:id="mainpage"><i class="uk-icon-comments-o"></i>&nbsp;&nbsp;&nbsp;Anamnes</a>
+                </li>
+                <li>
+                    <a wicket:id="exam"><i class="uk-icon-stethoscope"></i>&nbsp;&nbsp;&nbsp;Status</a>
+                </li>
+                <li>
+                    <a wicket:id="lab"><i class="uk-icon-flask"></i>&nbsp;&nbsp;&nbsp;Lab/Bild</a>
+                </li>
+                <li>
+                    <a wicket:id="instrument"><i class="uk-icon-pencil-square-o"></i>&nbsp;&nbsp;&nbsp;Instrument</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>

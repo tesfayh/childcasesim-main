@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence
+      http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+             version="2.0">
+
+    <!-- A JPA Persistence Unit -->
+    <persistence-unit name="myFirstJpaUnit" transaction-type="RESOURCE_LOCAL">
+        <provider>org.hibernate.ejb.HibernatePersistence</provider>
+
+        <!-- JPA entities must be registered here -->
+        <class>se.su.dsv.bivsim.data.Case.dataobjects.InterviewEntity</class>
+        <class>se.su.dsv.bivsim.data.Case.dataobjects.Phq2Entity</class>
+        <class>se.su.dsv.bivsim.data.Case.dataobjects.Phq9Entity</class>
+        <class>se.su.dsv.bivsim.data.Case.dataobjects.PreExpertAssessmentEntity</class>
+        <class>se.su.dsv.bivsim.data.Case.dataobjects.ProbableDiagonosisEntity</class>
+        <class>se.su.dsv.bivsim.data.Case.dataobjects.InterviewCase2Entity</class>
+        <class>se.su.dsv.bivsim.data.Case.dataobjects.InterviewCase3Entity</class>
+        <class>se.su.dsv.bivsim.data.Case.dataobjects.AllCasesEntity</class>
+        <class>se.su.dsv.bivsim.data.Case.dataobjects.GenHealthEntity</class>
+        <class>se.su.dsv.bivsim.data.Case.dataobjects.PTSDEntity</class>
+        <class>se.su.dsv.bivsim.data.Case.dataobjects.FollowUpEntity</class>
+        <class>se.su.dsv.bivsim.data.Case.dataobjects.HistoryEntity</class>
+        <class>se.su.dsv.bivsim.data.Case.dataobjects.ExpertAssessmentEntity</class>
+        <properties>
+            <property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/bivsim?autoReconnect=true"/>
+            <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver"/>
+            <property name="hibernate.connection.username" value="bivsim"/>
+            <property name="hibernate.connection.password" value="KVQKY08q4gnoNwbORu"/>
+            <property name="hibernate.dialect"
+                      value="org.hibernate.dialect.MySQL5Dialect"/>
+
+
+
+           <!-- <property name="hibernate.connection.initialSize" value="0"/>
+            <property name="hibernate.connection.maxActive" value="20"/>
+            <property name="hibernate.connection.maxIdle" value="10"/>-->
+            <property name="testConnectionOnCheckin" value="true"/>
+            <property name="idleConnectionTestPeriod" value="14400"/>
+            <property name="preferredTestQuery" value="SELECT 1"/>
+
+            <!--<property name="hibernate.connection.poolPreparedStatements" value="true"/>
+            <property name="hibernate.connection.removeAbandoned" value="true"/>
+            <property name="hibernate.connection.removeAbandonedTimeout" value="true"/>
+            <property name="hibernate.connection.logAbandoned" value="true"/>-->
+<!--
+            <property name="hibernate.connection.autoReconnectForPools" value="true"/>
+-->
+
+
+
+            <!--
+                        <property name="idleConnectionTestPeriod" value="14400"/>
+            -->
+            <!--
+            -->
+           <!-- <property name="hibernate.connection.autocommit" value="true"/>
+            <property name="hibernate.connection.autoReconnect" value="true"/>-->
+            <!--   <property name="hibernate.show_sql" value="${hibernate.showsql}" />-->
+        </properties>
+    </persistence-unit>
+
+</persistence>
