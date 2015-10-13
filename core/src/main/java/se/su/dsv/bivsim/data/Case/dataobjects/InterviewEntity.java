@@ -19,15 +19,11 @@ public class InterviewEntity extends DomainObject implements Serializable {
     @Id
     private Long id;
 
-    @Column(name = "trust_value")
-    private Integer trustValue;
 
     @Column(name = "type_person")
     private String person;
 
 
-    @Column(name = "required")
-    private Boolean required;
 
     @Column(name = "feedback_Input")
     private String feedbackInput;
@@ -79,15 +75,6 @@ public class InterviewEntity extends DomainObject implements Serializable {
     }
 
 
-    public Integer getTrustValue() {
-        return trustValue;
-    }
-
-    public void setTrustValue(Integer trustValue) {
-        this.trustValue = trustValue;
-    }
-
-
     public String getPerson()
     {
         return person;
@@ -99,13 +86,6 @@ public class InterviewEntity extends DomainObject implements Serializable {
     }
 
 
-    public Boolean getRequired() {
-        return required;
-    }
-
-    public void setRequired(Boolean required) {
-        this.required = required;
-    }
 
 
     public String getFeedbackInput() {
@@ -178,8 +158,6 @@ public class InterviewEntity extends DomainObject implements Serializable {
         if (feedbackInput != null ? !feedbackInput.equals(that.feedbackInput) : that.feedbackInput != null)
             return false;
         if (name != null ? !name.equals(that.name) : that.name != null) return false;
-        if (required != null ? !required.equals(that.required) : that.required != null) return false;
-        if (trustValue != null ? !trustValue.equals(that.trustValue) : that.trustValue != null) return false;
 
         return true;
     }
@@ -187,8 +165,6 @@ public class InterviewEntity extends DomainObject implements Serializable {
     @Override
     public int hashCode() {
         int result = id.intValue();
-        result = 31 * result + (trustValue != null ? trustValue.hashCode() : 0);
-        result = 31 * result + (required != null ? required.hashCode() : 0);
         result = 31 * result + (feedbackInput != null ? feedbackInput.hashCode() : 0);
         result = 31 * result + (clipId != null ? clipId.hashCode() : 0);
         result = 31 * result + (name != null ? name.hashCode() : 0);
