@@ -15,8 +15,7 @@
         <class>se.su.dsv.bivsim.data.Case.dataobjects.Phq9Entity</class>
         <class>se.su.dsv.bivsim.data.Case.dataobjects.PreExpertAssessmentEntity</class>
         <class>se.su.dsv.bivsim.data.Case.dataobjects.ProbableDiagonosisEntity</class>
-        <class>se.su.dsv.bivsim.data.Case.dataobjects.InterviewCase2Entity</class>
-        <class>se.su.dsv.bivsim.data.Case.dataobjects.InterviewCase3Entity</class>
+
         <class>se.su.dsv.bivsim.data.Case.dataobjects.AllCasesEntity</class>
         <class>se.su.dsv.bivsim.data.Case.dataobjects.GenHealthEntity</class>
         <class>se.su.dsv.bivsim.data.Case.dataobjects.PTSDEntity</class>
@@ -24,7 +23,7 @@
         <class>se.su.dsv.bivsim.data.Case.dataobjects.HistoryEntity</class>
         <class>se.su.dsv.bivsim.data.Case.dataobjects.ExpertAssessmentEntity</class>
         <properties>
-            <property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/bivsim?autoReconnect=true"/>
+            <property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/bivsim"/>
             <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver"/>
             <property name="hibernate.connection.username" value="bivsim"/>
             <property name="hibernate.connection.password" value="KVQKY08q4gnoNwbORu"/>
@@ -36,9 +35,9 @@
            <!-- <property name="hibernate.connection.initialSize" value="0"/>
             <property name="hibernate.connection.maxActive" value="20"/>
             <property name="hibernate.connection.maxIdle" value="10"/>-->
-            <property name="testConnectionOnCheckin" value="true"/>
-            <property name="idleConnectionTestPeriod" value="14400"/>
-            <property name="preferredTestQuery" value="SELECT 1"/>
+            <property name="minEvictableIdleTimeMillis" value="30000"/>
+            <property name="timeBetweenEvictionRunsMillis" value="10000"/>
+            <property name="numTestsPerEviction" value="-1"/>
 
             <!--<property name="hibernate.connection.poolPreparedStatements" value="true"/>
             <property name="hibernate.connection.removeAbandoned" value="true"/>

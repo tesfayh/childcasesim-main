@@ -78,8 +78,10 @@ public class InterviewEntityDaoJPAImp extends AbstractDaoJPAImpl<InterviewEntity
     public List<InterviewEntity> findAllEntityWithOutParents(final Integer groupId, final String type) {
         List<InterviewEntity> es = getJpaTemplate().execute(new JpaCallback<List<InterviewEntity>>() {
             public List<InterviewEntity> doInJpa(EntityManager em) throws PersistenceException {
-                Query query = em.createQuery("select e from InterviewEntity e where e.groupId=:groupId", InterviewEntity.class);
+                Query query = em.createQuery("select e from InterviewEntity e where e.groupId=:groupId And e.person=:type", InterviewEntity.class);
                 query.setParameter("groupId", groupId);
+                query.setParameter("type", type);
+
                 List<InterviewEntity> results = query.getResultList();
                 return results;
             }

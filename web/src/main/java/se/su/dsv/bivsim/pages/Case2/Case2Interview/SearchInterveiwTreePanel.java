@@ -381,15 +381,6 @@ public class SearchInterveiwTreePanel extends AbstractTreePanel {
                                 }
                             }
 
-                            if (model.getObject().getTrustValue() != null) {
-                                getSession().setAttribute("trustValue", (Integer) getSession().getAttribute("trustValue") + model.getObject().getTrustValue());
-                                if (model.getObject().getTrustValue() < 0)
-
-                                    getSession().setAttribute("negativeTrustValue", (Integer) getSession().getAttribute("negativeTrustValue") + model.getObject().getTrustValue());
-                                else if (model.getObject().getTrustValue() > 0)
-                                    getSession().setAttribute("positiveTrustValue", (Integer) getSession().getAttribute("positiveTrustValue") + model.getObject().getTrustValue());
-
-                            }
 
                         }
 
@@ -743,15 +734,6 @@ public class SearchInterveiwTreePanel extends AbstractTreePanel {
                             }
                         }
 
-                        if (model.getObject().getTrustValue() != null) {
-                            getSession().setAttribute("trustValue", (Integer) getSession().getAttribute("trustValue") + model.getObject().getTrustValue());
-                            if (model.getObject().getTrustValue() < 0)
-
-                                getSession().setAttribute("negativeTrustValue", (Integer) getSession().getAttribute("negativeTrustValue") + model.getObject().getTrustValue());
-                            else if (model.getObject().getTrustValue() > 0)
-                                getSession().setAttribute("positiveTrustValue", (Integer) getSession().getAttribute("positiveTrustValue") + model.getObject().getTrustValue());
-
-                        }
 
 
                     }

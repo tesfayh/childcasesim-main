@@ -15,9 +15,9 @@ public class VirtualAdviserFeedBackPage3 extends BaseFeedbackPage {
         if ((Integer) getSession().getAttribute("exPhysical") != null) {
 
             if ((Integer) getSession().getAttribute("exPhysical") >= 2)
-                Fysiskundersökning = Fysiskundersökning + v.adviser_feedback_selected[8] + " ";
+                Fysiskundersökning = Fysiskundersökning + v.adviser_feedback_selected[11] + " ";
             if ((Integer) getSession().getAttribute("exPhysical") < 1)
-                Fysiskundersökning = Fysiskundersökning + v.adviser_feedback_selected[19] + " ";
+                Fysiskundersökning = Fysiskundersökning + v.adviser_feedback_selected[22] + " ";
         }
 
         add(new Label("Fysiskundersökning", Fysiskundersökning));
@@ -25,9 +25,9 @@ public class VirtualAdviserFeedBackPage3 extends BaseFeedbackPage {
         String Lab = "";
         if ((Integer) getSession().getAttribute("exLab") != null) {
             if ((Integer) getSession().getAttribute("exLab") < 1)
-                Lab = Lab + v.adviser_feedback_selected[9] + " ";
+                Lab = Lab + v.adviser_feedback_selected[12] + " ";
             if ((Integer) getSession().getAttribute("exLab") >= 1)
-                Lab = Lab + v.adviser_feedback_selected[20] + " ";
+                Lab = Lab + v.adviser_feedback_selected[23] + " ";
         }
         add(new Label("Lab", Lab));
 
@@ -37,9 +37,9 @@ public class VirtualAdviserFeedBackPage3 extends BaseFeedbackPage {
         String Instrument = "";
         if ((Integer) getSession().getAttribute("exInstrument") != null) {
             if ((Integer) getSession().getAttribute("exInstrument") >= 0)
-                Instrument = Instrument + v.adviser_feedback_selected[10] + " ";
+                Instrument = Instrument + v.adviser_feedback_selected[13] + " ";
             if ((Integer) getSession().getAttribute("exInstrument") < 0)
-                Instrument = Instrument + v.adviser_feedback_selected[21] + " ";
+                Instrument = Instrument + v.adviser_feedback_selected[24] + " ";
         }
         add(new Label("Instrument", Instrument));
 

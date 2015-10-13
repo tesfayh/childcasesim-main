@@ -21,7 +21,7 @@
         enable the configuration of transactional behavior based on
         annotations
     -->
-    <context:component-scan base-package="se.su.dsv.childcasesim.data"/>
+    <context:component-scan base-package="se.su.dsv.bivsim.data.Case"/>
 
     <tx:annotation-driven transaction-manager="transactionManager"/>
 
@@ -65,9 +65,7 @@
         <property name="entityManagerFactory" ref="entityManagerFactory"/>
     </bean>
 
-    <bean id="interviewCase2EntityDao" class="se.su.dsv.bivsim.data.Case.dao.jpa.InterviewCase2EntityDaoJPAImpl">
-        <property name="entityManagerFactory" ref="entityManagerFactory"/>
-    </bean>
+
 
     <bean id="AllCasesEntityDao" class="se.su.dsv.bivsim.data.Case.dao.jpa.AllCasesEntityDaoJPAImpl">
         <property name="entityManagerFactory" ref="entityManagerFactory"/>
@@ -91,17 +89,7 @@
         <property name="entityManagerFactory" ref="entityManagerFactory"/>
     </bean>
 
-    <bean id="interviewCase3EntityDao" class="se.su.dsv.bivsim.data.Case.dao.jpa.InterviewCase3EntityDaoJPAImpl">
-        <property name="entityManagerFactory" ref="entityManagerFactory"/>
-    </bean>
-    <bean id="interviewCase4EntityDao" class="se.su.dsv.bivsim.data.Case.dao.jpa.InterviewCase4EntityDaoJPAImpl">
-        <property name="entityManagerFactory" ref="entityManagerFactory"/>
-    </bean>
-    <bean id="interviewCase5EntityDao" class="se.su.dsv.bivsim.data.Case.dao.jpa.InterviewCase5EntityDaoJPAImpl">
-        <property name="entityManagerFactory" ref="entityManagerFactory"/>
-    </bean>
-
-    <bean id="HistoryEntityDao" class="se.su.dsv.bivsim.data.Case.dao.jpa.HistoryEntityDaoJPAImpl">
+     <bean id="HistoryEntityDao" class="se.su.dsv.bivsim.data.Case.dao.jpa.HistoryEntityDaoJPAImpl">
         <property name="entityManagerFactory" ref="entityManagerFactory"/>
     </bean>
 

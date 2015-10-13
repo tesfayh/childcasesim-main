@@ -382,7 +382,7 @@ public class InterviewTreePanel extends AbstractTreePanel {
                                 }
                             }
 
-                            if (model.getObject().getTrustValue() != null) {
+                          /*  if (model.getObject().getTrustValue() != null) {
                                 getSession().setAttribute("trustValue", (Integer) getSession().getAttribute("trustValue") + model.getObject().getTrustValue());
                                 if (model.getObject().getTrustValue() < 0)
 
@@ -392,7 +392,7 @@ public class InterviewTreePanel extends AbstractTreePanel {
 
                             }
 
-
+*/
                         }
 
                     };
@@ -745,7 +745,7 @@ public class InterviewTreePanel extends AbstractTreePanel {
                             }
                         }
 
-                        if (model.getObject().getTrustValue() != null) {
+                        /*if (model.getObject().getTrustValue() != null) {
                             getSession().setAttribute("trustValue", (Integer) getSession().getAttribute("trustValue") + model.getObject().getTrustValue());
                             if (model.getObject().getTrustValue() < 0)
 
@@ -753,7 +753,7 @@ public class InterviewTreePanel extends AbstractTreePanel {
                             else if (model.getObject().getTrustValue() > 0)
                                 getSession().setAttribute("positiveTrustValue", (Integer) getSession().getAttribute("positiveTrustValue") + model.getObject().getTrustValue());
 
-                        }
+                        }*/
 
 
                     }

@@ -38,14 +38,14 @@ public class InterviewTreePanel extends AbstractTreePanel {
                         public void clicked(AjaxRequestTarget target) {
 
                             ContentPanel panel;
-                            if (model.getObject().getClipId() != null && model.getObject().getPatientAnswer() != null && !model.getObject().getClipId().contains("pic")) {
+                            if (model.getObject().getClipId() != null && !model.getObject().getClipId().contains("pic")) {
                                 panel = new VideoPanel("content", model.getObject().getPatientAnswer(), model.getObject().getClipId());
                                 getSession().setAttribute("Antalfrågor", (Integer) getSession().getAttribute("Antalfrågor") + 1);
 
                                 //  getSession().setAttribute("Number_of_questions_asked", (Integer) getSession().getAttribute("Number_of_questions_asked") + 1);
                                 getSession().setAttribute("Interview", getSession().getAttribute("Interview") + "Q:" + model.getObject().getName() + "--Ans:" + model.getObject().getPatientAnswer() + "#");
 
-                            } else if (model.getObject().getClipId() != null && model.getObject().getPatientAnswer() != null && model.getObject().getClipId().contains("pic"))
+                            } else if (model.getObject().getClipId() != null && model.getObject().getClipId().contains("pic"))
                                 panel = new InterviewPicturePanel("content", model.getObject().getPatientAnswer(), model.getObject().getClipId());
 
                                 //panel = new ContentPanel("content", "Please select a Question!");
@@ -382,7 +382,7 @@ public class InterviewTreePanel extends AbstractTreePanel {
 
                                 }
                             }
-
+/*
                             if (model.getObject().getTrustValue() != null) {
                                 getSession().setAttribute("trustValue", (Integer) getSession().getAttribute("trustValue") + model.getObject().getTrustValue());
                                 if (model.getObject().getTrustValue() < 0)
@@ -391,7 +391,7 @@ public class InterviewTreePanel extends AbstractTreePanel {
                                 else if (model.getObject().getTrustValue() > 0)
                                     getSession().setAttribute("positiveTrustValue", (Integer) getSession().getAttribute("positiveTrustValue") + model.getObject().getTrustValue());
 
-                            }
+                            }*/
 
 
                         }
@@ -402,7 +402,7 @@ public class InterviewTreePanel extends AbstractTreePanel {
                     public void clicked(AjaxRequestTarget target) {
 
                         ContentPanel panel;
-                        if (model.getObject().getClipId() != null && model.getObject().getPatientAnswer() != null && !model.getObject().getClipId().contains("pic")) {
+                        if (model.getObject().getClipId() != null && !model.getObject().getClipId().contains("pic")) {
                             panel = new VideoPanel("content", model.getObject().getPatientAnswer(), model.getObject().getClipId());
                             getSession().setAttribute("Antalfrågor", (Integer) getSession().getAttribute("Antalfrågor") + 1);
                             //getSession().setAttribute("Number_of_questions_asked", (Integer) getSession().getAttribute("Number_of_questions_asked") + 1);
@@ -410,7 +410,7 @@ public class InterviewTreePanel extends AbstractTreePanel {
                             getSession().setAttribute("Sub_questions", (Integer) getSession().getAttribute("Sub_questions") + 1);
                             getSession().setAttribute("Interview", getSession().getAttribute("Interview") + "Q:" + model.getObject().getName() + "--Ans:" + model.getObject().getPatientAnswer() + "#");
 
-                        } else if (model.getObject().getClipId() != null && model.getObject().getPatientAnswer() != null && model.getObject().getClipId().contains("pic"))
+                        } else if (model.getObject().getClipId() != null && model.getObject().getClipId().contains("pic"))
                             //panel = new ContentPanel("content", "Please select a Question!");
                             panel = new InterviewPicturePanel("content", model.getObject().getPatientAnswer(), model.getObject().getClipId());
                         else
@@ -746,7 +746,7 @@ public class InterviewTreePanel extends AbstractTreePanel {
                             }
                         }
 
-                        if (model.getObject().getTrustValue() != null) {
+                       /* if (model.getObject().getTrustValue() != null) {
                             getSession().setAttribute("trustValue", (Integer) getSession().getAttribute("trustValue") + model.getObject().getTrustValue());
                             if (model.getObject().getTrustValue() < 0)
 
@@ -754,7 +754,7 @@ public class InterviewTreePanel extends AbstractTreePanel {
                             else if (model.getObject().getTrustValue() > 0)
                                 getSession().setAttribute("positiveTrustValue", (Integer) getSession().getAttribute("positiveTrustValue") + model.getObject().getTrustValue());
 
-                        }
+                        }*/
 
 
                     }

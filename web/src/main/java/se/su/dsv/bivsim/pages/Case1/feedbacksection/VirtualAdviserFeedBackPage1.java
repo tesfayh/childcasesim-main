@@ -51,45 +51,40 @@ public class VirtualAdviserFeedBackPage1 extends BaseFeedbackPage {
                         (Integer) getSession().getAttribute("exRespekt");
 
 
-        if ((Integer) getSession().getAttribute("positiveTrustValue") != null || (Integer) getSession().getAttribute("negativeTrustValue") != null) {
 
             if (totalTrustValue > 0) {
-                show_feedback = "Du verkar ha en god kompetens i att hantera denna typ av fall. Generellt sett gjorde du ett bra arbete. Det sätt som du genomförde samtalet med patienten var bra och effektivt. ";
+                show_feedback =  adviser_feedback_selected[0];
                 add(new Label("adviser", show_feedback));
             } else if (totalTrustValue == 0) {
-                show_feedback = "Du verkar ha en relativt bra förståelse för denna typ av fall. Generellt sett gjorde du ett någorlunda bra arbete, men vissa saker behöver förbättras. \n\n";
+                show_feedback =  adviser_feedback_selected[1];
                 add(new Label("adviser", show_feedback));
             } else {
-                show_feedback = "Mötet med dig kändes inte alls bra";
+                show_feedback =  adviser_feedback_selected[2];
                 add(new Label("adviser", show_feedback));
             }
-        } else {
-            show_feedback = "Du verkar tyvärr ha en relativt dålig kompetens i att hantera denna typ av fall. Generellt sett gjorde du inte så bra arbete. Det sätt som du genomförde samtalet med patienten var inte heller så bra. ";
-            add(new Label("adviser", show_feedback));
 
-        }
 
 
         String Anamnesen = "";
         if ((Integer) getSession().getAttribute("exSpegling") != null) {
 
             if ((Integer) getSession().getAttribute("exSpegling") >= -2)
-                Anamnesen = Anamnesen + adviser_feedback_selected[0] + " ";
+                Anamnesen = Anamnesen + adviser_feedback_selected[3] + " ";
             if ((Integer) getSession().getAttribute("exSpegling") < -2)
-                Anamnesen = Anamnesen + adviser_feedback_selected[11] + " ";
+                Anamnesen = Anamnesen + adviser_feedback_selected[14] + " ";
         }
 
         if ((Integer) getSession().getAttribute("exÖppnafrågor") != null) {
             if ((Integer) getSession().getAttribute("exÖppnafrågor") >= 2)
-                Anamnesen = Anamnesen + adviser_feedback_selected[1] + " ";
+                Anamnesen = Anamnesen + adviser_feedback_selected[4] + " ";
             if ((Integer) getSession().getAttribute("exÖppnafrågor") < 2)
-                Anamnesen = Anamnesen + adviser_feedback_selected[12] + " ";
+                Anamnesen = Anamnesen + adviser_feedback_selected[15] + " ";
         }
         if ((Integer) getSession().getAttribute("exEgenbedömning") != null) {
             if ((Integer) getSession().getAttribute("exEgenbedömning") >= 0)
-                Anamnesen = Anamnesen + adviser_feedback_selected[2] + " ";
+                Anamnesen = Anamnesen + adviser_feedback_selected[5] + " ";
             if ((Integer) getSession().getAttribute("exEgenbedömning") < -3)
-                Anamnesen = Anamnesen + adviser_feedback_selected[13] + " ";
+                Anamnesen = Anamnesen + adviser_feedback_selected[16] + " ";
         }
         add(new Label("Anamnesen", Anamnesen));
 
@@ -98,9 +93,9 @@ public class VirtualAdviserFeedBackPage1 extends BaseFeedbackPage {
         if ((Integer) getSession().getAttribute("exSocialt") != null) {
 
             if ((Integer) getSession().getAttribute("exSocialt") >= 5)
-                Socialt = Socialt + adviser_feedback_selected[3] + " ";
+                Socialt = Socialt + adviser_feedback_selected[6] + " ";
             if ((Integer) getSession().getAttribute("exSocialt") < 5)
-                Socialt = Socialt + adviser_feedback_selected[14] + " ";
+                Socialt = Socialt + adviser_feedback_selected[17] + " ";
         }
         add(new Label("Socialt", Socialt));
 

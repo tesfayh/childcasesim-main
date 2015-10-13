@@ -128,7 +128,9 @@ public class ChooseCase extends WebPage {
             public void onClick(AjaxRequestTarget target) {
 
                 // setResponsePage(CommonEditingPage.class);
+/*
                 setResponsePage(InfoCase2Page.class);
+*/
 
             }
 
@@ -142,7 +144,7 @@ public class ChooseCase extends WebPage {
 
                 // setResponsePage(CommonEditingPage.class);
 
-                setResponsePage(InfoCase3Page.class);
+//                setResponsePage(InfoCase3Page.class);
 
 
             }

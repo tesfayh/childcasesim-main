@@ -24,16 +24,16 @@ public class VirtualAdviserFeedBackPage2 extends BaseFeedbackPage {
         if ((Integer) getSession().getAttribute("exFunktionsnivå") != null) {
 
             if ((Integer) getSession().getAttribute("exFunktionsnivå") >= 2)
-                Funktion = Funktion + v.adviser_feedback_selected[4] + " ";
+                Funktion = Funktion + v.adviser_feedback_selected[7] + " ";
             if ((Integer) getSession().getAttribute("exFunktionsnivå") < 1)
-                Funktion = Funktion + v.adviser_feedback_selected[15] + " ";
+                Funktion = Funktion + v.adviser_feedback_selected[18] + " ";
         }
 
         if ((Integer) getSession().getAttribute("exBarn") != null) {
             if ((Integer) getSession().getAttribute("exBarn") >= 5)
-                Funktion = Funktion + v.adviser_feedback_selected[5] + " ";
+                Funktion = Funktion + v.adviser_feedback_selected[8] + " ";
             if ((Integer) getSession().getAttribute("exBarn") < 3)
-                Funktion = Funktion + v.adviser_feedback_selected[16] + " ";
+                Funktion = Funktion + v.adviser_feedback_selected[19] + " ";
         }
         add(new Label("Funktion", Funktion));
 
@@ -41,9 +41,9 @@ public class VirtualAdviserFeedBackPage2 extends BaseFeedbackPage {
         if ((Integer) getSession().getAttribute("exMotivation") != null) {
 
             if ((Integer) getSession().getAttribute("exMotivation") >= 0)
-                Motivation = Motivation + v.adviser_feedback_selected[6] + " ";
+                Motivation = Motivation + v.adviser_feedback_selected[9] + " ";
             if ((Integer) getSession().getAttribute("exMotivation") < 0)
-                Motivation = Motivation + v.adviser_feedback_selected[17] + " ";
+                Motivation = Motivation + v.adviser_feedback_selected[20] + " ";
         }
         add(new Label("Motivation", Motivation));
 
@@ -52,9 +52,9 @@ public class VirtualAdviserFeedBackPage2 extends BaseFeedbackPage {
         if ((Integer) getSession().getAttribute("Antalfrågor") != null) {
 
             if ((Integer) getSession().getAttribute("Antalfrågor") < 45)
-                Antalfrågor = Antalfrågor + v.adviser_feedback_selected[7] + " ";
+                Antalfrågor = Antalfrågor + v.adviser_feedback_selected[10] + " ";
             if ((Integer) getSession().getAttribute("Antalfrågor") > 45)
-                Antalfrågor = Antalfrågor + v.adviser_feedback_selected[18] + " ";
+                Antalfrågor = Antalfrågor + v.adviser_feedback_selected[21] + " ";
         }
         add(new Label("Antalfrågor", Antalfrågor));
 

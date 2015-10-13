@@ -14,25 +14,22 @@ public class FeedbackEntity extends DomainObject implements Serializable {
     @Column(name = "feedback_ID")
     @Id
     public long feedbackId;
-
-
-    @Column(name = "feedback_Value2")
-    public String feedbackValue2;
-
-
     @Column(name = "feedback_Value1")
     public String feedbackValue1;
 
     @Column(name = "patient_Feedback")
     public String patientFeedback;
-    @Column(name = "feedback_Value3")
-    public String feedbackValue3;
+
 
     @Column(name = "clip_ID")
     public String clipId;
 
+    @Column(name = "person")
+    public String person;
+
     @Column(name = "groupId")
     public Integer groupId;
+
 
     public Integer getGroupId() {
         return groupId;
@@ -69,6 +66,15 @@ public class FeedbackEntity extends DomainObject implements Serializable {
     }
 
 
+    public String getPerson() {
+        return person;
+    }
+
+    public void setPerson(String person) {
+        this.person = person;
+    }
+
+
     public String getPatientFeedback() {
         return patientFeedback;
     }
@@ -77,23 +83,6 @@ public class FeedbackEntity extends DomainObject implements Serializable {
         this.patientFeedback = patientFeedback;
     }
 
-
-    public String getFeedbackValue2() {
-        return feedbackValue2;
-    }
-
-    public void setFeedbackValue2(String feedbackValue2) {
-        this.feedbackValue2 = feedbackValue2;
-    }
-
-
-    public String getFeedbackValue3() {
-        return feedbackValue3;
-    }
-
-    public void setFeedbackValue3(String feedbackValue3) {
-        this.feedbackValue3 = feedbackValue3;
-    }
 
     @Override
     public boolean equals(Object o) {
@@ -104,11 +93,7 @@ public class FeedbackEntity extends DomainObject implements Serializable {
 
         if (feedbackId != that.feedbackId) return false;
         if (feedbackValue1 != null ? !feedbackValue1.equals(that.feedbackValue1) : that.feedbackValue1 != null)
-            return false;
-        if (feedbackValue2 != null ? !feedbackValue2.equals(that.feedbackValue2) : that.feedbackValue2 != null)
-            return false;
-        if (feedbackValue3 != null ? !feedbackValue3.equals(that.feedbackValue3) : that.feedbackValue3 != null)
-            return false;
+
         if (patientFeedback != null ? !patientFeedback.equals(that.patientFeedback) : that.patientFeedback != null)
             return false;
 
@@ -120,8 +105,7 @@ public class FeedbackEntity extends DomainObject implements Serializable {
         int result = (int) feedbackId;
         result = 31 * result + (feedbackValue1 != null ? feedbackValue1.hashCode() : 0);
         result = 31 * result + (patientFeedback != null ? patientFeedback.hashCode() : 0);
-        result = 31 * result + (feedbackValue2 != null ? feedbackValue2.hashCode() : 0);
-        result = 31 * result + (feedbackValue3 != null ? feedbackValue3.hashCode() : 0);
+
         return result;
     }
 }

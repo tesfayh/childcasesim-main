@@ -79,6 +79,24 @@ public class FeedbackEntityDaoJPAImp extends AbstractDaoJPAImpl<FeedbackEntity> 
     }
 
 
+
+    @Transactional
+    public List<FeedbackEntity> findAllByGroupIdAndPerson(final Integer groupId, final String person) {
+        return getJpaTemplate().execute(new JpaCallback<List<FeedbackEntity>>() {
+            public List<FeedbackEntity> doInJpa(EntityManager em) throws PersistenceException {
+                TypedQuery<FeedbackEntity> query = em.createQuery("select e from FeedbackEntity e where e.groupId=:groupId", FeedbackEntity.class);
+                query.setParameter("groupId", groupId);
+                return query.getResultList();
+
+            }
+        });
+
+    }
+
+
+
+
 }
+
 
 

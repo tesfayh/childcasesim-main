@@ -43,7 +43,7 @@ public class HeaderPanel extends Panel {
             public void onClick(AjaxRequestTarget target) {
                 ((BasePage) getPage()).getContentW().replace(new InterviewTreePanel("mainNavigation2", 1, "m"));
                 target.add(((BasePage) getPage()).getContentW());
-              ((BasePage) getPage()).getContentWChild().replace(new ChildInterviewfTreePanel("mainNavigation3", 1, "m"));
+              ((BasePage) getPage()).getContentWChild().replace(new ChildInterviewfTreePanel("mainNavigation3", 9, "c"));
                 target.add(((BasePage) getPage()).getContentWChild());
             }
         };
@@ -57,83 +57,97 @@ public class HeaderPanel extends Panel {
 
                 ((BasePage) getPage()).getContentW().replace(new InterviewTreePanel("mainNavigation2", 2, "m"));
                 target.add(((BasePage) getPage()).getContentW());
+                ((BasePage) getPage()).getContentWChild().replace(new ChildInterviewfTreePanel("mainNavigation3", 10, "c"));
+                target.add(((BasePage) getPage()).getContentWChild());
 
             }
 
         };
         this.add(physicalExam);
 
-        Link labsImaging = new AjaxFallbackLink("Tidigare") {
+        Link Grundl = new AjaxFallbackLink("Grundl") {
 
             @Override
             public void onClick(AjaxRequestTarget target) {
 
                 ((BasePage) getPage()).getContentW().replace(new InterviewTreePanel("mainNavigation2", 3, "m"));
                 target.add(((BasePage) getPage()).getContentW());
+                ((BasePage) getPage()).getContentWChild().replace(new ChildInterviewfTreePanel("mainNavigation3", 11, "c"));
+                target.add(((BasePage) getPage()).getContentWChild());
 
 
             }
         };
-        this.add(labsImaging);
+        this.add(Grundl);
 
-        Link screeingInstruments = new AjaxFallbackLink("Socialt") {
+        Link Utveckling = new AjaxFallbackLink("Utveckling") {
 
             @Override
             public void onClick(AjaxRequestTarget target) {
                 ((BasePage) getPage()).getContentW().replace(new InterviewTreePanel("mainNavigation2", 4, "m"));
                 target.add(((BasePage) getPage()).getContentW());
+                ((BasePage) getPage()).getContentWChild().replace(new ChildInterviewfTreePanel("mainNavigation3", 12, "c"));
+                target.add(((BasePage) getPage()).getContentWChild());
 
 
             }
         };
-        this.add(screeingInstruments);
+        this.add(Utveckling);
 
-        Link Hereditet = new AjaxFallbackLink("Hereditet") {
+        Link Socialt = new AjaxFallbackLink("Socialt") {
 
             @Override
             public void onClick(AjaxRequestTarget target) {
 
                 ((BasePage) getPage()).getContentW().replace(new InterviewTreePanel("mainNavigation2", 5, "m"));
                 target.add(((BasePage) getPage()).getContentW());
+                ((BasePage) getPage()).getContentWChild().replace(new ChildInterviewfTreePanel("mainNavigation3", 13, "c"));
+                target.add(((BasePage) getPage()).getContentWChild());
 
             }
         };
-        this.add(Hereditet);
-        Link Allergier = new AjaxFallbackLink("Allergier") {
+        this.add(Socialt);
+        Link Hereditet = new AjaxFallbackLink("Hereditet") {
 
             @Override
             public void onClick(AjaxRequestTarget target) {
 
-                ((BasePage) getPage()).getContentW().replace(new InterviewTreePanel("mainNavigation2", 8, "m"));
+                ((BasePage) getPage()).getContentW().replace(new InterviewTreePanel("mainNavigation2", 6, "m"));
                 target.add(((BasePage) getPage()).getContentW());
+                ((BasePage) getPage()).getContentWChild().replace(new ChildInterviewfTreePanel("mainNavigation3", 14, "c"));
+                target.add(((BasePage) getPage()).getContentWChild());
 
             }
         };
-        this.add(Allergier);
+        this.add(Hereditet);
 
-        Link Medicinering = new AjaxFallbackLink("Medicinering") {
+        Link Systemkartläggning = new AjaxFallbackLink("Systemkartläggning") {
 
             @Override
             public void onClick(AjaxRequestTarget target) {
 
                 ((BasePage) getPage()).getContentW().replace(new InterviewTreePanel("mainNavigation2", 7, "m"));
                 target.add(((BasePage) getPage()).getContentW());
+                ((BasePage) getPage()).getContentWChild().replace(new ChildInterviewfTreePanel("mainNavigation3", 15, "c"));
+                target.add(((BasePage) getPage()).getContentWChild());
 
             }
         };
-        this.add(Medicinering);
+        this.add(Systemkartläggning);
 
-        Link Levnadsvanor = new AjaxFallbackLink("Levnadsvanor") {
+        Link Gemensamt = new AjaxFallbackLink("Gemensamt") {
 
             @Override
             public void onClick(AjaxRequestTarget target) {
 
-                ((BasePage) getPage()).getContentW().replace(new InterviewTreePanel("mainNavigation2", 9, "m"));
+                ((BasePage) getPage()).getContentW().replace(new InterviewTreePanel("mainNavigation2", 8, "m"));
                 target.add(((BasePage) getPage()).getContentW());
+                ((BasePage) getPage()).getContentWChild().replace(new ChildInterviewfTreePanel("mainNavigation3", 15, "c"));
+                target.add(((BasePage) getPage()).getContentWChild());
 
             }
         };
-        this.add(Levnadsvanor);
+        this.add(Gemensamt);
 
 
 /*
