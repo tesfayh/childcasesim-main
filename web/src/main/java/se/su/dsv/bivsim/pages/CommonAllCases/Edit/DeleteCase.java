@@ -8,9 +8,9 @@ import org.apache.wicket.markup.html.list.ListItem;
 import org.apache.wicket.markup.html.list.ListView;
 import org.apache.wicket.markup.html.panel.FeedbackPanel;
 import org.apache.wicket.spring.injection.annot.SpringBean;
-import se.su.dsv.bivsim.data.Case.dao.interfaces.AllCasesEntityDao;
-import se.su.dsv.bivsim.data.Case.dataobjects.AllCasesEntity;
-import se.su.dsv.bivsim.pages.CommonAllCases.Edit.BaseClasses.CommonEditingPage;
+import se.su.dsv.childcasesim.data.Case.dao.interfaces.AllCasesEntityDao;
+import se.su.dsv.childcasesim.data.Case.dataobjects.AllCasesEntity;
+import se.su.dsv.childcasesim.pages.CommonAllCases.Edit.BaseClasses.CommonEditingPage;
 
 import java.util.List;
 

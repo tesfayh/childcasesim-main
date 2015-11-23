@@ -4,10 +4,10 @@ import org.apache.wicket.markup.html.form.*;
 import org.apache.wicket.markup.html.panel.FeedbackPanel;
 import org.apache.wicket.model.PropertyModel;
 import org.apache.wicket.spring.injection.annot.SpringBean;
-import se.su.dsv.bivsim.data.Case.dao.interfaces.AdminsEntityDao;
-import se.su.dsv.bivsim.data.Case.dataobjects.AdminsEntity;
-import se.su.dsv.bivsim.pages.Case1.EditingPages.Common.MailClient;
-import se.su.dsv.bivsim.pages.CommonAllCases.Edit.BaseClasses.CommonEditingPage;
+import se.su.dsv.childcasesim.data.Case.dao.interfaces.AdminsEntityDao;
+import se.su.dsv.childcasesim.data.Case.dataobjects.AdminsEntity;
+import se.su.dsv.childcasesim.pages.Case1.EditingPages.Common.MailClient;
+import se.su.dsv.childcasesim.pages.CommonAllCases.Edit.BaseClasses.CommonEditingPage;
 
 import java.security.SecureRandom;
 import java.util.Arrays;

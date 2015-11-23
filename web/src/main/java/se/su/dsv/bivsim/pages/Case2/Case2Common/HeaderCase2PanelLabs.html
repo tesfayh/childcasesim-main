@@ -1,40 +1,32 @@
-<?xml version="1.0" encoding="UTF-8"?>>
-<html xmlns:wicket="http://wicket.apache.org">
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon"/>
-    <link rel="apple-touch-icon-precomposed" href="images/apple-touch-icon.png"/>
-    <link rel="stylesheet" href="css4/uikit.gradient.min.css"/>
-    <link rel="stylesheet" href="css4/hermes.css"/>
-    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-    <script src="js/jquery-1.11.1.min.js"></script>
-    <script src="js/uikit.min.js"></script>
-</head>
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.3-strict.dtd" lang="en-gb" dir="ltr"
+      class="uk-height-1-1">
 <body>
 <wicket:panel>
-    <ul class="uk-nav uk-nav-side uk-margin-small-top" data-uk-switcher="{connect:'#anamnes_questions'}">
+    <ul class="uk-nav">
         <li><a class="" href="#" wicket:id="KlinKemi">Klin Kemi </a>
         </li>
-        <div wicket:id="wmc">
-            <div wicket:id="test"></div>
+        <div wicket:id="QuestionContainer1" class="subCat">
+            <div wicket:id="subQuestion1">
+            </div>
         </div>
-        <li><a class="" href="#" wicket:id="Mikrobiologi">Mikrobiologi</a>
+        <li><a class="" href="#" wicket:id="Mikrobiologi">Mikrobiologi </a>
         </li>
-        <div wicket:id="wmc2">
-            <div wicket:id="test2"></div>
+        <div wicket:id="QuestionContainer2" class="subCat">
+            <div wicket:id="subQuestion2">
+            </div>
         </div>
         <li><a class="" href="#" wicket:id="Fysiologi">Fysiologi
         </a></li>
-        <div wicket:id="wmc3">
-            <div wicket:id="test3"></div>
+        <div wicket:id="QuestionContainer3" class="subCat">
+            <div wicket:id="subQuestion3">
+            </div>
         </div>
         <li><a class="" href="#" wicket:id="Bild/Rtg">Bild/Rtg</a></li>
-        <div wicket:id="wmc4">
-            <div wicket:id="test4"></div>
-        </div>
 
-        <div wicket:id="wmc5" style="position: fixed; bottom: 150px; text-align: center">
-            <div wicket:id="test5"></div>
+        <div wicket:id="QuestionContainer4" class="subCat">
+            <div wicket:id="subQuestion4">
+            </div>
         </div>
     </ul>
 </wicket:panel>

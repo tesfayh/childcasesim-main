@@ -1,0 +1,214 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.3-strict.dtd">
+<head>
+    <link rel="stylesheet" type="text/css" href="css4/hermes.css"/>
+</head>
+<body>
+<wicket:panel>
+        <div class="skattHeadline_3">
+            <table width="15em">
+                <tr>
+                    <td class="tdFeedbackHeadline">DUDIT</td>
+                </tr>
+            </table>
+        </div>
+
+
+        <div class="skattningsskalor">
+
+            <form wicket:id="form">
+
+                <div class="uk-width-1-1">
+
+                    <div class="uk-overflow-container">
+                        <table class="uk-table uk-table-condensed uk-table-striped" style="text-align: left;">
+
+
+
+                            <tbody>
+
+                            <div class="uk-form-row">
+                                <div class="uk-form-controls">
+
+                                    <tr>
+                                        <td ></td>
+                                        <td colspan="5" ><b>Din bedömning</b></td>
+                                        <td colspan="5" id="colunmcolor"><b>Experterna bedömning</b></td>
+                                    </tr>
+
+                                </div>
+                            </div>
+
+                            <div class="uk-form-row">
+                                <div class="uk-form-controls">
+                                    <tr wicket:id="interviews1">
+                                        <td id="radio-bel"><p wicket:id="name1"></p>
+                                        </td>
+                            <span wicket:id="radioGroup1">
+                                <td>
+                                    Aldrig
+                                    <p><input type="radio" wicket:id="radio1"/></p>
+                                </td>
+                                <td>
+                                    1 gång i månaden eller mer sällan
+                                    <p><input type="radio" wicket:id="radio2"/></p>
+                                </td>
+
+                                <td>
+                                    2-4 gånger i månaden
+                                    <p><input type="radio" wicket:id="radio3"/></p>
+                                </td>
+
+                                 <td>
+                                     2-3 gånger i veckan
+                                     <p><input type="radio" wicket:id="radio4"/></p>
+                                 </td>
+                                <td>
+                                    4 gånger/vecka eller mer
+                                    <p><input type="radio" wicket:id="radio5"/></p>
+                                </td>
+                            </span>
+
+                              <span wicket:id="exRadioGroup1">
+                                <td class="radio-color">
+                                    Aldrig
+                                    <p><input type="radio" wicket:id="exradio1"/></p>
+                                </td>
+                                <td class="radio-color">
+                                    1 gång i månaden eller mer sällan
+                                    <p><input type="radio" wicket:id="exradio2"/></p>
+                                </td>
+                                  <td class="radio-color">
+                                      2-4 gånger i månaden
+                                      <p><input type="radio" wicket:id="exradio3"/></p>
+                                  </td>
+                                <td class="radio-color">
+                                    2-3 gånger i veckan
+                                    <p><input type="radio" wicket:id="exradio4"/></p>
+                                </td>
+                                <td colspan="2" class="radio-color">
+                                    4 gånger/vecka eller mer
+                                    <p><input type="radio"
+                                              wicket:id="exradio5"/></p>
+
+                                </td>
+                            </span>
+                                    </tr>
+
+
+                                    <tr wicket:id="interviews2">
+                                        <td id="radio-bel"><p wicket:id="name2"></p></td>
+                            <span wicket:id="radioGroup2">
+                                <td>
+                                    0
+                                    <p><input type="radio" wicket:id="radio1"/></p>
+                                </td>
+                                <td>
+                                    1-2
+                                    <p><input type="radio" wicket:id="radio2"/></p>
+                                </td>
+                                <td>
+                                    3-4
+                                    <p><input type="radio" wicket:id="radio3"/></p>
+                                </td>
+                                <td>
+                                    5-6
+                                    <p><input type="radio" wicket:id="radio4"/></p>
+                                </td>
+                                <td>
+                                    7 eller fler
+                                    <p><input type="radio" wicket:id="radio5"/></p>
+                                </td>
+
+                            </span>
+                            <span wicket:id="exRadioGroup2">
+                                <td class="radio-color">
+                                    0
+                                    <p><input type="radio" wicket:id="exradio1"/></p>
+
+                                </td>
+                                <td class="radio-color">1-2<p><input type="radio" wicket:id="exradio2"/>
+                                </p></td>
+                                <td class="radio-color">3-4<p><input type="radio" wicket:id="exradio3"/>
+                                </p></td>
+                                 <td class="radio-color">5-6<p><input type="radio" wicket:id="exradio4"/>
+                                 </p></td>
+                                <td class="radio-color">7 eller fler<p><input type="radio"
+                                                                                           wicket:id="exradio5"/></p>
+                                </td>
+
+                            </span>
+                                    </tr>
+
+
+                                    <tr wicket:id="interviews3">
+                                        <td id="radio-bel"><p wicket:id="name3"></p></td>
+                            <span wicket:id="radioGroup3">
+                                <td> 1 - 2<p><input type="radio" wicket:id="radio1"/></p></td>
+                                <td>3 - 4<p><input type="radio" wicket:id="radio2"/></p></td>
+                                <td> 5 – 6<p><input type="radio" wicket:id="radio3"/></p></td>
+                                <td>7 – 9<p><input type="radio" wicket:id="radio4"/></p></td>
+                                <td>10 eller fler<p><input type="radio" wicket:id="radio5"/></p></td>
+                            </span>
+                 <span wicket:id="exradioGroup3">
+                                <td class="radio-color">1 - 2<p><input type="radio" wicket:id="exradio1"/>
+                                </p></td>
+                                <td class="radio-color">3 - 4<p><input type="radio" wicket:id="exradio2"/>
+                                </p></td>
+                                <td class="radio-color">5 – 6<p><input type="radio" wicket:id="exradio3"/>
+                                </p></td>
+                                <td class="radio-color">7 – 9<p><input type="radio" wicket:id="exradio4"/>
+                                </p></td>
+                                <td class="radio-color">10 eller fler<p><input type="radio"
+                                                                                            wicket:id="exradio5"/></p>
+                                </td>
+                            </span>
+                                    </tr>
+
+
+                                    <tr wicket:id="interviews4">
+                                        <td id="radio-bel"><p wicket:id="name4"></p></td>
+                            <span wicket:id="radioGroup4">
+                                <td>10 eller fler Aldrig<p><input type="radio" wicket:id="radio1"/></p></td>
+                                <td colspan="3">10 eller fler Mer sällan än en gång i månaden<p><input type="radio"
+                                                                                                       wicket:id="radio2"/>
+                                </p></td>
+                                <td>10 eller flerVarje månad<p><input type="radio" wicket:id="radio3"/></p></td>
+
+                            </span>
+                 <span wicket:id="exradioGroup4">
+                                <td class="radio-color">Aldrig<p><input type="radio" wicket:id="exradio1"/>
+                                </p></td>
+                                <td colspan="3" class="radio-color">Mer sällan än en gång i månaden<p>
+                                    <input type="radio" wicket:id="exradio2"/></p></td>
+                                <td colspan="1" class="radio-color">Varje månad<p><input type="radio"
+                                                                                                      wicket:id="exradio3"/>
+                                </p></td>
+
+                            </span>
+                                    </tr>
+
+
+                                </div>
+                            </div>
+                            </tbody>
+                        </table>
+
+
+                    </div>
+
+                </div>
+
+
+            </form>
+
+        </div>
+
+        <div class="formButtons_4">
+
+            <div class="standardButton"><a wicket:id="tillbaka">TILLBAKA</a></div>
+
+        </div>
+</wicket:panel>
+</body>
+</html>

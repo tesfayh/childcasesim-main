@@ -14,7 +14,7 @@ import org.apache.wicket.util.resource.IResourceStream;
 public class FaktaPanel extends Panel {
     public FaktaPanel(String id) {
         super(id);
-        File file = new File("/var/childcasesim/Case3log/Lagtext om barn som anhöriga.pdf");
+        File file = new File("/var/childcasesim/Info2/Lagtext om barn som anhöriga.pdf");
         file.listFiles();
         // IResourceStream resStream = new ZipResourceStream(file);
         IResourceStream resourceStream = new FileResourceStream(
@@ -24,7 +24,7 @@ public class FaktaPanel extends Panel {
         ResourceLink link = new ResourceLink("link", resource);
         add(link);
 
-        File file2 = new File("/var/childcasesim/Case3log/barnkonventionen-i-sin-helhet.pdf");
+        File file2 = new File("/var/childcasesim/Info2/barnkonventionen-i-sin-helhet.pdf");
         file2.listFiles();
         // IResourceStream resStream = new ZipResourceStream(file);
         IResourceStream resourceStream2 = new FileResourceStream(

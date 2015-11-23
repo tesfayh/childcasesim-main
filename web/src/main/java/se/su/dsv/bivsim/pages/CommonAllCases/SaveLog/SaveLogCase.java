@@ -19,8 +19,8 @@ public class SaveLogCase extends WebPage {
 
         // this is extra code to save sample data to log file.
 
-        if(getSession().getAttribute("referral")!=null)
-        followUpReport= getSession().getAttribute("referral").toString();
+        if(getSession().getAttribute("referralValue")!=null)
+        followUpReport= getSession().getAttribute("referralValue").toString();
 
         if(getSession().getAttribute("Bedömning")!=null)
             PreliminaryReport= getSession().getAttribute("Bedömning").toString();
@@ -35,85 +35,7 @@ public class SaveLogCase extends WebPage {
         for (i = 0; i < interviewSplits.length; i++)
             tempoInterview = tempoInterview + interviewSplits[i] + "\n";
 
-
-        String[] ASRSSplits;
-        if (getSession().getAttribute("ASRSreport") != null)
-            ASRSSplits = getSession().getAttribute("ASRSreport").toString().split("#");
-        else
-            ASRSSplits = new String[]{""};
-        String tempoASRS = "";
-        int j;
-        for (j = 0; j < ASRSSplits.length; j++)
-            tempoASRS = tempoASRS + ASRSSplits[j] + "\n";
-
-
-        String[] Phq9Splits;
-        if (getSession().getAttribute("PHQ9report") != null)
-            Phq9Splits = getSession().getAttribute("PHQ9report").toString().split("#");
-        else
-            Phq9Splits = new String[]{""};
-        String tempoPhq9 = "";
-        int k;
-        for (k = 0; k < Phq9Splits.length; k++)
-            tempoPhq9 = tempoPhq9 + Phq9Splits[k] + "\n";
-
-
-        String[] Audit;
-        if (getSession().getAttribute("Auditreport") != null)
-            Audit = getSession().getAttribute("Auditreport").toString().split("#");
-        else
-            Audit = new String[]{""};
-        String tempoAudit = "";
-        int l;
-        for (l = 0; l < Audit.length; l++)
-            tempoAudit = tempoAudit + Audit[l] + "\n";
-
-
-        String[] Ptsd;
-        if (getSession().getAttribute("Ptsdreport") != null)
-            Ptsd = getSession().getAttribute("Ptsdreport").toString().split("#");
-        else
-            Ptsd = new String[]{""};
-        String tempoPtsd = "";
-        int m;
-        for (m = 0; m < Ptsd.length; m++)
-            tempoPtsd = tempoPtsd + Ptsd[m] + "\n";
-
-
-        String[] Dudit;
-        if (getSession().getAttribute("Duditreport") != null)
-            Dudit = getSession().getAttribute("Duditreport").toString().split("#");
-        else
-            Dudit = new String[]{""};
-        String tempoDudit = "";
-        int n;
-        for (n = 0; n < Dudit.length; n++)
-            tempoDudit = tempoDudit + Dudit[n] + "\n";
-
-
-        String[] IES;
-        if (getSession().getAttribute("IESreport") != null)
-            IES = getSession().getAttribute("IESreport").toString().split("#");
-        else
-            IES = new String[]{""};
-        String tempoIES = "";
-        int r;
-        for (r = 0; r < IES.length; r++)
-            tempoIES = tempoIES + IES[r] + "\n";
-
-
-        String[] MADRS;
-        if (getSession().getAttribute("MADRSreport") != null)
-            MADRS = getSession().getAttribute("MADRSreport").toString().split("#");
-        else
-            MADRS = new String[]{""};
-        String tempoMADRS = "";
-        int f;
-        for (f = 0; f < MADRS.length; f++)
-            tempoMADRS = tempoMADRS + MADRS[f] + "\n";
-
-
-
+        String InstrumentTemp=getSession().getAttribute("instrumentValue").toString();
 
         String[] followup;
         if (followUpReport != null)
@@ -161,16 +83,19 @@ public class SaveLogCase extends WebPage {
             tempoImaging = tempoImaging + Imaging[y] + "\n";
 
 
-        AllFileContents = "Anamnes: \n" + tempoInterview + "\n" + "\n" + "Status: \n" + tempphysical + "\n" + "\n" + "Lab/Bild: \n" + tempoImaging + "\n" + "\n" + "ASRS: \n" + tempoASRS + "\n" + "PHQ9: \n" + tempoPhq9 + "\n" + "Dudit: \n" + tempoDudit + "\n" +
-                "IES-R: \n" + tempoIES+ "\n" + "PTSD: \n" + tempoPtsd + "\n" + "MADRS: \n" + tempoMADRS
-                + "\n" + "Audit: \n" + tempoAudit + "\n" + "Remiss: \n" + tempoFollowup + "\n" + "Preliminär Bedömning; \n" + tempopreliminary;
+        AllFileContents = "############################################################" + "\n" +
+                "Anamnes: \n" + "\n"  + tempoInterview + "\n"  +
+                "\n" + "############################################################"+ "\n" + "Status: \n" + "\n"  +  tempphysical + "\n" + "\n" + "############################################################" + "\n" +
+                "Lab/Bild: \n" + "\n" +  tempoImaging + "\n" + "\n" +  "############################################################"
+                + "\n" +
+                "Instrument: \n" + "\n" +  InstrumentTemp + "\n"  +  "\n"+"############################################################"+  "\n" +"Remiss: \n" + "\n" + tempoFollowup + "\n" + "############################################################" + "\n"+  "Preliminär Bedömning: \n" +  "\n" + tempopreliminary;
 
 
         try {
 
             Date date = new Date();
             SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH-mm-ss");
-            File file = new File("/var/childcasesim/" + Caselog + "/" + "username" + "(" + dateFormat.format(date) + ")" + ".txt");
+            File file = new File("/var/childcasesim/" + "Case1log/" + getSession().getAttribute("username").toString() + "(" + dateFormat.format(date) + ")" + ".txt");
             BufferedWriter out = new BufferedWriter(new FileWriter(file));
             out.write(AllFileContents);
             out.close();

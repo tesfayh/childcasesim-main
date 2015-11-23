@@ -1,8 +1,7 @@
 package se.su.dsv.bivsim.pages.Case2.Case2Common;
 
 import org.apache.wicket.markup.html.WebMarkupContainer;
-import org.apache.wicket.markup.html.basic.Label;
-import se.su.dsv.bivsim.pages.Case2.Case2Common.BaseClasses.BaseCase2Page;
+import se.su.dsv.childcasesim.pages.Case2.Case2Common.BaseClasses.BaseCase2Page;
 
 
 public class HomeCase2Page extends BaseCase2Page {
@@ -16,16 +15,8 @@ public class HomeCase2Page extends BaseCase2Page {
     public HomeCase2Page() {
         contentWmc = new WebMarkupContainer("contentWmc");
         contentWmc.setOutputMarkupId(true);
-
-        contentWmc.add(new Label("content", "<p style=\" padding: 0em 1em;\">\n" +
-                "                      <img src=\"/img/KarinCase2.jpg\"  style=\" width: 320px; height: 240px; float:center; margin:0 5px 0 0;\" />\n" +
-                "\n" +
-                "                       .\n" +
-                "                    </p>\n").setEscapeModelStrings(false));
-
+        contentWmc.add(new PaticnetPictuerPanel2("content"));
         add(contentWmc);
-
-
     }
 }
 

@@ -6,25 +6,35 @@ import org.apache.wicket.markup.html.WebMarkupContainer;
 import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.markup.html.link.Link;
-import se.su.dsv.bivsim.pages.Case1.CommonCase1.*;
-import se.su.dsv.bivsim.pages.Case1.assessment.AssessmentReferalPage;
-import se.su.dsv.bivsim.pages.Case1.feedbacksection.CategoryFeedBackPage;
-import se.su.dsv.bivsim.pages.CommonAllCases.ChooseCase;
-import se.su.dsv.bivsim.pages.CommonAllCases.Edit.BaseClasses.CommonEditingPage;
-import se.su.dsv.bivsim.pages.CommonAllCases.SignOut;
+import org.apache.wicket.markup.html.panel.EmptyPanel;
+import se.su.dsv.childcasesim.pages.Case1.CommonCase1.*;
+import se.su.dsv.childcasesim.pages.CommonAllCases.assessment.AssessmentReferalPage;
+import se.su.dsv.childcasesim.pages.CommonAllCases.feedbacksection.CategoryFeedBackPage;
+import se.su.dsv.childcasesim.pages.CommonAllCases.screeninginstruments.InstrumentListPage;
+import se.su.dsv.childcasesim.pages.CommonAllCases.General.ChooseCase;
+import se.su.dsv.childcasesim.pages.CommonAllCases.Edit.BaseClasses.CommonEditingPage;
+import se.su.dsv.childcasesim.pages.CommonAllCases.General.SignOut;
 
 /**
  * Created by kib on 12/1/14.
  */
 public class InfoPage extends WebPage {
-    WebMarkupContainer downloadContainer;
+    WebMarkupContainer downloadContainer1;
+    WebMarkupContainer downloadContainer2;
+
 
     public InfoPage() {
 
-        downloadContainer = new WebMarkupContainer("Questions");
-        downloadContainer.setOutputMarkupId(true);
-        add(downloadContainer);
-        downloadContainer.add(new KarinTextPanel("mainNavigation2"));
+        downloadContainer1 = new WebMarkupContainer("Questions1");
+        downloadContainer1.setOutputMarkupId(true);
+        add(downloadContainer1);
+        downloadContainer1.add(new EmptyPanel("mainNavigation1"));
+
+        downloadContainer2 = new WebMarkupContainer("Questions2");
+        downloadContainer2.setOutputMarkupId(true);
+        add(downloadContainer2);
+        downloadContainer2.add(new EmptyPanel("mainNavigation2"));
+        add(new PaticnetPictuerPanel("content"));
 
         Link signOut = new AjaxFallbackLink("signOut") {
 
@@ -38,7 +48,7 @@ public class InfoPage extends WebPage {
 
         };
         add(signOut);
-        signOut.add(new Label("username", getSession().getAttribute("username").toString()));
+        add(new Label("username", "Inloggad:" + getSession().getAttribute("username").toString()));
 
         //Variables  for patient feedback
 
@@ -163,8 +173,13 @@ public class InfoPage extends WebPage {
             @Override
             public void onClick(AjaxRequestTarget target) {
 
-                downloadContainer.replace(new JournalPanel("mainNavigation2"));
-                target.add(downloadContainer);
+                downloadContainer1.replace(new JournalPanel("mainNavigation1"));
+                target.add(downloadContainer1);
+
+
+                //disabling
+                downloadContainer2.replace(new EmptyPanel("mainNavigation2"));
+                target.add(downloadContainer2);
 
 
             }
@@ -177,12 +192,15 @@ public class InfoPage extends WebPage {
 
             @Override
             public void onClick(AjaxRequestTarget target) {
-                downloadContainer.replace(new FaktaPanel("mainNavigation2"));
-                target.add(downloadContainer);
+                downloadContainer2.replace(new FaktaPanel("mainNavigation2"));
+                target.add(downloadContainer2);
+
+                // diabling
+                downloadContainer1.replace(new EmptyPanel("mainNavigation1"));
+                target.add(downloadContainer1);
 
 
             }
-
 
         };
         add(Lagar);
@@ -193,7 +211,6 @@ public class InfoPage extends WebPage {
             public void onClick(AjaxRequestTarget target) {
 
                 setResponsePage(CommonEditingPage.class);
-
 
             }
 

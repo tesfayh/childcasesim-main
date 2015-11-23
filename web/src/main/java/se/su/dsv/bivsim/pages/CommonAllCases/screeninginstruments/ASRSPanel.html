@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.3-strict.dtd">
+<head>
+    <title></title>
+</head>
+<body>
+<wicket:panel>
+
+    <div class="skattHeadline_3">
+        <table width="15em">
+            <tr>
+                <td class="tdFeedbackHeadline">ASRS</td>
+            </tr>
+        </table>
+    </div>
+
+
+    <div class="skattningsskalor">
+
+        <form wicket:id="form">
+
+                <div class="uk-width-1-1">
+
+                    <div class="uk-overflow-container">
+                        <table class="uk-table uk-table-condensed uk-table-striped" style="text-align: left;">
+
+                                                      <tbody>
+
+                            <div class="uk-form-row">
+                                <div class="uk-form-controls">
+                                    <tr>
+                                        <td> Besvara frågorna nedan genom att skatta dig själv med hjälp av skalan till
+                                            höger. För
+                                            varje fråga, sätt ett
+                                            kryss i den ruta som bäst beskriver hur du har känt och betett dig de
+                                            senaste sex
+                                            månaderna.
+                                        </td>
+                                        <td>Aldrig</td>
+                                        <td>Sällan</td>
+                                        <td>Ibland</td>
+                                        <td>Ofta</td>
+                                        <td>Mycket
+                                            ofta
+                                        </td>
+                                    </tr>
+
+                                </div>
+                            </div>
+
+                            <div class="uk-form-row">
+                                <div class="uk-form-controls">
+                                    <tr wicket:id="interviews1">
+
+                                        <td><p wicket:id="name1"></p></td>
+                                                        <span wicket:id="radioGroup1">
+                                                        <td><input type="radio" wicket:id="radio1"/></td>
+                                                        <td><input type="radio" wicket:id="radio2"/></td>
+                                                         <td><input type="radio" wicket:id="radio3"/></td>
+                                                        <td><input type="radio" wicket:id="radio4"/></td>
+                                                       <td><input type="radio" wicket:id="radio5"/></td>
+                                                         </span>
+                                    </tr>
+
+
+
+
+
+                                    <tr>
+                                        <td colspan="4"  wicket:id="wmc" >
+                                          <span wicket:id="total"></span>
+                                        </td>
+
+                                        <td>
+                                            <div class="standardButton"><a wicket:id="save">SKICKA</a></div>
+
+
+                                        </td>
+                                    </tr>
+
+
+                                </div>
+                            </div>
+                            </tbody>
+                        </table>
+
+
+                    </div>
+
+                </div>
+
+
+        </form>
+
+    </div>
+
+    <div class="formButtons_4">
+
+        <div class="standardButton"><a wicket:id="tillbaka">TILLBAKA</a></div>
+
+    </div>
+</wicket:panel>
+</body>
+</html>
+

@@ -2,159 +2,190 @@ package se.su.dsv.bivsim.pages.Case3.Case3Common;
 
 import org.apache.wicket.ajax.AjaxRequestTarget;
 import org.apache.wicket.ajax.markup.html.AjaxFallbackLink;
+import org.apache.wicket.markup.html.WebMarkupContainer;
 import org.apache.wicket.markup.html.link.Link;
+import org.apache.wicket.markup.html.panel.EmptyPanel;
 import org.apache.wicket.markup.html.panel.Panel;
-import se.su.dsv.bivsim.pages.Case3.Case3Common.BaseClasses.BaseCase3Pagephysical;
-import se.su.dsv.bivsim.pages.Case3.Case3Physicalexa.PhysicalExamTreePanel;
+import se.su.dsv.childcasesim.pages.Case3.Case3Common.BaseClasses.BaseCase3Pagephysical;
+import se.su.dsv.childcasesim.pages.Case3.Case3Physicalexa.PhysicalExamTreePanel;
 
 public class HeaderCase3PanelPhysical extends Panel {
 
 
+    WebMarkupContainer QuestionContainer1;
+    WebMarkupContainer QuestionContainer2;
+    WebMarkupContainer QuestionContainer3;
+    WebMarkupContainer QuestionContainer4;
+    WebMarkupContainer QuestionContainer5;
+
+
     public HeaderCase3PanelPhysical(String id) {
         super(id);
+        QuestionContainer1 = new WebMarkupContainer("QuestionContainer1");
+        QuestionContainer2 = new WebMarkupContainer("QuestionContainer2");
+        QuestionContainer3 = new WebMarkupContainer("QuestionContainer3");
+        QuestionContainer4 = new WebMarkupContainer("QuestionContainer4");
+        QuestionContainer5 = new WebMarkupContainer("QuestionContainer5");
 
-        Link Inspection = new AjaxFallbackLink("Inspection") {
+
+
+        QuestionContainer1.setOutputMarkupId(true);
+        QuestionContainer2.setOutputMarkupId(true);
+        QuestionContainer3.setOutputMarkupId(true);
+        QuestionContainer4.setOutputMarkupId(true);
+        QuestionContainer5.setOutputMarkupId(true);
+
+        add(QuestionContainer1);
+        add(QuestionContainer2);
+        add(QuestionContainer3);
+        add(QuestionContainer4);
+        add(QuestionContainer5);
+
+
+        QuestionContainer1.add(new EmptyPanel("subQuestion1"));
+        QuestionContainer2.add(new EmptyPanel("subQuestion2"));
+        QuestionContainer3.add(new EmptyPanel("subQuestion3"));
+        QuestionContainer4.add(new EmptyPanel("subQuestion4"));
+        QuestionContainer5.add(new EmptyPanel("subQuestion5"));
+
+        Link Interview = new AjaxFallbackLink("Inspection") {
             @Override
             public void onClick(AjaxRequestTarget target) {
-                ((BaseCase3Pagephysical) getPage()).getContentW().replace(new PhysicalExamTreePanel("mainNavigation2", 1));
-                target.add(((BaseCase3Pagephysical) getPage()).getContentW());
+                QuestionContainer1.replace(new PhysicalExamTreePanel("subQuestion1", 1));
+                target.add((QuestionContainer1));
+
+                //Setting to empty panel
+                QuestionContainer2.replace(new EmptyPanel("subQuestion2"));
+                target.add((QuestionContainer2));
+                QuestionContainer3.replace(new EmptyPanel("subQuestion3"));
+                target.add((QuestionContainer3));
+                QuestionContainer4.replace(new EmptyPanel("subQuestion4"));
+                target.add((QuestionContainer4));
+                QuestionContainer5.replace(new EmptyPanel("subQuestion5"));
+                target.add((QuestionContainer5));
+
+
+                //seting the search panel empty, incase it was full of search texts
+
+                ((BaseCase3Pagephysical) getPage()).getContentSearch().replace(new EmptyPanel("subSearch"));
+                target.add(((BaseCase3Pagephysical) getPage()).getContentSearch());
+
             }
-
-// it was 10
-
-              /*  wmc.replace(new InterviewTreePanel("test"));
-                target.add(wmc);
-
-                getSession().setAttribute("Interview_examExpanded", true);
-
-                if (getSession().getAttribute("Physical_examExpanded") != null) {
-                    wmc2.replace(new EmptyPanel("test2"));
-                    target.add(wmc2);
-                }
-                if (getSession().getAttribute("labsImaging_examExpanded") != null) {
-                    wmc3.replace(new EmptyPanel("test3"));
-                    target.add(wmc3);
-                }
-                if (getSession().getAttribute("screeing_examExpanded") != null) {
-                    wmc4.replace(new EmptyPanel("test4"));
-                    target.add(wmc4);
-                    wmc5.replace(new EmptyPanel("test5"));
-                    target.add(wmc5);
-                }  }*/
-
-
         };
-        this.add(Inspection);
+        this.add(Interview);
 
-        Link Palpation = new AjaxFallbackLink("Palpation") {
-
-            @Override
-            public void onClick(AjaxRequestTarget target) {
-
-
-                ((BaseCase3Pagephysical) getPage()).getContentW().replace(new PhysicalExamTreePanel("mainNavigation2", 2));
-                target.add(((BaseCase3Pagephysical) getPage()).getContentW());
-
-                // it was 40
-
-             /*   wmc2.replace(new PhysicalExamTreePanel("test2"));
-                target.add(wmc2);
-                getSession().setAttribute("Physical_examExpanded", true);
-
-                if (getSession().getAttribute("Interview_examExpanded") != null) {
-                    wmc.replace(new EmptyPanel("test"));
-                    target.add(wmc);
-                }
-                if (getSession().getAttribute("labsImaging_examExpanded") != null) {
-                    wmc3.replace(new EmptyPanel("test3"));
-                    target.add(wmc3);
-                }
-                if (getSession().getAttribute("screeing_examExpanded") != null) {
-                    wmc4.replace(new EmptyPanel("test4"));
-                    target.add(wmc4);
-                    wmc5.replace(new EmptyPanel("test5"));
-                    target.add(wmc5);
-                }
-
-
-                */
-            }
-
-        };
-        this.add(Palpation);
-
-        Link Auscultation = new AjaxFallbackLink("Auscultation") {
+        Link physicalExam = new AjaxFallbackLink("Palpation") {
 
             @Override
             public void onClick(AjaxRequestTarget target) {
 
-                ((BaseCase3Pagephysical) getPage()).getContentW().replace(new PhysicalExamTreePanel("mainNavigation2", 3));
-                target.add(((BaseCase3Pagephysical) getPage()).getContentW());
+
+                QuestionContainer2.replace(new PhysicalExamTreePanel("PhysicalExamTreePanel", 2));
+                target.add((QuestionContainer2));
+
+                //Setting to empty panel
+                QuestionContainer1.replace(new EmptyPanel("subQuestion1"));
+                target.add((QuestionContainer1));
+                QuestionContainer3.replace(new EmptyPanel("subQuestion3"));
+                target.add((QuestionContainer3));
+                QuestionContainer4.replace(new EmptyPanel("subQuestion4"));
+                target.add((QuestionContainer4));
+                QuestionContainer5.replace(new EmptyPanel("subQuestion5"));
+                target.add((QuestionContainer5));
 
 
+                //seting the search panel empty, in-case it was full of search texts
 
-
-
-
-
-
-
-             /*   wmc3.replace(new ImagingTreePanel("test3"));
-                target.add(wmc3);
-                getSession().setAttribute("labsImaging_examExpanded", true);
-
-
-                if (getSession().getAttribute("Interview_examExpanded") != null) {
-                    wmc.replace(new EmptyPanel("test"));
-                    target.add(wmc);
-                }
-                if (getSession().getAttribute("Physical_examExpanded") != null) {
-                    wmc2.replace(new EmptyPanel("test2"));
-                    target.add(wmc2);
-                }
-                if (getSession().getAttribute("screeing_examExpanded") != null) {
-                    wmc4.replace(new EmptyPanel("test4"));
-                    target.add(wmc4);
-                    wmc5.replace(new EmptyPanel("test5"));
-                    target.add(wmc5);
-                }
-
-                */
+                ((BaseCase3Pagephysical) getPage()).getContentSearch().replace(new EmptyPanel("subSearch"));
+                target.add(((BaseCase3Pagephysical) getPage()).getContentSearch());
 
             }
-        };
-        this.add(Auscultation);
 
-        Link Psykstatus = new AjaxFallbackLink("Psykstatus") {
+        };
+        this.add(physicalExam);
+
+        Link labsImaging = new AjaxFallbackLink("Auscultation") {
 
             @Override
             public void onClick(AjaxRequestTarget target) {
 
-                ((BaseCase3Pagephysical) getPage()).getContentW().replace(new PhysicalExamTreePanel("mainNavigation2", 4));
-                target.add(((BaseCase3Pagephysical) getPage()).getContentW());
+                QuestionContainer3.replace(new PhysicalExamTreePanel("subQuestion3", 3));
+                target.add((QuestionContainer3));
+
+                // setting to empty panel
+                QuestionContainer1.replace(new EmptyPanel("subQuestion1"));
+                target.add((QuestionContainer1));
+                QuestionContainer2.replace(new EmptyPanel("subQuestion2"));
+                target.add((QuestionContainer2));
+                QuestionContainer4.replace(new EmptyPanel("subQuestion4"));
+                target.add((QuestionContainer4));
+                QuestionContainer5.replace(new EmptyPanel("subQuestion5"));
+                target.add((QuestionContainer5));
+
+                //setting the search panel empty, in case it was full of search texts
+
+                ((BaseCase3Pagephysical) getPage()).getContentSearch().replace(new EmptyPanel("subSearch"));
+                target.add(((BaseCase3Pagephysical) getPage()).getContentSearch());
+
+
             }
         };
-        this.add(Psykstatus);
+        this.add(labsImaging);
 
-        Link Övrigt = new AjaxFallbackLink("Övrigt") {
+        Link screeingInstruments = new AjaxFallbackLink("Socialt") {
 
             @Override
             public void onClick(AjaxRequestTarget target) {
-                ((BaseCase3Pagephysical) getPage()).getContentW().replace(new PhysicalExamTreePanel("mainNavigation2", 5));
-                target.add(((BaseCase3Pagephysical) getPage()).getContentW());
+                QuestionContainer4.replace(new PhysicalExamTreePanel("subQuestion4", 4));
+                target.add((QuestionContainer4));
+
+                // setting to empty panel
+                QuestionContainer1.replace(new EmptyPanel("subQuestion1"));
+                target.add((QuestionContainer1));
+                QuestionContainer2.replace(new EmptyPanel("subQuestion2"));
+                target.add((QuestionContainer2));
+                QuestionContainer3.replace(new EmptyPanel("subQuestion3"));
+                target.add((QuestionContainer3));
+                QuestionContainer5.replace(new EmptyPanel("subQuestion5"));
+                target.add((QuestionContainer5));
+
+                //setting the search panel empty, in case it was full of search texts
+
+                ((BaseCase3Pagephysical) getPage()).getContentSearch().replace(new EmptyPanel("subSearch"));
+                target.add(((BaseCase3Pagephysical) getPage()).getContentSearch());
 
             }
         };
-        this.add(Övrigt);
-/*
-/*
-        Link assessment = new AjaxFallbackLink("Assessment") {
+        this.add(screeingInstruments);
+
+        Link Hereditet = new AjaxFallbackLink("Psykiatriskt") {
+
             @Override
             public void onClick(AjaxRequestTarget target) {
-            //    this.setResponsePage(new AssessmentMainPage());
+
+                QuestionContainer5.replace(new PhysicalExamTreePanel("subQuestion5", 5));
+                target.add((QuestionContainer5));
+                // setting to empty panel
+                QuestionContainer1.replace(new EmptyPanel("subQuestion1"));
+                target.add((QuestionContainer1));
+                QuestionContainer2.replace(new EmptyPanel("subQuestion2"));
+                target.add((QuestionContainer2));
+                QuestionContainer3.replace(new EmptyPanel("subQuestion3"));
+                target.add((QuestionContainer3));
+                QuestionContainer4.replace(new EmptyPanel("subQuestion4"));
+                target.add((QuestionContainer4));
+
+
+                //setting the search panel empty, in case it was full of search texts
+
+                ((BaseCase3Pagephysical) getPage()).getContentSearch().replace(new EmptyPanel("subSearch"));
+                target.add(((BaseCase3Pagephysical) getPage()).getContentSearch());
+
 
             }
         };
-        this.add(assessment); */
-    }
+        this.add(Hereditet);
+
+
+   }
 }

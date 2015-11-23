@@ -2,6 +2,7 @@ package se.su.dsv.bivsim.pages.CommonAllCases;
 
 import org.apache.wicket.ajax.AjaxRequestTarget;
 import org.apache.wicket.ajax.markup.html.AjaxFallbackLink;
+import org.apache.wicket.ajax.markup.html.form.AjaxSubmitLink;
 import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.markup.html.form.Form;
 import org.apache.wicket.markup.html.form.PasswordTextField;
@@ -9,7 +10,8 @@ import org.apache.wicket.markup.html.form.TextField;
 import org.apache.wicket.markup.html.link.Link;
 import org.apache.wicket.markup.html.panel.FeedbackPanel;
 import org.apache.wicket.model.PropertyModel;
-import se.su.dsv.bivsim.pages.CommonAllCases.LostPassword.LostPassword;
+import se.su.dsv.childcasesim.pages.CommonAllCases.General.WelcomePage;
+import se.su.dsv.childcasesim.pages.CommonAllCases.LostPassword.LostPassword;
 
 public class SignIn extends WebPage {
 
@@ -29,6 +31,13 @@ public class SignIn extends WebPage {
         form.add(userIdField);
         form.add(passField);
         add(form);
+
+        form.add(new AjaxSubmitLink("save") {
+            @Override
+            protected void onSubmit(AjaxRequestTarget target, Form form) {
+
+            }
+        });
 
         Link lostpwd = new AjaxFallbackLink("lostPwd") {
             @Override
@@ -59,6 +68,7 @@ public class SignIn extends WebPage {
             super(id);
         }
 
+
         @Override
         public void onSubmit() {
 
@@ -66,14 +76,16 @@ public class SignIn extends WebPage {
 
             if (session.signIn(getUserId(), getPassword().toString())) {
                 continueToOriginalDestination();
-                setResponsePage(ChooseCase.class);
+                setResponsePage(WelcomePage.class);
                 getSession().setAttribute("username", getUserId());
+
 
             } else {
                 info("unable to sign in");
             }
 
-        }
+
+              }
 
         public String getUserId()
         {

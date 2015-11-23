@@ -2,35 +2,72 @@ package se.su.dsv.bivsim.pages.Case3.Case3Common.BaseClasses;
 
 import org.apache.wicket.ajax.AjaxRequestTarget;
 import org.apache.wicket.ajax.markup.html.AjaxFallbackLink;
+import org.apache.wicket.ajax.markup.html.form.AjaxSubmitLink;
 import org.apache.wicket.markup.html.WebMarkupContainer;
 import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.markup.html.form.Form;
+import org.apache.wicket.markup.html.form.TextField;
 import org.apache.wicket.markup.html.link.Link;
 import org.apache.wicket.markup.html.panel.EmptyPanel;
-import se.su.dsv.bivsim.pages.Case3.Case3Common.HomeCase3Labs;
-import se.su.dsv.bivsim.pages.Case3.Case3Common.HomeCase3Page;
-import se.su.dsv.bivsim.pages.Case3.Case3Common.HomeCase3Pagephysical;
-import se.su.dsv.bivsim.pages.Case3.Case3Physicalexa.StatusNonTreePanel;
-import se.su.dsv.bivsim.pages.Case3.Case3assessment.AssessmentReferalCase3Page;
-import se.su.dsv.bivsim.pages.Case3.Case3feedbacksection.CategoryFeedBackPage;
-import se.su.dsv.bivsim.pages.CommonAllCases.ChooseCase;
-import se.su.dsv.bivsim.pages.CommonAllCases.SignOut;
+import org.apache.wicket.model.Model;
+import se.su.dsv.childcasesim.pages.Case3.Case3Common.HomeCase3Labs;
+import se.su.dsv.childcasesim.pages.Case3.Case3Common.HomeCase3Page;
+import se.su.dsv.childcasesim.pages.Case3.Case3Common.HomeCase3Pagephysical;
+import se.su.dsv.childcasesim.pages.Case3.Case3Physicalexa.PhysicalExamTreePanel;
+import se.su.dsv.childcasesim.pages.CommonAllCases.General.ChooseCase;
+import se.su.dsv.childcasesim.pages.CommonAllCases.General.SignOut;
+import se.su.dsv.childcasesim.pages.CommonAllCases.assessment.AssessmentReferalPage;
+import se.su.dsv.childcasesim.pages.CommonAllCases.feedbacksection.CategoryFeedBackPage;
+import se.su.dsv.childcasesim.pages.CommonAllCases.screeninginstruments.InstrumentListPage;
 
 public class BaseCase3Pagephysical extends WebPage {
-    WebMarkupContainer questions;
+    WebMarkupContainer SearchContainer1;
+    WebMarkupContainer MainNavigationContainer;
+    WebMarkupContainer VideoContainer;
 
-    public WebMarkupContainer getContentW() {
 
-        return questions;
+
+
+    public WebMarkupContainer getContentSearch() {
+
+        return SearchContainer1;
     }
 
+
+    public WebMarkupContainer getContentMainNavigation() {
+
+        return MainNavigationContainer;
+    }
+
+    public WebMarkupContainer getContentVideoContainer() {
+
+        return VideoContainer;
+    }
+
+
+
+
     public BaseCase3Pagephysical() {
-        questions = new WebMarkupContainer("Questions");
-        questions.setOutputMarkupId(true);
-        add(questions);
-        questions.add(new EmptyPanel("mainNavigation2"));
-        this.add(new StatusNonTreePanel("mainNavigation", 3));
+        SearchContainer1=new WebMarkupContainer("SearchContainer1");
+        SearchContainer1.setOutputMarkupId(true);
+        add(SearchContainer1);
+        SearchContainer1.add(new EmptyPanel("subSearch"));
+
+
+        MainNavigationContainer=new WebMarkupContainer("MainNavigationContainer");
+        MainNavigationContainer.setOutputMarkupId(true);
+        add(MainNavigationContainer);
+        MainNavigationContainer.add(new PhysicalExamTreePanel("mainNavigation", 3));
+
+
+
+
+
+
+/*
+        this.add(new HeaderPanel("mainNavigation"));
+*/
 
         Link signOut = new AjaxFallbackLink("signOut") {
 
@@ -44,16 +81,57 @@ public class BaseCase3Pagephysical extends WebPage {
 
         };
         add(signOut);
-        signOut.add(new Label("username", getSession().getAttribute("username").toString()));
+        add(new Label("username", "Inloggad:" + getSession().getAttribute("username").toString()));
+
+
+
+        final TextField searchtxt = new TextField("searchtxt", new Model(""));
+
+      /* Link search = new AjaxFallbackLink("search") {
+
+            @Override
+            public void onClick(AjaxRequestTarget target) {
+
+                ((BasePage) getPage()).getContentW().replace(new SearchInterveiwTreePanel("mainNavigation2", searchtxt.getModel().getObject().toString()));
+                target.add(((BasePage) getPage()).getContentW());
+            }
+
+
+
+
+        };
+*/
+
+        AjaxSubmitLink addLink = new AjaxSubmitLink("link") {
+
+            protected void onSubmit(AjaxRequestTarget target, Form<?> form) {
+                if (searchtxt.getModel().getObject() != null) {
+                   /* SearchContainer1.replace(new SearchInterveiwTreePanel("subSearch", searchtxt.getModel().getObject().toString()));
+                    target.add(SearchContainer1);
+*/
+                   /* // to collapse all navigation menus when the Search button is clicked.
+                    ((BaseCase3Pagephysical) getPage()).getContentMainNavigation().replace(new HeaderCase3PanelPhysical("mainNavigation"));
+                    target.add(((BaseCase3Pagephysical) getPage()).getContentMainNavigation());
+*/
+
+                }
+
+
+
+            }
+        };
+
         Form<?> form = new Form("searchForm") {
             @Override
             public void onSubmit() {
 
-                System.out.println("search working well");
+
             }
 
         };
         add(form);
+        searchtxt.add(addLink);
+        form.add(searchtxt);
         Link Choose = new AjaxFallbackLink("choose") {
 
             @Override
@@ -123,7 +201,7 @@ public class BaseCase3Pagephysical extends WebPage {
             @Override
             public void onClick(AjaxRequestTarget target) {
 
-                setResponsePage(InstrumentCase3ListPage.class);
+                setResponsePage(InstrumentListPage.class);
 
             }
 
@@ -136,7 +214,7 @@ public class BaseCase3Pagephysical extends WebPage {
             @Override
             public void onClick(AjaxRequestTarget target) {
 
-                setResponsePage(AssessmentReferalCase3Page.class);
+                setResponsePage(AssessmentReferalPage.class);
 
             }
 

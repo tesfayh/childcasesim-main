@@ -1,0 +1,137 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.3-strict.dtd">
+<head>
+    <title></title>
+</head>
+<body>
+<wicket:panel>
+
+        <div class="skattHeadline_3">
+            <table width="15em">
+                <tr>
+                    <td class="tdFeedbackHeadline">PHQ9</td>
+                </tr>
+            </table>
+        </div>
+
+
+       <div class="skattningsskalor">
+
+            <form wicket:id="form">
+
+                <div class="uk-width-1-1">
+
+                    <div class="uk-overflow-container">
+                        <table class="uk-table uk-table-condensed uk-table-striped" style="text-align: left;">
+
+
+
+                            <tbody>
+
+                            <div class="uk-form-row">
+                                <div class="uk-form-controls">
+
+                                    <tr>
+                                        <td ></td>
+                                        <td colspan="4" ><b>Din bedömning</b></td>
+                                        <td colspan="4" id="colunmcolor"><b>Experterna bedömning</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td id="radio-bel"><b>Under de senaste 2 veckorna - Hur ofta har du besvärats av något av följande
+                                            problem?</b></td>
+                                        <td id="radio-bel"><b>Inte alls</b></td>
+                                        <td id="radio-bel"><b>Flera dagar</b></td>
+                                        <td id="radio-bel"><b>Mer än hälften av dagarna</b></td>
+                                        <td id="radio-bel"><b>Nästan varje dag</b></td>
+
+                                        <td id="radio-bel" class="radio-color"><b>Inte alls</b></td>
+                                        <td id="radio-bel" class="radio-color"><b>Flera dagar</b></td>
+                                        <td id="radio-bel" class="radio-color"><b>Mer än hälften av dagarna</b></td>
+                                        <td id="radio-bel" class="radio-color"><b>Nästan varje dag</b></td>
+                                    </tr>
+
+                                </div>
+                            </div>
+
+                            <div class="uk-form-row">
+                                <div class="uk-form-controls">
+                                    <tr wicket:id="interviews1">
+
+                                        <td><p wicket:id="name1"></p></td>
+                               <span wicket:id="radioGroup1">
+                                <td><input type="radio" wicket:id="radio1"/></td>
+                                <td><input type="radio" wicket:id="radio2"/></td>
+                                 <td><input type="radio" wicket:id="radio3"/></td>
+                                <td><input type="radio" wicket:id="radio4"/></td>
+                            </span>
+
+                              <span wicket:id="exRadioGroup1">
+                                <td class="radio-color"><input type="radio" wicket:id="exradio1"/></td>
+                                <td class="radio-color"><input type="radio" wicket:id="exradio2"/></td>
+                                <td class="radio-color"><input type="radio" wicket:id="exradio3"/></td>
+                                 <td class="radio-color"><input type="radio" wicket:id="exradio4"/></td>
+
+                            </span>
+
+                                    </tr>
+
+
+                                    <tr wicket:id="interviews2">
+                                        <td><p wicket:id="name2"></p></td>
+                            <span wicket:id="radioGroup2">
+                                <td>Inga svårigheter<p><input type="radio" wicket:id="radio1" class="regular-radio"/>
+                                </p></td>
+                                <td>Vissa svårigheter<p><input type="radio" wicket:id="radio2" class="regular-radio"/>
+                                </p></td>
+                                <td>stora svårigheter<p><input type="radio" wicket:id="radio3" class="regular-radio"/>
+                                </p></td>
+                                 <td>Extrema svårigheter<p><input type="radio" wicket:id="radio4"
+                                                                  class="regular-radio"/></p></td>
+
+
+                            </span>
+                            <span wicket:id="exRadioGroup2">
+                                <td class="radio-color"> Inga svårigheter<p><input type="radio"
+                                                                                                wicket:id="exradio1"/>
+                                </p></td>
+                                <td class="radio-color">Vissa svårigheter<p><input type="radio"
+                                                                                                wicket:id="exradio2"/>
+                                </p></td>
+                                <td class="radio-color">stora svårigheter<p><input type="radio"
+                                                                                                wicket:id="exradio3"/>
+                                </p></td>
+                                 <td class="radio-color">Extrema svårigheter<p><input type="radio"
+                                                                                                   wicket:id="exradio4"/>
+                                 </p></td>
+
+
+                            </span>
+
+                                    </tr>
+
+
+                                </div>
+                            </div>
+                            </tbody>
+                        </table>
+
+
+                    </div>
+
+                </div>
+
+
+            </form>
+
+        </div>
+
+        <div class="formButtons_4">
+
+            <div class="standardButton"><a wicket:id="tillbaka">TILLBAKA</a></div>
+
+        </div>
+
+
+</wicket:panel>
+</body>
+</html>

@@ -6,25 +6,33 @@ import org.apache.wicket.markup.html.WebMarkupContainer;
 import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.markup.html.link.Link;
-import se.su.dsv.bivsim.pages.Case3.Case3Common.*;
-import se.su.dsv.bivsim.pages.Case3.Case3assessment.AssessmentReferalCase3Page;
-import se.su.dsv.bivsim.pages.Case3.Case3feedbacksection.CategoryFeedBackPage;
-import se.su.dsv.bivsim.pages.CommonAllCases.ChooseCase;
-import se.su.dsv.bivsim.pages.CommonAllCases.Edit.BaseClasses.CommonEditingPage;
-import se.su.dsv.bivsim.pages.CommonAllCases.SignOut;
+import org.apache.wicket.markup.html.panel.EmptyPanel;
+import se.su.dsv.childcasesim.pages.Case3.Case3Common.*;
+import se.su.dsv.childcasesim.pages.CommonAllCases.General.ChooseCase;
+import se.su.dsv.childcasesim.pages.CommonAllCases.Edit.BaseClasses.CommonEditingPage;
+import se.su.dsv.childcasesim.pages.CommonAllCases.General.SignOut;
+import se.su.dsv.childcasesim.pages.CommonAllCases.assessment.AssessmentReferalPage;
+import se.su.dsv.childcasesim.pages.CommonAllCases.feedbacksection.CategoryFeedBackPage;
+import se.su.dsv.childcasesim.pages.CommonAllCases.screeninginstruments.InstrumentListPage;
 
 /**
  * Created by kib on 12/1/14.
  */
 public class InfoCase3Page extends WebPage {
-    WebMarkupContainer downloadContainer;
-
+    WebMarkupContainer downloadContainer1;
+    WebMarkupContainer downloadContainer2;
     public InfoCase3Page() {
 
-        downloadContainer = new WebMarkupContainer("Questions");
-        downloadContainer.setOutputMarkupId(true);
-        add(downloadContainer);
-        downloadContainer.add(new AhmedTextPanel("mainNavigation2"));
+        downloadContainer1 = new WebMarkupContainer("Questions1");
+        downloadContainer1.setOutputMarkupId(true);
+        add(downloadContainer1);
+        downloadContainer1.add(new EmptyPanel("mainNavigation1"));
+
+        downloadContainer2 = new WebMarkupContainer("Questions2");
+        downloadContainer2.setOutputMarkupId(true);
+        add(downloadContainer2);
+        downloadContainer2.add(new EmptyPanel("mainNavigation2"));
+        add(new PaticnetPictuerPanel3("content"));
 
         Link signOut = new AjaxFallbackLink("signOut") {
 
@@ -38,7 +46,7 @@ public class InfoCase3Page extends WebPage {
 
         };
         add(signOut);
-        signOut.add(new Label("username", getSession().getAttribute("username").toString()));
+        add(new Label("username", "Inloggad:" + getSession().getAttribute("username").toString()));
 
         //Variables  for patient feedback
 
@@ -98,7 +106,7 @@ public class InfoCase3Page extends WebPage {
             @Override
             public void onClick(AjaxRequestTarget target) {
 
-                setResponsePage(InstrumentCase3ListPage.class);
+                setResponsePage(InstrumentListPage.class);
 
             }
 
@@ -135,7 +143,7 @@ public class InfoCase3Page extends WebPage {
             @Override
             public void onClick(AjaxRequestTarget target) {
 
-                setResponsePage(AssessmentReferalCase3Page.class);
+                setResponsePage(AssessmentReferalPage.class);
 
             }
 
@@ -162,9 +170,13 @@ public class InfoCase3Page extends WebPage {
 
             @Override
             public void onClick(AjaxRequestTarget target) {
+                downloadContainer1.replace(new JournalPanel("mainNavigation1"));
+                target.add(downloadContainer1);
 
-                downloadContainer.replace(new JournalPanel("mainNavigation2"));
-                target.add(downloadContainer);
+
+                //disabling
+                downloadContainer2.replace(new EmptyPanel("mainNavigation2"));
+                target.add(downloadContainer2);
 
 
             }
@@ -177,10 +189,12 @@ public class InfoCase3Page extends WebPage {
 
             @Override
             public void onClick(AjaxRequestTarget target) {
-                downloadContainer.replace(new FaktaPanel("mainNavigation2"));
-                target.add(downloadContainer);
+                downloadContainer2.replace(new FaktaPanel("mainNavigation2"));
+                target.add(downloadContainer2);
 
-
+                // diabling
+                downloadContainer1.replace(new EmptyPanel("mainNavigation1"));
+                target.add(downloadContainer1);
             }
 
 

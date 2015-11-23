@@ -11,6 +11,7 @@ import org.apache.wicket.request.Request;
 import org.apache.wicket.request.Response;
 import org.apache.wicket.request.component.IRequestableComponent;
 import org.apache.wicket.spring.injection.annot.SpringComponentInjector;
+import se.su.dsv.childcasesim.pages.CommonAllCases.General.AuthenticatedWebPage;
 
 public class WicketApplication extends WebApplication {
 

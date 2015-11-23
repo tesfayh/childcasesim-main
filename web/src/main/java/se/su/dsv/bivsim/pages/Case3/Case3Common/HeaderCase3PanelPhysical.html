@@ -1,23 +1,33 @@
 <!DOCTYPE html>
 <html xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.3-strict.dtd" lang="en-gb" dir="ltr"
       class="uk-height-1-1">
-<head>
-
 <body>
 <wicket:panel>
-    <ul class="uk-nav uk-nav-side uk-margin-small-top" data-uk-switcher="{connect:'#anamnes_questions'}">
+    <ul class="uk-nav">
         <li><a class="" href="#" wicket:id="Inspection">Inspektion </a>
         </li>
-
-        <li><a class="" href="#" wicket:id="Palpation">Palpation</a>
+        <div wicket:id="QuestionContainer1" class="subCat">
+            <div wicket:id="subQuestion1">
+            </div>
+        </div>
+        <li><a class="" href="#" wicket:id="Palpation">Palpation </a>
         </li>
-
-        <li><a class="" href="#" wicket:id="Auscultation">Auskultation
+        <div wicket:id="QuestionContainer2" class="subCat">
+            <div wicket:id="subQuestion2">
+            </div>
+        </div>
+        <li><a class="" href="#" wicket:id="Auscultation">Auskultation sjd
         </a></li>
+        <div wicket:id="QuestionContainer3" class="subCat">
+            <div wicket:id="subQuestion3">
+            </div>
+        </div>
+        <li><a class="" href="#" wicket:id="Psykiatriskt">Psykiatriskt</a></li>
 
-        <li><a class="" href="#" wicket:id="Psykstatus">Psykiatriskt</a></li>
-        <li><a class="" href="#" wicket:id="Övrigt">Övrigt</a></li>
-
+        <div wicket:id="QuestionContainer4" class="subCat">
+            <div wicket:id="subQuestion4">
+            </div>
+        </div>
     </ul>
 </wicket:panel>
 </body>

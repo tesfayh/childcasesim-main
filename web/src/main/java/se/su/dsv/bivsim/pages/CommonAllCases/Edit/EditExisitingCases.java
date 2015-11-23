@@ -4,12 +4,12 @@ import org.apache.wicket.markup.html.form.DropDownChoice;
 import org.apache.wicket.markup.html.form.Form;
 import org.apache.wicket.model.PropertyModel;
 import org.apache.wicket.spring.injection.annot.SpringBean;
-import se.su.dsv.bivsim.data.Case.dao.interfaces.AllCasesEntityDao;
-import se.su.dsv.bivsim.data.Case.dataobjects.AllCasesEntity;
-import se.su.dsv.bivsim.pages.Case1.EditingPages.Common.BaseClasses.EditingMainPage1;
-import se.su.dsv.bivsim.pages.Case2.Case2EditingPages.Case2EdittingCommon.BaseClasses.EditingMainPage2;
-import se.su.dsv.bivsim.pages.Case3.Case3EditingPages.Case3EdittingCommon.BaseClasses.EditingMainPage3;
-import se.su.dsv.bivsim.pages.CommonAllCases.Edit.BaseClasses.CommonEditingPage;
+import se.su.dsv.childcasesim.data.Case.dao.interfaces.AllCasesEntityDao;
+import se.su.dsv.childcasesim.data.Case.dataobjects.AllCasesEntity;
+import se.su.dsv.childcasesim.pages.Case1.EditingPages.Common.BaseClasses.EditingMainPage1;
+import se.su.dsv.childcasesim.pages.Case2.Case2EditingPages.Case2EdittingCommon.BaseClasses.EditingMainPage2;
+import se.su.dsv.childcasesim.pages.Case3.Case3EditingPages.Case3EdittingCommon.BaseClasses.EditingMainPage3;
+import se.su.dsv.childcasesim.pages.CommonAllCases.Edit.BaseClasses.CommonEditingPage;
 
 import java.util.List;
 

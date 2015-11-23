@@ -1,0 +1,785 @@
+h1, h2, h3, h4, h5, h6, .uk-button, .uk-navbar-brand, .special, .uk-nav-side > li > a{
+    font-family: Arial, Helvetica, Roboto, sans-serif;
+    font-weight: bold;
+}
+
+.uk-navbar-nav > li > a {
+    font-family: Arial, Helvetica, Roboto, sans-serif;
+    font-weight: bold;
+    font-size: 12pt;
+
+}
+body {
+    font-size: 80%;
+
+}
+
+.uk-navbar-brand  {
+    font-size: 1em;
+}
+
+.uk-navbar-nav {
+    margin-top: 0em;
+}
+
+.uk-navbar-brand > img {
+    height: 20px;
+    margin-top: -0.15em;
+    margin-left: -0.15em;
+}
+
+h1.login {
+    font-size: 2em;
+    margin-top: 0.15em;
+    border: 1px solid red;
+}
+
+/*This is where I started 151002.*/
+
+
+body{
+    scrollbar-face-color: #fcfcf5;
+    scrollbar-shadow-color: #9fb28b;
+    scrollbar-highlight-color:#9fb28b;
+    scrollbar-3dlight-color: #9fb28b;
+    scrollbar-darkshadow-color: #9fb28b;
+    scrollbar-track-color: #ffffff;
+    scrollbar-arrow-color: #9fb28b;
+}
+
+a{
+    text-decoration: none;
+    color: #5c5052
+}
+
+a:active{
+    text-decoration: none;
+    color: #c89563;
+}
+
+a:hover{
+    text-decoration: none;
+    color:  #a67c52;
+}
+
+.BSAsim_navbar{
+    position: absolute;
+    top: 0.95em;
+    height: 1.5em;
+    width: 56em;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+.search{
+    position: absolute;
+    top: 5.60em;
+    left: 20.500em;
+    border: 0.125em solid #576e44;
+    width: 21.500em;
+    height: 1.725em;
+    border-radius: 0.525em;
+    valign: middle;
+    border: 0.125em solid #576e44;
+    background-repeat: no-repeat;
+    background-image: url(../img/searchButton_3.png);
+}
+
+.searchMoveable{
+    border: 0.125em solid #576e44;
+    width: 21.500em;
+    height: 1.725em;
+    border-radius: 0.525em;
+    valign: middle;
+    border: 0.125em solid #576e44;
+    background-repeat: no-repeat;
+    background-image: url(../img/searchButton_3.png);
+}
+
+.standardButton{
+    background-image: url(../img/Button.png);
+    background-repeat: no-repeat;
+    width: 7.125em;
+    height: 1.925em;
+    font-family: Arial, Helvetica, Roboto, sans-serif;
+    font-size: 1em;
+    font-color: #576e44;
+    text-align: center;
+    valign: middle;
+}
+
+.bigButton{
+    background-image: url(../img/buttonBig.png);
+    background-repeat: no-repeat;
+    width: 8.225em;
+    height: 1.925em;
+    font-family: Arial, Helvetica, Roboto, sans-serif;
+    font-size: 1em;
+    font-color: #576e44;
+    text-align: center;
+    valign: middle;
+}
+
+.bsaSimFrame{
+    z-index: -5;
+    position: absolute;
+    margin-top: 1%;
+    left: 5%;
+    width: 88.5em;
+    height: 54.125em;
+    border: 0.125em solid #9fb28b;
+    border-radius: 0.5em;
+    background-image: url(../img/graphicsBg.png);
+    text-align: center;
+}
+
+/* This is where I will fix centered position for the whole system!
+
+.center{
+}
+
+.outerPosition{
+    width: 100%;
+    height: 100%;
+    border: 0.5em solid blue;
+    align-content: center;
+}
+*/
+.loginFrame{
+    position: absolute;
+    margin-top: 1%;
+    left: 5%;
+    width: 88.5em;
+    height: 54.125em;
+    border: 0.125em solid #9fb28b;
+    background-color: #fcfcf5;
+    border-radius: 0.5em;
+    background-image: url(../img/graphicsBottom.png);
+}
+
+.loginBox{
+    position: absolute;
+    left: 34.500em;
+    width: 20.325em;
+    height: 42.5em;
+    margin-top: 1em;
+}
+
+.container{
+    width: 88.5em;
+    height: 51.75em;
+}
+
+.content{
+    position: absolute;
+    top: 7.625em;
+    left: 1.475em;
+    width: 82.375em;
+    height: 44em;
+    text-align: center;
+}
+
+.content_2{
+    z-index: 0;
+    position: absolute;
+    top: 7.625em;
+    left: 1.475em;
+    width: 82.375em;
+    height: 41em;
+    text-align: center;
+    border-left: 0.125em solid #9fb28b;
+    border-top: 0.125em solid #9fb28b;
+    border-top-left-radius: 0.625em;
+}
+
+.content_3{
+    z-index: 0;
+    position: absolute;
+    top: 8.5em;
+    left: 8em;
+    width: 75em;
+    height: 41em;
+    text-align: center;
+}
+
+.tdTab{
+    border-right: 0.125em solid #9fb28b;
+    border-top: 0.125em solid #9fb28b;
+    border-left: 0.125em solid #9fb28b;
+    border-top-right-radius: 0.625em;
+    border-top-left-radius: 0.625em;
+    background-color: #fcfcf5;
+    font-weight: bold;
+}
+
+.skattningsskalor{
+    position: absolute;
+    text-align: left;
+    top: 4.425em;
+    left: 2.75em;
+    height: 37em;
+    width: 78.625em;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+
+.formButtons{
+    position: absolute;
+    top: 39.125em;;
+    left: 47.625em;
+    width: 35em;
+    height: 2.625em;
+}
+
+.formButtons_2{
+    position: absolute;
+    top: 39.125em;;
+    left: 34.125em;
+    width: 18em;
+    height: 2.625em;
+}
+
+.formButtons_4{
+    position: absolute;
+    top: 41.925em;
+    left: 70.625em;
+    width: 8em;
+    height: 2.625em;
+}
+
+.loginForm{
+    position: absolute;
+    height: 19.125em;
+    width: 17.625em;
+    top: 8.250em;
+    border: 0.125em solid #9fb28b;
+    background-color: #ffffff;
+    border-radius: 0.525em;
+    padding: 1.525em;
+}
+
+.credits{
+    position: absolute;
+    top: 3em;
+    left: 14.225em;
+    width: 55em;
+    overflow-y: auto;
+    height: 41em;
+    border: 0.125em solid #9fb28b;
+    background-color: #ffffff;
+    border-radius: 0.5em;
+    padding: 3em;
+}
+
+.tdHead{
+    font-weight: bold;
+    font-size: 1.5em;
+    vertical-align: top;
+    height: 1.375em;
+}
+
+.loggedIn{
+    z-index: 1;
+    position: absolute;
+    left: 2em;
+    top: 5.125em;
+    width: 18em;
+    height: 1.925em;
+}
+
+.logOut{
+    z-index: 1;
+    position: absolute;
+    left: 82.325em;
+    top: 0.240em;
+    width: 6.125em;
+    height: 1.925em;
+}
+
+.settings{
+    z-index: 1;
+    position: absolute;
+    left: 72.825em;
+    top: 0.240em;
+    width: 8.425em;
+    height: 3.850em;
+    font-color: #576e44;
+}
+
+.subCat{
+    text-indent: 0em;
+    font-weight: normal;
+    width: 22em;
+    font-family: Arial, Helvetica, Roboto, sans-serif;
+    font-size: 0.9em;
+}
+
+.subCat2{
+    text-indent: 2.825em;
+    font-weight: normal;
+    width: 22em;
+    font-family: Arial, Helvetica, Roboto, sans-serif;
+    font-size: 0.9em;
+}
+
+
+.leftMenu{
+    position: absolute
+    height: 80em;
+    width: 28em;
+    font-family: Arial, Helvetica, Roboto, sans-serif;
+    font-weight: bold;
+    font-size: 1.4em;
+    text-align: left;
+    padding-left: 1.875em;
+    padding-top: 1.250em;
+    height: 28em;
+
+}
+
+/*.underCategoriesLeftMenu{
+    position: absolute;
+    top: 300px;
+    height: 450px;
+    width: 350px;
+    font-family: Arial, Helvetica, Roboto, sans-serif;
+    font-weight: bold;
+    font-size: 0.8;
+    text-align: left;
+    padding-left: 30px;
+    padding-top: 15px;
+    border: 1px solid red;	
+}*/
+
+
+.categoriesParent{
+    height: 10.5em;
+    width: 25em;
+    overflow-y: auto;
+    font-family: Arial, Helvetica, Roboto, sans-serif;
+    font-weight: bold;
+    font-size: 1.3em;
+    text-align: left;
+    padding-left: 0.175em;
+    padding-top: 0.150em;
+    border-right: 0.125em solid #9fb28b;
+}
+
+.categoriesChild{
+    height: 10.5em;
+    width: 25em;
+    overflow-y: auto;
+    font-family: Arial, Helvetica, Roboto, sans-serif;
+    font-weight: bold;
+    font-size: 1.3em;
+    text-align: left;
+    padding-left: 0.175em;
+    padding-top: 0.150em;
+    border-right: 0.125em solid #9fb28b;
+
+}
+
+.categoriesLeftMenu{
+    font-size: 1.1em;
+    font-weight: bold;
+    text-align: left;
+    height: 26em;
+    overflow: auto;
+}
+
+.patientImg{
+    position: absolute;
+    top: 3.145em;
+    left: 1.625em;
+    width: 39.53125em;
+    text-align: center;
+}
+
+.imageBig{
+    position: absolute;
+    top: 1em;
+    left: 1.725em;
+    width: 39.53125em;
+    text-align: center;
+}
+
+.videoAnswer{
+    position: absolute;
+    top: 3.145em;
+    left: 1.625em;
+    height: 27.500em;
+    width: 39.53125em;
+    text-align: center;
+}
+
+
+.videofeedback{
+    position: absolute;
+    top: 3.145em;
+    left: 1.625em;
+    height: 27.500em;
+    width: 39.53125em;
+    text-align: center;
+}
+.videoAnswerParent{
+    align: center;
+    valign: middle;
+    height: 22.6875em;
+    width: 32.6128em;
+    text-align: center;
+}
+
+.videoAnswerChild{
+    align: center;
+    valign: middle;
+    height: 22.6875em;
+    width: 32.6128em;
+    text-align: center;
+}
+
+.patientImgThumb{
+    z-index: 5;
+    position: absolute;
+    top: 5em;
+    left: 80em;
+    width: 5.925em;
+    height: 5.925em;
+    background-color: #ffffff;
+    padding: 0.7125em;
+}
+
+.textBox_1{
+    position: absolute;
+    top: 35em;
+    left: 4.825em;
+    width: 30em;
+    height: 6.875em;
+    border: 0.125em solid #9fb28b;
+    padding: 1.325em;
+    border-radius:  0.525em;
+    background-color: #ffffff;
+}
+
+.textBox_2{
+    position: absolute;
+    top: 40em;
+    left: 4.825em;
+    width: 30em;
+    height: 3.6em;
+    border: 0.125em solid #9fb28b;
+    padding: 1.325em;
+    border-radius:  0.525em;
+    background-color: #ffffff;
+}
+
+
+.imageArea{
+    position: absolute;
+    top: 5.025em;
+    left:   44.325em;
+    width:   43.125em;
+    height: 47em;
+    background-color: #ced8c4;
+}
+
+.imageAreawithChild{
+    position: absolute;
+    top: 7.825em;
+    left:   1.45em;
+    width:   86.250em;
+    height: 25.525em;
+    background-color: #ced8c4;
+}
+.bedomning{
+    position: absolute;
+    left: 4.125em;
+}
+/*
+.inactiveForm{
+    font-color: red;
+}
+*/
+
+.textArea_1{
+    position: absolute;
+    top: 9.825em;
+    width: 20em;
+    height: 28.250em;
+    text-align: left;
+}
+
+
+.textArea_2{
+    position: absolute;
+    width: 20em;
+    height: 28.250em;
+    left: 22.425em;
+    top: 9.825em;
+    text-align: left;
+}
+
+.textArea_3{
+    position: absolute;
+    width: 20em;
+    height: 28.250em;
+    left: 45em;
+    top: 9.825em;
+    text-align: left;
+}
+
+.feedbackHeadline{
+    position: absolute;
+    top: 2.3em;
+    left: 34.5em;
+    width: 40em;
+}
+
+.feedbackHeadline_2{
+    position: absolute;
+    top: 2.3em;
+    left: 37.2em;
+    width: 40em;
+}
+.feedbackHeadline_3{
+    position: absolute;
+    top: 2.3em;
+    left: 49em;
+    width: 40em;
+}
+.skattHeadline_3{
+    position: absolute;
+    top: 1.5em;
+    left: 2em;
+    width: 40em;
+    font-size: 1.3em;
+}
+
+.feedbackContent{
+    position: absolute;
+    top: 5em;
+    left: 22em;
+    width: 50em;
+    overflow-y: scroll;
+    height: 38em;
+}
+
+.feedbackVideoContent{
+    position: absolute;
+    top: 1em;
+    left: 40em;
+    width: 50em;
+    height: 16em;
+}
+
+.feedbackContent_2{
+    position: absolute;
+    top: 5em;
+    left: 25em;
+    width: 50em;
+    height: 38em;
+}
+
+.tdFeedbackHeadline{
+    width: 20em;
+    font-weight: bold;
+}
+
+.tdFeedback{
+    border-right: 0.125em solid #a67c52;
+    width: 5em;
+}
+.tdUppf{
+    width: 6em;
+}
+.tdFeedbackBedom{
+    width: 7em;
+    border-right: 0.125em solid #a67c52;
+}
+.tdQuestion{
+    width: 20em;
+}
+
+.copyrightText{
+    position: absolute;
+    top: 54.3em;
+    left: 67.7em;
+    width: 22em;
+    font-family: Arial, Helvetica, Roboto, sans-serif;
+    font-size: 1em;
+}
+
+/*End of my contribution!*/
+
+.uk-text-tiny {
+    font-size: 0.65em;
+    font-color: #5c5052
+
+}
+
+.logoin {
+    margin-top: 0em;
+    font-size: 1.2em;
+}
+
+iframe, img.main {
+    border: solid 5px gray;
+    border-radius: 5px;
+}
+
+.uk-tab-left > li > a {
+    padding: 0.2em;
+    color: gray;
+
+}
+
+.uk-tab-left > li > a:hover {
+    color: black;
+    text-decoration: none;
+    height: 1.12em;
+
+}
+
+.uk-tab-left > li {
+    margin: -0.2em;
+}
+
+.uk-tab-left > li:hover {
+
+}
+
+.tabcontenttt{
+    background: white;
+    border: 2px solid black;
+    height: 100%;
+    width: 100%;
+}
+
+#anamnes_questions {
+    background: #fff;
+}
+
+.listylist {
+    height: 10.6em; overflow-y: scroll;
+    border: solid 1px lightgray;
+    border-radius: 5px;
+}
+
+.uk-nav-side {
+    overflow-y: scroll;
+    height: 10.6em;
+    border: solid 1px lightgray;
+    border-radius: 5px;
+}
+
+.uk-nav-side > li.uk-active > a {
+
+    border-radius: 5px;
+}
+
+.uk-nav-side > li > a {
+    padding: 0.13em;
+    background-color: #ffffff;
+}
+
+.statuscats > li > a {
+    padding: 0.65em;
+}
+
+.labcats > li > a {
+    padding: 0.65em;
+}
+
+
+.statusdescription {
+    padding: 0.05em;
+    margin-bottom: 0em;
+    background-color: lightgray;
+    color: black;
+    border: 1px solid black;
+}
+
+.casecont > a:hover {
+    text-decoration: none;
+}
+
+a > .casebox:hover {
+    background: lightgray;
+}
+
+.casebox {
+    padding-bottom: 0.15em;
+    text-decoration: none;
+}
+
+h4 {
+    margin-top: 0.1em;
+    font-size: 12pt;
+    font-weight: normal;
+}
+
+
+
+.casebox > img {
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+
+img {
+    border-radius: 0px;
+    border: solid 1px #9fb28b;
+}
+
+img.logo {
+    border-radius: 0px;
+    border: solid 0px black;
+    height: 15px;
+    width: 15px;
+}
+
+.infobutton {
+    font-size: 1.5em;
+    padding-top: 1.2em;
+    padding-bottom: 1.2em;
+}
+
+.instrumentbutton {
+    font-size: 2.5em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.uk-icon-small {
+    font-size: 0.6em;
+}
+
+
+.uk-icon-medium {
+    font-size: 0.55em;
+}
+
+.uk-navbar-brand.uk-visible-small {
+    margin-top: 0.1em;
+    font-size: 1em;
+}
+
+.formButtons_5{
+    position: absolute;
+    top: 24.925em;
+    left: 36.625em;
+    width: 8em;
+    height: 2.625em;
+}
+.intro{
+    position: absolute;
+    top: 7em;
+    left: 17em;
+    left: 17em;
+    width: 45em;
+    overflow-y: auto;
+    height: 25em;
+    border: 0.125em solid #9fb28b;
+    background-color: #ffffff;
+    border-radius: 0.5em;
+    padding: 4.5em;
+}

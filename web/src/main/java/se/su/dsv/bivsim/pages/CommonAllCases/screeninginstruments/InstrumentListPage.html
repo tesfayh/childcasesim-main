@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.3-strict.dtd" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>BSAsim - Anamnes</title>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon-precomposed" href="images/apple-touch-icon.png">
+    <script src="/flowplayer/flowplayer-3.2.12.min.js"></script>
+    <link rel="stylesheet" href="css/uikit.gradient.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/uikit.min.js"></script>
+</head>
+
+<body>
+<div class="bsaSimFrame">
+
+
+    <div class="loggedIn">
+
+        <span class="special"></span> <span class="uk-text-muted" wicket:id="username"></span>
+
+    </div>
+
+    <div class="BSAsim_navbar">
+        <span wicket:id="caseHeader"></span>
+    </div>
+
+    <div class="logOut"><a wicket:id="signOut">LOGGA UT</a></div>
+
+
+    <div class="container">
+
+
+        <div class="patientImgThumb"><img src="img/patient_1_small.png"></div>
+
+        <div class="content_2">
+
+            <div class="leftMenu">
+                <div class="categoriesLeftMenu">
+                    <ul class="uk-nav">
+                        <li><a wicket:id="PHQ9">PHQ-2</a>
+                        </li>
+                        <li><a wicket:id="IES-R">IES-R</a>
+                        </li>
+                        <li><a  wicket:id="AUDIT">AUDIT</a>
+                        </li>
+                        <li><a wicket:id="PTSD">PTSD</a>
+                        </li>
+                        <li><a wicket:id="DUDIT">DUDIT</a>
+                        </li>
+                        <li><a wicket:id="MADRAS">MADRAS</a>
+                        </li>
+                        <li><a wicket:id="ASRS">ASRS</a>
+                        </li>
+                          <li><a wicket:id="Social">Social nätverkskarta</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+
+        </div>
+
+
+
+    </div>
+
+    <div class="copyrightText">&copy; Copyright: DSV, Stockholms Universitet, 2014</div>
+</div>
+
+</body>
+
+</html>

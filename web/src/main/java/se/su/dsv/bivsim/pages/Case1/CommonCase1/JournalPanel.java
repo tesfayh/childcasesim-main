@@ -14,21 +14,21 @@ import org.apache.wicket.util.resource.IResourceStream;
 public class JournalPanel extends Panel {
     public JournalPanel(String id) {
         super(id);
-        File file = new File("/var/childcasesim/Case1log/Tidigarejournal.pdf");
+        File file = new File("/var/childcasesim/Info1/Tidigare.pdf");
         file.listFiles();
         // IResourceStream resStream = new ZipResourceStream(file);
         IResourceStream resourceStream = new FileResourceStream(
-                new org.apache.wicket.util.file.File(file));
+                new File(file));
         ResourceStreamResource resource = new ResourceStreamResource(resourceStream);
         resource.setContentDisposition(ContentDisposition.ATTACHMENT);
         ResourceLink link = new ResourceLink("link", resource);
         add(link);
 
-        File file2 = new File("/var/childcasesim/Case1log/Social nätverkskarta.pdf");
+        File file2 = new File("/var/childcasesim/Info1/Social nätverkskarta.pdf");
         file2.listFiles();
         // IResourceStream resStream = new ZipResourceStream(file);
         IResourceStream resourceStream2 = new FileResourceStream(
-                new org.apache.wicket.util.file.File(file2));
+                new File(file2));
         ResourceStreamResource resource2 = new ResourceStreamResource(resourceStream2);
         resource.setContentDisposition(ContentDisposition.ATTACHMENT);
         ResourceLink link2 = new ResourceLink("link2", resource2);

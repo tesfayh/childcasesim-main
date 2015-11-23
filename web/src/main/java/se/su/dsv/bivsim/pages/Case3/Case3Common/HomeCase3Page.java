@@ -1,8 +1,7 @@
 package se.su.dsv.bivsim.pages.Case3.Case3Common;
 
 import org.apache.wicket.markup.html.WebMarkupContainer;
-import org.apache.wicket.markup.html.basic.Label;
-import se.su.dsv.bivsim.pages.Case3.Case3Common.BaseClasses.BaseCase3Page;
+import se.su.dsv.childcasesim.pages.Case3.Case3Common.BaseClasses.BaseCase3Page;
 
 
 public class HomeCase3Page extends BaseCase3Page {
@@ -14,18 +13,10 @@ public class HomeCase3Page extends BaseCase3Page {
     }
 
     public HomeCase3Page() {
-        contentWmc = new WebMarkupContainer("contentWmc");
+         contentWmc = new WebMarkupContainer("contentWmc");
         contentWmc.setOutputMarkupId(true);
-
-        contentWmc.add(new Label("content", "<p style=\" padding: 0em 1em;\">\n" +
-                "                      <img src=\"/img/Ahmed.png\"  style=\" width: 320px; height: 220px; float:center; margin:0 5px 0 0;\" />\n" +
-                "\n" +
-                "                       .\n" +
-                "                    </p>\n").setEscapeModelStrings(false));
-
+        contentWmc.add(new PaticnetPictuerPanel3("content"));
         add(contentWmc);
-
-
     }
 }
 

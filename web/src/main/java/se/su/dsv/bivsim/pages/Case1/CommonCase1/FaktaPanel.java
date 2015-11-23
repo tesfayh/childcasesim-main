@@ -14,21 +14,21 @@ import org.apache.wicket.util.resource.IResourceStream;
 public class FaktaPanel extends Panel {
     public FaktaPanel(String id) {
         super(id);
-        File file = new File("/var/childcasesim/Case1log/Lagtext om barn som anhöriga.pdf");
+        File file = new File("/var/childcasesim/Info1/Lagtext om barn som anhöriga.pdf");
         file.listFiles();
         // IResourceStream resStream = new ZipResourceStream(file);
         IResourceStream resourceStream = new FileResourceStream(
-                new org.apache.wicket.util.file.File(file));
+                new File(file));
         ResourceStreamResource resource = new ResourceStreamResource(resourceStream);
         resource.setContentDisposition(ContentDisposition.ATTACHMENT);
         ResourceLink link = new ResourceLink("link", resource);
         add(link);
 
-        File file2 = new File("/var/childcasesim/Case1log/barnkonventionen-i-sin-helhet.pdf");
+        File file2 = new File("/var/childcasesim/Info1/barnkonventionen-i-sin-helhet.pdf");
         file2.listFiles();
         // IResourceStream resStream = new ZipResourceStream(file);
         IResourceStream resourceStream2 = new FileResourceStream(
-                new org.apache.wicket.util.file.File(file2));
+                new File(file2));
         ResourceStreamResource resource2 = new ResourceStreamResource(resourceStream2);
         resource.setContentDisposition(ContentDisposition.ATTACHMENT);
         ResourceLink link2 = new ResourceLink("link2", resource2);

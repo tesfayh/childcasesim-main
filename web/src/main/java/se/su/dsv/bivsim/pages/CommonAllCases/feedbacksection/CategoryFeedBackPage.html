@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.3-strict.dtd">
+<head>
+    <title></title>
+</head>
+<body>
+<wicket:extend>
+     <div class="leftMenu">
+        <div class="categoriesLeftMenu">
+            <ul class="uk-nav">
+                <li><a wicket:id="interview">Anamnes</a>
+                </li>
+
+
+                    <div class="subCat"  wicket:id="interviewMarkup">
+                        <div wicket:id="anamnes"></div>
+                    </div>
+                    <!--Subcategories shows in Expand mode
+                                    <ul class="subCat"><li>
+
+                                                            <li><a href="aterkoppling_anamnes_pat.html"><font color="#a67c52">Återkoppling från patienten</font></a></li>
+                                                            <li><a href="aterkoppling_anamnes_exp.html">Återkoppling från Experten</a></li>
+                                                             </li>
+                    </ul>
+                    -->
+                <li><a wicket:id="Instrument">Skattningsskalor</a>
+                </li>
+
+                    <div class="subCat"  wicket:id="instrumentmarkup">
+                    <div wicket:id="instrument"></div>
+                   </div>
+
+                <!--Subcategories shows in Expand mode
+                                <ul class="subCat">
+                                <li><a href="#">PHQ-2</a>
+                                                </li>
+                                                <li><a href="#">PHQ-9</a>
+                                                </li>
+                                                <li><a href="#">HSCL</a>
+                                                </li>
+                                                <li><a href="#">PTSD</a>
+                                                </li>
+                                <li><a href="aterkoppling_skatt_audit.html"><font color="#a67c52">AUDIT</font></a>
+                                                </li>
+                                <li><a href="#">DUDIT</a>
+                                                </li>
+                                <li><a href="#">MADRAS</a>
+                                                </li>
+                                <li><a href="#">ASRS</a>
+                                                </li>
+                                <li><a href="#">BENTON</a>
+                                                </li>
+                                <li><a href="#">Social nätverkskarta</a>
+                                                </li>
+                </ul>
+                -->
+                <li><a wicket:id="Uppföljning">Uppföljning</a>
+                </li>
+                <li><a wicket:id="PreliminärBedömning">Preliminär bedömning</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div wicket:id="feedbackContainer1" >
+        <div wicket:id="subfeedback">
+        </div>
+    </div>
+
+
+</wicket:extend>
+</body>
+</html>

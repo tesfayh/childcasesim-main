@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.3-strict.dtd">
+<head>
+    <title></title>
+</head>
+<body>
+<wicket:extend>
+
+   <div class="bedomning">
+        <form wicket:id="professionForm" class="uk-form" style="position: absolute; left: 50px; top: 30px;">
+            <fieldset>
+
+                <table width="800" border="0">
+                    <tr>
+                        <td align="left" valign="top">Vill du schemalägga ett uppföljningsbesök?</td>
+                        <td align="left" valign="top" width="15px"><div class="uk-form-row">
+                        </div></td>
+                        <td align="left" valign="top"><div class="uk-form-row">
+                            <div class="uk-form-icon">
+                                <i class="uk-icon-calendar"></i>
+                                <input wicket:id="dateTextField" type="text" style="border: 1px solid #576e44; height: 22px;" placeholder="Datum">
+                            </div></div></td>
+                        <td align="left" valign="middle"><div class="uk-form-icon">
+                        </div></td>
+
+                    </tr>
+                    <tr>
+                        <td align="left" valign="middle">Vill du remittera patienten vidare?</td>
+                        <td align="left" valign="middle" width="15px"><div class="uk-form-row">
+                        </div></td>
+                        <td align="left" valign="middle">
+                            <div class="uk-form-row">
+                            <select wicket:id="Profession"  style="border: 1px solid #576e44; font-color: #9fb28b; height: 22px;"></select>
+                            </div></td>
+
+                    </tr>
+                    <!--<tr>
+                        <td align="left" valign="top">Vill du formulera en bedömning?</td>
+                        <td align="left" valign="top" colspan="2"><div class="uk-form-row">
+                            <input type="checkbox" id="fysiskhalsa">
+                            <a href="bedom2.html">Fysisk hälsa</a></div></td>
+                        <td align="left" valign="top"><div class="uk-form-row">
+                            <input type="checkbox" id="fysiskhalsa">
+                            <a href="bedom2.html">Psykisk hälsa</a></div></td>
+                        <td align="left" valign="top"><div class="uk-form-row">
+                            <input type="checkbox" id="fysiskhalsa">
+                            <a href="bedom2.html">Social situation</a></div></td>
+                        <td align="left" valign="top"></td>
+                        <td align="left" valign="top""></td>
+                        <td align="left" valign="top"></td>
+                    </tr>-->
+                </table>
+
+                <div class="textArea_1">
+                    Anledning till remiss<br>
+                    <textarea wicket:id="Anledning" style="border: 1px solid #576e44" cols="30" rows="14" placeholder="Klicka och skriv här..."></textarea>
+                </div>
+                <div class="textArea_2">    	Diagnos / Frågor<br>
+                    <textarea wicket:id="Diagnos" style="border: 1px solid #576e44" cols="30" rows="14" placeholder="Klicka och skriv här..."></textarea>
+                </div>
+
+                <div class="textArea_3">    	Historia / Status<br>
+                    <textarea wicket:id="Historia" style="border: 1px solid #576e44; font-color: #9fb28b;" cols="30" rows="14" placeholder="Klicka och skriv här..."></textarea>
+                </div>
+
+
+            <div class="formButtons">
+
+                <table width="300">
+                    <tr>
+                        <td width="100"></td>
+                        <td width="100"><div class="standardButton"><a wicket:id="tillbaka">TILLBAKA</a></div></td>
+                        <td width="100"><div class="standardButton"><a wicket:id="save">SKICKA</a></div></td>
+                    </tr>
+                </table>
+
+
+            </div>
+            </fieldset>
+
+        </form>
+    </div>
+
+</wicket:extend>
+</body>
+</html>
+
+
+

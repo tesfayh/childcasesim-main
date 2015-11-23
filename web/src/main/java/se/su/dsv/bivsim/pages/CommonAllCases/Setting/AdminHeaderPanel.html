@@ -5,21 +5,20 @@
 </head>
 <body>
 <wicket:panel>
-    <ul class="uk-navbar-nav">
-        <li>
-            <a wicket:id="downloadheader"><span class="special"></span> <span class="uk-text-muted">Log</span></a>
-        </li>
-        <li>
-            <a wicket:id="admin"><span class="special"></span> <span class="uk-text-muted">Administrering</span></a>
-        </li>
-        <li>
-            <a class="uk-text-muted" wicket:id="setting">Inställning</a>
-        </li>
-        <li>
-            <a wicket:id="signOut"><span class="special" wicket:id="username"></span> <span
-                    class="uk-text-muted">[Logga ut]</span></a>
-        </li>
-    </ul>
+
+    <div class="settings">
+        <a wicket:id="setting">INSTÄLLNINGAR</a>
+        <a wicket:id="admin">ADMINISTRATÖR </a>
+    </div>
+    <div class="logOut">
+        <a wicket:id="signOut">LOGGA UT</a>
+        <a wicket:id="downloadheader">LOGG</a>
+
+    </div>
+
+
 </wicket:panel>
 </body>
 </html>
+
+

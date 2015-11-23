@@ -2,11 +2,9 @@ package se.su.dsv.bivsim.pages.CommonAllCases.Setting;
 
 import org.apache.wicket.ajax.AjaxRequestTarget;
 import org.apache.wicket.ajax.markup.html.AjaxFallbackLink;
-import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.markup.html.link.Link;
 import org.apache.wicket.markup.html.panel.Panel;
-import se.su.dsv.bivsim.pages.CommonAllCases.Edit.BaseClasses.CommonEditingPage;
-import se.su.dsv.bivsim.pages.CommonAllCases.SignOut;
+import se.su.dsv.childcasesim.pages.CommonAllCases.General.SignOut;
 
 public class AdminHeaderPanel extends Panel{
 
@@ -26,7 +24,6 @@ public class AdminHeaderPanel extends Panel{
 
         };
         add(signOut);
-        signOut.add(new Label("username", getSession().getAttribute("username").toString()));
 
         Link setting = new AjaxFallbackLink("setting") {
 
@@ -34,7 +31,11 @@ public class AdminHeaderPanel extends Panel{
             public void onClick(AjaxRequestTarget target) {
 
 
-                setResponsePage(SettingPageAdmin.class);
+
+
+                setResponsePage(SettingAdmin.class);
+
+
 
 
             }
@@ -49,7 +50,11 @@ public class AdminHeaderPanel extends Panel{
             @Override
             public void onClick(AjaxRequestTarget target) {
 
-                setResponsePage(CommonEditingPage.class);
+
+/*
+               setResponsePage(CommonEditingPage.class);
+*/
+
 
             }
 
@@ -60,6 +65,7 @@ public class AdminHeaderPanel extends Panel{
 
             @Override
             public void onClick(AjaxRequestTarget target) {
+
 
                 setResponsePage(DownLoadPage.class);
 

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.3-strict.dtd">
+<head>
+    <title></title>
+</head>
+<body>
+<wicket:extend>
+
+    <div class="bedomning">
+        <form wicket:id="Preliminär" class="uk-form" style="position: absolute; left: 50px; top: 30px;">
+            <fieldset>
+
+                <table width="800" border="0">
+
+
+                    <tr wicket:id="radioGroup1">
+                        <td align="left" valign="top">Vill du formulera en bedömning?</td>
+                        <td>
+                            <label>Fysisk hälsa</label>
+                            <input type="radio" wicket:id="check1" />
+                        </td>
+                        <td>
+                            <label>Psykisk hälsa</label>
+                            <input type="radio" wicket:id="check2" />
+                        </td>
+                        <td>
+                            <label>Social situation</label>
+                            <input type="radio" wicket:id="check3" />
+                        </td>
+
+                    </tr>
+                </table>
+
+                <div class="textArea_1">
+                    <b>Bedömning</b><br>
+                    <textarea wicket:id="Bedömning" style="border: 1px solid #576e44" cols="30" rows="14"
+                              placeholder="Klicka och skriv här..."></textarea>
+                </div>
+                <div class="textArea_2"><b>Åtgärd</b><br>
+                    <textarea wicket:id="Åtgärd" style="border: 1px solid #576e44" cols="30" rows="14"
+                              placeholder="Klicka och skriv här..."></textarea>
+                </div>
+
+
+                <div class="formButtons_2">
+
+                    <table width="200">
+                        <tr>
+                            <td width="100">
+                                <div class="standardButton"><a wicket:id="tillbaka">TILLBAKA</a></div>
+                            </td>
+                            <td width="100">
+                                <div class="standardButton"><a wicket:id="save">SKICKA</a></div>
+                            </td>
+
+                        </tr>
+                    </table>
+                </div>
+
+
+            </fieldset>
+        </form>
+    </div>
+
+</wicket:extend>
+</body>
+</html>

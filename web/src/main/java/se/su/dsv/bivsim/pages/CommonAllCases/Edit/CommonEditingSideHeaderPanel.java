@@ -38,22 +38,7 @@ public class CommonEditingSideHeaderPanel extends Panel {
         };
         add(Editexistingcases);
 
-      /*  Link CreatNewCases = new AjaxFallbackLink("creatnewcases") {
-            @Override
-            public void onClick(AjaxRequestTarget target) {
 
-                this.setResponsePage(CreateNewCase.class);
-            }
-        };
-        add(CreatNewCases);*/
+}
 
-       /* Link welcomeupload = new Link("welcomeUpload") {
-            @Override
-            public void onClick() {
-
-                this.setResponsePage(WelcomeAndHomeDropwn.class);
-            }
-        };
-        this.add(welcomeupload);*/
-    }
 }

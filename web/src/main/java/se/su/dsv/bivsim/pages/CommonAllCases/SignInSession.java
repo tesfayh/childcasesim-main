@@ -5,8 +5,8 @@ import org.apache.wicket.authroles.authorization.strategies.role.Roles;
 import org.apache.wicket.injection.Injector;
 import org.apache.wicket.request.Request;
 import org.apache.wicket.spring.injection.annot.SpringBean;
-import se.su.dsv.bivsim.data.Case.dao.interfaces.AdminsEntityDao;
-import se.su.dsv.bivsim.data.Case.dataobjects.AdminsEntity;
+import se.su.dsv.childcasesim.data.Case.dao.interfaces.AdminsEntityDao;
+import se.su.dsv.childcasesim.data.Case.dataobjects.AdminsEntity;
 
 import java.util.List;
 
@@ -26,12 +26,15 @@ public final class SignInSession extends AuthenticatedWebSession {
 
         List<AdminsEntity> logins = adminsEntityDao.findAll();
         for (AdminsEntity login : logins) {
-            if (login.getemail().equals(email) && login.getPassword().equals(pass))
+            if (login.getemail().equals(email) && login.getPassword().equals(pass)){
                 authenticated = true;
+            }
+
 
         }
         return authenticated;
     }
+
 
     @Override
     public Roles getRoles() {

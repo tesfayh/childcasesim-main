@@ -7,14 +7,16 @@ import org.apache.wicket.extensions.markup.html.repeater.tree.content.Folder;
 import org.apache.wicket.markup.html.panel.Panel;
 import org.apache.wicket.model.IModel;
 import org.apache.wicket.spring.injection.annot.SpringBean;
-import se.su.dsv.bivsim.data.Case.dao.interfaces.PhysicalExamEntityDao;
-import se.su.dsv.bivsim.data.Case.dataobjects.PhysicalExamEntity;
-import se.su.dsv.bivsim.pages.Case3.Case3Common.HomeCase3Pagephysical;
-import se.su.dsv.bivsim.pages.Case3.Case3Interview.AbstractTreePanel;
-import se.su.dsv.bivsim.pages.Case3.Case3Interview.ContentPanel;
+import se.su.dsv.childcasesim.data.Case.dao.interfaces.PhysicalExamEntityDao;
+import se.su.dsv.childcasesim.data.Case.dataobjects.PhysicalExamEntity;
+import se.su.dsv.childcasesim.pages.Case3.Case3Common.HomeCase3Pagephysical;
+import se.su.dsv.childcasesim.pages.CommonAllCases.General.ImageResourceReference3;
+import se.su.dsv.childcasesim.pages.CommonAllCases.Physical.PhysicalExamEntityProvider;
+import se.su.dsv.childcasesim.pages.CommonAllCases.General.PhysicalExamSimplePanel;
+import se.su.dsv.childcasesim.pages.CommonAllCases.General.PicturePanel;
 
 
-public class PhysicalExamTreePanel extends AbstractTreePanel {
+public class PhysicalExamTreePanel extends Panel {
     @SpringBean
     private PhysicalExamEntityDao physicalExamEntityDao;
 
@@ -73,7 +75,7 @@ public class PhysicalExamTreePanel extends AbstractTreePanel {
 
                         getSession().setAttribute("exPhysical", (Integer) getSession().getAttribute("exPhysical") + 1);
 
-                        ContentPanel panel = new PicturePanel("content", model.getObject().getDescription(), model.getObject().getPicId());
+                        PicturePanel panel = new PicturePanel("content", model.getObject().getDescription(), model.getObject().getPicId(), new ImageResourceReference3());
                         setContent(panel, target);
                         //getSession().setAttribute("Physical", getSession().getAttribute("Physical") + model.getObject().getName() + "#");
 

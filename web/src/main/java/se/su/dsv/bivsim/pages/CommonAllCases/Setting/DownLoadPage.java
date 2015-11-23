@@ -3,7 +3,6 @@ package se.su.dsv.bivsim.pages.CommonAllCases.Setting;
 import org.apache.wicket.ajax.AjaxRequestTarget;
 import org.apache.wicket.ajax.markup.html.AjaxFallbackLink;
 import org.apache.wicket.markup.html.WebPage;
-import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.markup.html.link.Link;
 import org.apache.wicket.markup.html.link.ResourceLink;
 import org.apache.wicket.request.resource.ContentDisposition;
@@ -11,9 +10,7 @@ import org.apache.wicket.request.resource.ResourceStreamResource;
 import org.apache.wicket.util.file.File;
 import org.apache.wicket.util.resource.IResourceStream;
 import org.apache.wicket.util.resource.ZipResourceStream;
-import se.su.dsv.bivsim.pages.CommonAllCases.ChooseCase;
-import se.su.dsv.bivsim.pages.CommonAllCases.Edit.BaseClasses.CommonEditingPage;
-import se.su.dsv.bivsim.pages.CommonAllCases.SignOut;
+import se.su.dsv.childcasesim.pages.CommonAllCases.General.ChooseCase;
 
 /**
  * Created by kib on 9/22/15.
@@ -36,63 +33,6 @@ public class DownLoadPage extends WebPage {
          add(tillbaka);
 
 
-        Link signOut = new AjaxFallbackLink("signOut") {
-
-            @Override
-            public void onClick(AjaxRequestTarget target) {
-
-                setResponsePage(SignOut.class);
-
-            }
-
-
-        };
-        add(signOut);
-        signOut.add(new Label("username", getSession().getAttribute("username").toString()));
-
-
-        Link setting = new AjaxFallbackLink("setting") {
-
-            @Override
-            public void onClick(AjaxRequestTarget target) {
-
-
-                setResponsePage(SettingPageAdmin.class);
-
-
-            }
-
-
-        };
-        add(setting);
-
-
-        Link admin = new AjaxFallbackLink("admin") {
-
-            @Override
-            public void onClick(AjaxRequestTarget target) {
-
-                setResponsePage(CommonEditingPage.class);
-
-
-            }
-
-
-        };
-        add(admin);
-
-
-        Link downloadheader= new AjaxFallbackLink("downloadheader") {
-
-            @Override
-            public void onClick(AjaxRequestTarget target) {
-
-                setResponsePage(DownLoadPage.class);
-
-            }
-
-        };
-        add(downloadheader);
 
 
         File file1 = new File("/var/childcasesim/Case1log/");
