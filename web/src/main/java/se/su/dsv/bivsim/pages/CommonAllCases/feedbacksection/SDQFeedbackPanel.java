@@ -11,13 +11,13 @@ import org.apache.wicket.markup.html.list.ListItem;
 import org.apache.wicket.markup.html.list.ListView;
 import org.apache.wicket.markup.html.panel.Panel;
 import org.apache.wicket.model.Model;
-import se.su.dsv.childcasesim.data.Case.dataobjects.PTSDEntity;
+import se.su.dsv.bivsim.data.Case.dataobjects.PTSDEntity;
 
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 
-public class IESRFeedbackPanel extends Panel {
+public class SDQFeedbackPanel extends Panel {
 
 
     int i1 = 0;
@@ -43,79 +43,46 @@ public class IESRFeedbackPanel extends Panel {
 
 
     String[] questionArrays =
-            new String[]{"1. Varje påminnelse väckte till liv känslor av detta",
-
-                    "2. Jag hade svårt att sova ",
-
-                    "3. Andra saker fick mig att tänka på detta ",
-
-                    "4. Jag kände mig irriterad och arg",
-
-                    "5. Jag undvek att låta mig bli upprörd när jag tänkte" +
-
-                            " på eller blev påmind om detta",
-
-                    "6. Jag tänkte på detta när jag inte ville det",
-
-                    "7. Jag kände mig som om detta inte hade hänt mig" +
-
-                            " eller som om det inte var verkligt",
-
-                    "8. Jag höll mig borta från det som kunde påminna" +
-
-                            " mig om detta",
-
-                    " 9. Bilder om detta kom in i mitt huvud",
-
-                    "10. Jag hoppade till och hade lätt för att reagera",
-
-                    "11. Jag försökte att inte tänka på det",
-
-                    "12. Jag var medveten om att jag fortfarande hade många" +
-
-                            " känslor om detta, men jag tog inte itu med dem",
-
-                    "13. Mina känslor för detta var på något sätt förlamade",
-
-                    "14. Jag såg mig själv bete mig eller känna mig som om" +
-
-                            " jag var tillbaka vid den tidpunkten",
-
-                    "15. Jag hade svårt att somna",
-
-                    "16. Jag hade starka känslovågor om detta",
-
-                    "17. Jag försökte få bort detta från mitt minne",
-
-                    "18. Jag hade svårt att koncentrera mig",
-
-                    " 19. Påminnelser orsakade fysiologiska reaktioner hos" +
-
-                            " mig som ex. svettning, andningssvårigheter, illa-" +
-
-                            " mående eller hjärtklappning",
-
-                    "20. Jag drömde om det",
-
-                    "21. Jag kände att jag ville övervaka saker och ting och" +
-
-                            " var i försvarsposition",
-
-                    "22. Jag försökte att inte tala om det",
+            new String[]{"1. Omtänksam, tar hänsyn till andra människors känslor",
+                    "2.  Rastlös, överaktiv, kan inte vara stilla länge",
+                    "3. Klagar ofta över huvudvärk, ont i magen eller illamående",
+                    "4. Delar gärna med sig till andra barn (t ex godis, leksaker, pennor)",
+                    "5. Har ofta raseriutbrott eller häftigt humör",
+                    "6. Ganska ensam, leker eller håller sig ofta för sig själv",
+                    "7. Som regel lydig, följer vanligtvis vuxnas uppmaningar",
+                    "8. Oroar sig över mycket, verkar ofta bekymrad",
+                    "9. Hjälpsam om någon är ledsen, upprörd eller känner sig dålig",
+                    "10. Svårt att sitta stilla, rör och vrider jämt på sig",
+                    "11. Har minst en god vän (kamrat)",
+                    "12. Slåss/bråkar ofta med andra barn eller mobbar dem",
+                    "13. Ofta ledsen, nedstämd eller tårögd",
+                    "14. Vanligtvis omtyckt av andra barn",
+                    "15. Lättstörd, tappar lätt koncentrationen",
+                    "16. Nervös eller klängig i nya situationer, blir lätt otrygg",
+                    "17. Snäll mot yngre barn",
+                    "18. Ljuger eller fuskar ofta",
+                    "19. Blir retad eller mobbad av andra barn",
+                    "20. Ställer ofta upp och hjälper andra (föräldrar, lärare, andra barn)",
+                    "21. Tänker sig för innan han/hon gör olika saker",
+                    "22. Stjäl hemma, i skolan eller på andra ställen",
+                    "23. Kommer bättre överens med vuxna än med andra barn",
+                    "24. Rädd för mycket, är lättskrämd",
+                    "25. Fullföljer uppgifter, bra koncentrationsförmåga"
             };
+
     List listQuestions = Arrays.asList(questionArrays);
 
     int[] expertAnswers = new int[]{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
     int expertOpinion = 0;
 
 
-    public IESRFeedbackPanel(String id) {
+    public SDQFeedbackPanel(String id) {
 
         super(id);
 
-        tempoanswers1 = (HashMap<Long, Integer>) getSession().getAttribute("IESRanswer1");
+        tempoanswers1 = (HashMap<Long, Integer>) getSession().getAttribute("SDQRanswer1");
 
-        AUDITradiovalue1 = (Integer[]) getSession().getAttribute("IESRradiovalue1");
+        AUDITradiovalue1 = (Integer[]) getSession().getAttribute("SDQRradiovalue1");
 
 
 

@@ -14,12 +14,12 @@ import org.apache.wicket.markup.html.list.ListView;
 import org.apache.wicket.markup.html.panel.Panel;
 import org.apache.wicket.model.Model;
 import org.apache.wicket.spring.injection.annot.SpringBean;
-import se.su.dsv.childcasesim.data.Case.dao.interfaces.PTSDEntityDoa;
-import se.su.dsv.childcasesim.data.Case.dataobjects.PTSDEntity;
+import se.su.dsv.bivsim.data.Case.dao.interfaces.PTSDEntityDoa;
+import se.su.dsv.bivsim.data.Case.dataobjects.PTSDEntity;
 
 import java.util.*;
 
-public class ASRSPanel extends Panel {
+public class LitePanel extends Panel {
 
     @SpringBean
     PTSDEntityDoa pTSDEntityDoa;
@@ -122,7 +122,7 @@ public class ASRSPanel extends Panel {
     }
 
 
-    public ASRSPanel(String id) {
+    public LitePanel(String id) {
         super(id);
 
         final WebMarkupContainer wmc = new WebMarkupContainer("wmc");

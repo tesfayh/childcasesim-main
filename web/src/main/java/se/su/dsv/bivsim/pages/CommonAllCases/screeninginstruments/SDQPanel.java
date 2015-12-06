@@ -13,11 +13,11 @@ import org.apache.wicket.markup.html.list.ListItem;
 import org.apache.wicket.markup.html.list.ListView;
 import org.apache.wicket.markup.html.panel.Panel;
 import org.apache.wicket.model.Model;
-import se.su.dsv.childcasesim.data.Case.dataobjects.PTSDEntity;
+import se.su.dsv.bivsim.data.Case.dataobjects.PTSDEntity;
 
 import java.util.*;
 
-public class IESRPanel extends Panel {
+public class SDQPanel extends Panel {
 
     ;
     private static final long serialVersionUID = 1L;
@@ -105,7 +105,7 @@ public class IESRPanel extends Panel {
 
 
 
-    public IESRPanel(String id) {
+    public SDQPanel(String id) {
         super(id);
 
         final WebMarkupContainer wmc = new WebMarkupContainer("wmc");

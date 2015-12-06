@@ -8,16 +8,16 @@ import org.apache.wicket.request.mapper.parameter.PageParameters;
 import org.apache.wicket.request.resource.PackageResourceReference;
 import org.apache.wicket.request.resource.ResourceReference;
 
-public class VideoFeedbackPanel extends ContentPanel {
+public class VideoChildFeedbackPanel extends ContentPanel {
 
-    public VideoFeedbackPanel(String id, String content, String videoId, ResourceReference videoResourceReference) {
+    public VideoChildFeedbackPanel(String id, String content, String videoId, ResourceReference videoResourceReference) {
         super(id, content);
 
 /*
         ResourceReference videoResourceReference = new VideoResourceReference();
 */
         PageParameters videoParameters = new PageParameters();
-        String imageName = videoId + ".flv";
+        String imageName = "child/" + videoId + ".flv";
         videoParameters.set("name", imageName);
 
         CharSequence urlForVideo = urlFor(videoResourceReference, videoParameters);
@@ -25,7 +25,7 @@ public class VideoFeedbackPanel extends ContentPanel {
 
 
         PackageResourceReference resourceReference =
-                new PackageResourceReference(VideoFeedbackPanel.class, "flowplayer-3.2.16.swf");
+                new PackageResourceReference(VideoChildFeedbackPanel.class, "flowplayer-3.2.16.swf");
         CharSequence url = getRequestCycle().urlFor(resourceReference, new PageParameters());
         add(new Label("script",
                         "$f('a.player', '" + url + "', {log: {level: 'warn'}});" +
@@ -35,6 +35,6 @@ public class VideoFeedbackPanel extends ContentPanel {
     @Override
     public void renderHead(IHeaderResponse response) {
         super.renderHead(response);
-        response.render(JavaScriptHeaderItem.forReference(new PackageResourceReference(VideoFeedbackPanel.class, "flowplayer-3.2.12.min.js")));
+        response.render(JavaScriptHeaderItem.forReference(new PackageResourceReference(VideoChildFeedbackPanel.class, "flowplayer-3.2.12.min.js")));
     }
 }

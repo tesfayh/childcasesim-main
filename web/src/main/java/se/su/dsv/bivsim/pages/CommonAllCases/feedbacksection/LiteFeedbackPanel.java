@@ -1,5 +1,4 @@
 package se.su.dsv.bivsim.pages.CommonAllCases.feedbacksection;
-
 import org.apache.wicket.ajax.AjaxRequestTarget;
 import org.apache.wicket.ajax.markup.html.AjaxFallbackLink;
 import org.apache.wicket.markup.html.basic.Label;
@@ -11,13 +10,13 @@ import org.apache.wicket.markup.html.list.ListItem;
 import org.apache.wicket.markup.html.list.ListView;
 import org.apache.wicket.markup.html.panel.Panel;
 import org.apache.wicket.model.Model;
-import se.su.dsv.childcasesim.data.Case.dataobjects.PTSDEntity;
+import se.su.dsv.bivsim.data.Case.dataobjects.PTSDEntity;
 
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 
-public class PTSDFeedbackPanel extends Panel {
+public class LiteFeedbackPanel extends Panel {
 
 
     int k1 = 0;
@@ -108,7 +107,7 @@ public class PTSDFeedbackPanel extends Panel {
 
     List listExpertAnswers = Arrays.asList(expertAnswers);
 
-    public PTSDFeedbackPanel(String id) {
+    public LiteFeedbackPanel(String id) {
 
         super(id);
 
