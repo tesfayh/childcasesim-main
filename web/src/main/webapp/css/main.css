@@ -36,22 +36,22 @@ h1.login {
 
 /*This is where I started 151002.*/
 
-
+/*NEW COLOR!!*/
 body{
     scrollbar-face-color: #fcfcf5;
-    scrollbar-shadow-color: #9fb28b;
-    scrollbar-highlight-color:#9fb28b;
-    scrollbar-3dlight-color: #9fb28b;
-    scrollbar-darkshadow-color: #9fb28b;
+    scrollbar-shadow-color: #a6bbc8;
+    scrollbar-highlight-color:#a6bbc8;
+    scrollbar-3dlight-color: #a6bbc8;
+    scrollbar-darkshadow-color: #a6bbc8;
     scrollbar-track-color: #ffffff;
-    scrollbar-arrow-color: #9fb28b;
+    scrollbar-arrow-color: #a6bbc8;
 }
 
 a{
     text-decoration: none;
-    color: #5c5052
+    color: #00263e
 }
-
+/*END NEW COLOR!!*/
 a:active{
     text-decoration: none;
     color: #c89563;
@@ -71,30 +71,32 @@ a:hover{
     font-weight: bold;
 }
 
+/*NEW COLOR!!*/
 .search{
     position: absolute;
     top: 5.60em;
     left: 20.500em;
-    border: 0.125em solid #576e44;
+    border: 0.125em solid #a6bbc8;
     width: 21.500em;
     height: 1.725em;
     border-radius: 0.525em;
     valign: middle;
-    border: 0.125em solid #576e44;
+    border: 0.125em solid #a6bbc8;
     background-repeat: no-repeat;
     background-image: url(../img/searchButton_3.png);
 }
 
 .searchMoveable{
-    border: 0.125em solid #576e44;
+    border: 0.125em solid #a6bbc8;
     width: 21.500em;
     height: 1.725em;
     border-radius: 0.525em;
     valign: middle;
-    border: 0.125em solid #576e44;
+    border: 0.125em solid #a6bbc8;
     background-repeat: no-repeat;
     background-image: url(../img/searchButton_3.png);
 }
+
 
 .standardButton{
     background-image: url(../img/Button.png);
@@ -103,7 +105,7 @@ a:hover{
     height: 1.925em;
     font-family: Arial, Helvetica, Roboto, sans-serif;
     font-size: 1em;
-    font-color: #576e44;
+    font-color: #00263e;
     text-align: center;
     valign: middle;
 }
@@ -115,47 +117,39 @@ a:hover{
     height: 1.925em;
     font-family: Arial, Helvetica, Roboto, sans-serif;
     font-size: 1em;
-    font-color: #576e44;
+    font-color: #00263e;
     text-align: center;
     valign: middle;
 }
 
 .bsaSimFrame{
+/*
     z-index: -5;
+*/
     position: absolute;
     margin-top: 1%;
     left: 5%;
     width: 88.5em;
     height: 54.125em;
-    border: 0.125em solid #9fb28b;
+    border: 0.125em solid #a6bbc8;
     border-radius: 0.5em;
     background-image: url(../img/graphicsBg.png);
     text-align: center;
 }
 
-/* This is where I will fix centered position for the whole system!
-
-.center{
-}
-
-.outerPosition{
-    width: 100%;
-    height: 100%;
-    border: 0.5em solid blue;
-    align-content: center;
-}
-*/
 .loginFrame{
     position: absolute;
     margin-top: 1%;
     left: 5%;
     width: 88.5em;
     height: 54.125em;
-    border: 0.125em solid #9fb28b;
+    border: 0.125em solid #a6bbc8;
     background-color: #fcfcf5;
     border-radius: 0.5em;
     background-image: url(../img/graphicsBottom.png);
 }
+
+/*END NEW COLOR!!*/
 
 .loginBox{
     position: absolute;
@@ -163,11 +157,14 @@ a:hover{
     width: 20.325em;
     height: 42.5em;
     margin-top: 1em;
+
+    
 }
 
 .container{
     width: 88.5em;
     height: 51.75em;
+    
 }
 
 .content{
@@ -179,6 +176,7 @@ a:hover{
     text-align: center;
 }
 
+/*NEW COLOR!!*/
 .content_2{
     z-index: 0;
     position: absolute;
@@ -187,10 +185,11 @@ a:hover{
     width: 82.375em;
     height: 41em;
     text-align: center;
-    border-left: 0.125em solid #9fb28b;
-    border-top: 0.125em solid #9fb28b;
+    border-left: 0.125em solid #a6bbc8;
+    border-top: 0.125em solid #a6bbc8;
     border-top-left-radius: 0.625em;
 }
+/*END NEW COLOR!!*/
 
 .content_3{
     z-index: 0;
@@ -202,15 +201,35 @@ a:hover{
     text-align: center;
 }
 
+
+/*NEW COLOR!!*/
+
+.content_4{
+    position: absolute;
+    top: 12em;
+    left: 10em;
+    width: 82.375em;
+    height: 44em; 
+}
+
+.content_5{
+    position: absolute;
+    top: 12em;
+    left: 10em;
+    width: 40em;
+    height: 24em; 
+}
+
 .tdTab{
-    border-right: 0.125em solid #9fb28b;
-    border-top: 0.125em solid #9fb28b;
-    border-left: 0.125em solid #9fb28b;
+    border-right: 0.125em solid #a6bbc8;
+    border-top: 0.125em solid #a6bbc8;
+    border-left: 0.125em solid #a6bbc8;
     border-top-right-radius: 0.625em;
     border-top-left-radius: 0.625em;
     background-color: #fcfcf5;
     font-weight: bold;
 }
+/*END NEW COLOR!!*/
 
 .skattningsskalor{
     position: absolute;
@@ -226,19 +245,20 @@ a:hover{
 
 .formButtons{
     position: absolute;
-    top: 39.125em;;
-    left: 47.625em;
+    top: 38.825em;;
+    left: 40.625em;
     width: 35em;
     height: 2.625em;
 }
 
 .formButtons_2{
     position: absolute;
-    top: 39.125em;;
-    left: 34.125em;
+    top: 38.825em;;
+    left: 27.125em;
     width: 18em;
     height: 2.625em;
 }
+
 
 .formButtons_4{
     position: absolute;
@@ -248,16 +268,18 @@ a:hover{
     height: 2.625em;
 }
 
+/*NEW COLOR!!*/
 .loginForm{
     position: absolute;
     height: 19.125em;
     width: 17.625em;
     top: 8.250em;
-    border: 0.125em solid #9fb28b;
+    border: 0.125em solid #a6bbc8;
     background-color: #ffffff;
     border-radius: 0.525em;
     padding: 1.525em;
 }
+
 
 .credits{
     position: absolute;
@@ -266,11 +288,30 @@ a:hover{
     width: 55em;
     overflow-y: auto;
     height: 41em;
-    border: 0.125em solid #9fb28b;
+    border: 0.125em solid #a6bbc8;
     background-color: #ffffff;
     border-radius: 0.5em;
     padding: 3em;
+    padding-top: 2em;
 }
+
+.errorMessage{
+    position: absolute;
+    left: 29em;
+    height: 13.125em;
+    width: 23em;
+    top: 8.250em;
+    border: 0.125em solid #a6bbc8;
+    background-color: #ffffff;
+    border-radius: 0.525em;
+    padding: 1.825em;
+    padding-top: 6.125em;
+    text-align: left;
+    background-image: url(../img/errorMessage.png);
+    background-repeat: no-repeat;
+}
+
+/*END NEW COLOR!!*/
 
 .tdHead{
     font-weight: bold;
@@ -280,16 +321,21 @@ a:hover{
 }
 
 .loggedIn{
+/*
     z-index: 1;
+*/
     position: absolute;
     left: 2em;
     top: 5.125em;
     width: 18em;
     height: 1.925em;
+    font-weight: bold;
 }
 
 .logOut{
+/*
     z-index: 1;
+*/
     position: absolute;
     left: 82.325em;
     top: 0.240em;
@@ -298,7 +344,9 @@ a:hover{
 }
 
 .settings{
+/*
     z-index: 1;
+*/
     position: absolute;
     left: 72.825em;
     top: 0.240em;
@@ -313,6 +361,7 @@ a:hover{
     width: 22em;
     font-family: Arial, Helvetica, Roboto, sans-serif;
     font-size: 0.9em;
+
 }
 
 .subCat2{
@@ -324,6 +373,14 @@ a:hover{
 }
 
 
+.subCatinfo{
+    text-indent: 2em;
+    font-weight: normal;
+    width: 22em;
+    font-family: Arial, Helvetica, Roboto, sans-serif;
+    font-size: 0.9em;
+
+}
 .leftMenu{
     position: absolute
     height: 80em;
@@ -338,6 +395,17 @@ a:hover{
 
 }
 
+.leftMenuEdit{
+
+width: 15em;
+font-family: Arial,Helvetica,Roboto,sans-serif;
+font-weight: bold;
+font-size: 1.4em;
+text-align: left;
+padding-left: 1.875em;
+padding-top: 1.25em;
+height: 6em;
+}
 /*.underCategoriesLeftMenu{
     position: absolute;
     top: 300px;
@@ -352,7 +420,7 @@ a:hover{
     border: 1px solid red;	
 }*/
 
-
+/*NEW COLOR!!*/
 .categoriesParent{
     height: 10.5em;
     width: 25em;
@@ -363,7 +431,7 @@ a:hover{
     text-align: left;
     padding-left: 0.175em;
     padding-top: 0.150em;
-    border-right: 0.125em solid #9fb28b;
+    border-right: 0.125em solid #a6bbc8;
 }
 
 .categoriesChild{
@@ -376,9 +444,11 @@ a:hover{
     text-align: left;
     padding-left: 0.175em;
     padding-top: 0.150em;
-    border-right: 0.125em solid #9fb28b;
+    border-right: 0.125em solid #a6bbc8;
 
 }
+
+/*END NEW COLOR!!*/
 
 .categoriesLeftMenu{
     font-size: 1.1em;
@@ -387,6 +457,7 @@ a:hover{
     height: 26em;
     overflow: auto;
 }
+
 
 .patientImg{
     position: absolute;
@@ -448,13 +519,14 @@ a:hover{
     padding: 0.7125em;
 }
 
+/*NEW COLOR!!*/
 .textBox_1{
     position: absolute;
     top: 35em;
     left: 4.825em;
     width: 30em;
     height: 6.875em;
-    border: 0.125em solid #9fb28b;
+    border: 0.125em solid #a6bbc8;
     padding: 1.325em;
     border-radius:  0.525em;
     background-color: #ffffff;
@@ -466,7 +538,7 @@ a:hover{
     left: 4.825em;
     width: 30em;
     height: 3.6em;
-    border: 0.125em solid #9fb28b;
+    border: 0.125em solid #a6bbc8;
     padding: 1.325em;
     border-radius:  0.525em;
     background-color: #ffffff;
@@ -479,8 +551,9 @@ a:hover{
     left:   44.325em;
     width:   43.125em;
     height: 47em;
-    background-color: #ced8c4;
+    background-color: #a6bbc8;
 }
+
 
 .imageAreawithChild{
     position: absolute;
@@ -488,8 +561,10 @@ a:hover{
     left:   1.45em;
     width:   86.250em;
     height: 25.525em;
-    background-color: #ced8c4;
+    background-color: #e4eaee;
 }
+/*END NEW COLOR!!*/
+
 .bedomning{
     position: absolute;
     left: 4.125em;
@@ -502,9 +577,9 @@ a:hover{
 
 .textArea_1{
     position: absolute;
-    top: 9.825em;
+    top: 8.825em;
     width: 20em;
-    height: 28.250em;
+    height: 27.250em;
     text-align: left;
 }
 
@@ -512,18 +587,18 @@ a:hover{
 .textArea_2{
     position: absolute;
     width: 20em;
-    height: 28.250em;
+    height: 27.250em;
     left: 22.425em;
-    top: 9.825em;
+    top: 8.825em;
     text-align: left;
 }
 
 .textArea_3{
     position: absolute;
     width: 20em;
-    height: 28.250em;
+    height: 27.250em;
     left: 45em;
-    top: 9.825em;
+    top: 8.825em;
     text-align: left;
 }
 
@@ -557,7 +632,7 @@ a:hover{
 .feedbackContent{
     position: absolute;
     top: 5em;
-    left: 22em;
+    left: 26em;
     width: 50em;
     overflow-y: scroll;
     height: 38em;
@@ -578,6 +653,7 @@ a:hover{
     width: 50em;
     height: 38em;
 }
+
 
 .tdFeedbackHeadline{
     width: 20em;
@@ -724,11 +800,12 @@ h4 {
     border: 1px solid gray;
 }
 
+/*NEW COLOR!!*/
 img {
     border-radius: 0px;
-    border: solid 1px #9fb28b;
+    border: solid 1px #a6bbc8;
 }
-
+/*END NEW COLOR!!*/
 img.logo {
     border-radius: 0px;
     border: solid 0px black;
@@ -769,16 +846,41 @@ img.logo {
     width: 8em;
     height: 2.625em;
 }
+
+/*NEW COLOR!!*/
 .intro{
     position: absolute;
-    top: 7em;
-    left: 17em;
-    left: 17em;
-    width: 45em;
-    overflow-y: auto;
-    height: 25em;
-    border: 0.125em solid #9fb28b;
-    background-color: #ffffff;
+    margin-top: 1%;
+    left: 5%;
+    width: 88.5em;
+    height: 54.125em;
+    border: 0.125em solid #a6bbc8;
     border-radius: 0.5em;
-    padding: 4.5em;
+    background-image: url(../img/introGraphicsBg.png);
 }
+/*END NEW COLOR!!*/
+
+
+.formButtonsEdit {
+    position: absolute;
+    top: 44.125em;
+    left: 10.625em;
+    width: 35em;
+    height: 2.625em;
+}
+.imageAreaEdit{
+    position: absolute;
+    top: 2.025em;
+    left:   40.325em;
+    width:   43.125em;
+    height: 30em;
+    background-color: #ced8c4;
+}
+.categoriesLeftMenuEdit{
+    font-size: 1.1em;
+    font-weight: bold;
+    text-align: left;
+    overflow: auto;
+}
+
+

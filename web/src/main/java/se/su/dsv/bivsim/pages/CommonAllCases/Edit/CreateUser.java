@@ -1,20 +1,21 @@
 package se.su.dsv.bivsim.pages.CommonAllCases.Edit;
 
-import org.apache.wicket.markup.html.form.*;
+import org.apache.wicket.markup.html.form.Form;
+import org.apache.wicket.markup.html.form.RadioChoice;
+import org.apache.wicket.markup.html.form.TextField;
 import org.apache.wicket.markup.html.panel.FeedbackPanel;
+import org.apache.wicket.markup.html.panel.Panel;
 import org.apache.wicket.model.PropertyModel;
 import org.apache.wicket.spring.injection.annot.SpringBean;
-import se.su.dsv.childcasesim.data.Case.dao.interfaces.AdminsEntityDao;
-import se.su.dsv.childcasesim.data.Case.dataobjects.AdminsEntity;
-import se.su.dsv.childcasesim.pages.Case1.EditingPages.Common.MailClient;
-import se.su.dsv.childcasesim.pages.CommonAllCases.Edit.BaseClasses.CommonEditingPage;
+import se.su.dsv.bivsim.data.Case.dao.interfaces.AdminsEntityDao;
+import se.su.dsv.bivsim.data.Case.dataobjects.AdminsEntity;
 
 import java.security.SecureRandom;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
-public class CreateUser extends CommonEditingPage {
+public class CreateUser extends Panel {
     @SpringBean
     AdminsEntityDao adminsEntityDoa;
     private String password;
@@ -33,9 +34,8 @@ public class CreateUser extends CommonEditingPage {
     String letters = "abcdefghjkmnpqrstuvwxyzABCDEFGHJKMNPQRSTUVWXYZ23456789+@";
     private static List<String> GENDER =null;
     private String selected="Student";
-
-    public CreateUser() {
-
+    public CreateUser(String id) {
+        super(id);
         for (int i=0; i<PASSWORD_LENGTH; i++)
         {
             int index = (int)(RANDOM.nextDouble()*letters.length());
@@ -71,10 +71,10 @@ public class CreateUser extends CommonEditingPage {
                 String server="smtp.su.se";
                 String from="noreply@dsv.su.se";
                 String to = getemail();
-                String subject="BSAsim Användarnamn och lösenord";
-                String message="Hej, här är ditt lösenord och användarnamn för att logga in på BSAsim System" +"\n"+
-                        "användarnamn:" +getemail() +"\n"+ "lösenord:"+ pw +"\n"+ "Om du vill ändra ditt lösenord när du loggat in kan du göra det i\n" +
-                        "                        inställningsmenyn"  +"\n"+ "\"Webbadressen till BSAsim är:  https://childcasesim-test.dsv.su.se\" " ;
+                String subject="BIVsim Användarnamn och lösenord";
+                String message="Hej, här är ditt lösenord och användarnamn för att logga in på BIVsim System" +"\n"+
+                        "användarnamn: " +getemail() +"\n"+ "lösenord: "+ pw +"\n"+ "Om du vill ändra ditt lösenord när du loggat in kan du göra det i " +
+                        "                        inställningsmenyn"  +"\n"+ "\"Webbadressen till BIMsim är:  https://bivsim.dsv.su.se\" " ;
                 client.sendMail(server,from,to,subject,message);
             }
             catch(Exception e)
@@ -104,15 +104,14 @@ public class CreateUser extends CommonEditingPage {
                 ad.setPassword(pw);
                 ad.setrole(selected);
                 adminsEntityDoa.save(ad);
-/*
+
                 info(" You have added a new user successfully");
-*/
+
                 orgName = null;
                 role = null;
                 email = null;
                 Name = null;
 
-                setResponsePage(AndraAddPage.class);
 
 
             }

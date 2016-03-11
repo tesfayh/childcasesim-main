@@ -23,27 +23,50 @@
     <div>
         <span wicket:id="Header"></span>
     </div>
-    <div class="container">
-        <div>
-            <br>           <br>
-            <br>
 
-            <wicket:child/>
+    <div class="content">
+
+        <div class="leftMenuEdit">
+            <div class="categoriesLeftMenuEdit">
+        <!--<div wicket:id="Container1" >
+            <div wicket:id="mainNavigation">
             </div>
-        <div class="content">
-            <div class="leftMenu">
-                <div class="categoriesLeftMenu">
-                    <a href="#" wicket:id="mainNavigation"/>
+        </div>-->
 
-                </div>
-            </div>
-               <div class="standardButton">
+                <ul class="uk-nav">
+                    <li><a class="admin"  wicket:id="Admisnistrator">Lägg till ny användare
+                    </a></li>
+                    <li><a class="admin"  wicket:id="editAdmisnistrator">Redigera användare</a></li>
+                    <li><a class="admin"   wicket:id="editExistingCases">Redigera  fall</a></li>
 
-                <a wicket:id="tillbaka" >SKICKA</a>
+                </ul>
+        </div>
+        </div>
 
+
+        <div class="imageAreaEdit">
+        <div wicket:id="Container2">
+            <div wicket:id="mainNavigation2">
             </div>
         </div>
+        </div>
+
+
+
+
+
+
     </div>
+
+    <div class="formButtonsEdit">
+
+    <div class="standardButton" >
+
+        <a wicket:id="tillbaka" >Tillbaka</a>
+
+    </div>
+    </div>
+
 
     <div class="copyrightText">&copy; Copyright: DSV, Stockholms Universitet, 2014</div>
 </div>
